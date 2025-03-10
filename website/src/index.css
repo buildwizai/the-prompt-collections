@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+body {
+  font-family: 'Inter', sans-serif; /* Use a modern sans-serif font */
+  background-color: #f9fafb; /* Light gray background */
+  color: #1f2937; /* Dark gray text for better readability */
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1f2937; /* Dark background */
+    color: #f9fafb; /* Light text for better readability */
+  }
+
+  h1, h2, h3 {
+    color: #f9fafb; /* Light text for headings */
+  }
+
+  a {
+    color: #60a5fa; /* Lighter blue links for dark mode */
+  }
+
+  a:hover {
+    color: #3b82f6; /* Slightly darker blue on hover */
+  }
+
+  .card {
+    background-color: #374151; /* Darker background for cards */
+    border-color: #4b5563; /* Darker border for cards */
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1); /* Subtle shadow for dark mode */
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Slightly stronger shadow on hover */
+  }
+
+  input, textarea {
+    background-color: #374151; /* Darker background for inputs */
+    border-color: #4b5563; /* Darker border for inputs */
+    color: #f9fafb; /* Light text for inputs */
+  }
+
+  input:focus, textarea:focus {
+    border-color: #60a5fa; /* Lighter blue border on focus */
+  }
+}
+
+/* Custom container styles */
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Custom heading styles */
+h1, h2, h3 {
+  font-weight: 600; /* Semi-bold headings */
+  color: #111827; /* Darker text for headings */
+}
+
+h1 {
+  font-size: 2rem; /* 32px */
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+h2 {
+  font-size: 1.5rem; /* 24px */
+  margin-bottom: 1rem; /* 16px */
+}
+
+h3 {
+  font-size: 1.25rem; /* 20px */
+  margin-bottom: 0.75rem; /* 12px */
+}
+
+/* Custom link styles */
+a {
+  color: #3b82f6; /* Blue links */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2563eb; /* Darker blue on hover */
+}
+
+/* Custom button styles */
+button {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px); /* Slight lift on hover */
+}
+
+/* Custom card styles */
+.card {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+/* Custom input styles */
+input, textarea {
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 0.375rem; /* Rounded corners */
+  padding: 0.5rem 0.75rem; /* Padding for better spacing */
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance; /* Improve text wrapping */
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  .transition-smooth {
+    transition: all 0.2s ease;
+  }
+}

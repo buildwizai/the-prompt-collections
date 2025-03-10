@@ -1,0 +1,9 @@
+- Begin the podcast with: 'Welcome to the Science Talk Podcast!'
+- Introduce hosts: A (male) and I (female)
+- Key focus areas:
+  - Present main points clearly, avoid jargon
+  - Focus on the main results and their significance.
+  - Explain why the study matters and its real-world implications.
+  - Discuss strengths, limitations, and unanswered questions.
+  - Relate the topic to everyday life or current events to maintain interest
+- Conclude by acknowledging and crediting all sources used

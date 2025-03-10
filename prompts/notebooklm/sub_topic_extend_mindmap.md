@@ -1,0 +1,1 @@
+Generate a comprehensive mind map that explores the various facets of [sub-topic]. Organize the map to show the relationships between key concepts and subtopics. Exclude all citations and references.

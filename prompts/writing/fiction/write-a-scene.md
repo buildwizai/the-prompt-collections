@@ -1,0 +1,1 @@
+Write a scene where the character discovers a hidden passage behind a seemingly ordinary object in their home. Describe their reaction and what they find.

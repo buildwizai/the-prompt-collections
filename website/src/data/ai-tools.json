@@ -1,0 +1,40 @@
+{
+  "tools": [
+    {
+      "name": "ChatGPT",
+      "url": "https://chat.openai.com",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+      "description": "OpenAI's ChatGPT - Advanced language model for natural conversations"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://gemini.google.com",
+      "logo": "https://www.gstatic.com/lamda/images/favicon_v1_150160cddff7f294ce30.svg",
+      "description": "Google's Gemini AI - Multimodal AI for text, code, and images"
+    },
+    {
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "logo": "https://claude.ai/favicon.ico",
+      "description": "Anthropic's Claude - Advanced AI assistant for analysis and writing"
+    },
+    {
+      "name": "DeepSeek",
+      "url": "https://chat.deepseek.com",
+      "logo": "https://chat.deepseek.com/favicon.ico",
+      "description": "DeepSeek Chat - Advanced language model with deep learning capabilities"
+    },
+    {
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai",
+      "logo": "https://www.perplexity.ai/favicon.ico",
+      "description": "Perplexity AI - Real-time information synthesis and analysis"
+    },
+    {
+      "name": "Le Chat",
+      "url": "https://chat.mistral.ai",
+      "logo": "https://chat.mistral.ai/favicon.ico",
+      "description": "Mistral AI's Le Chat - French-based conversational AI model"
+    }
+  ]
+}
