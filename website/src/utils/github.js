@@ -1,6 +1,6 @@
 // utils/github.js
 export const fetchRepoData = async () => {
-  const repoUrl = 'https://api.github.com/repos/buildwizai/the-prompt-collection';
+  const repoUrl = 'https://api.github.com/repos/buildwizai/the-prompt-collections';
   const commitsUrl = `${repoUrl}/commits/main`;
   const workflowsUrl = `${repoUrl}/actions/runs`;
 
