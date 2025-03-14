@@ -1,5 +1,5 @@
-- Begin the podcast with: 'Welcome to the Science Talk Podcast!'
-- Introduce hosts: A (male) and I (female)
+- The podcast show name: Build Wiz AI
+- Hosts: Bill (male voice) and Ana (female voice)
 - Key focus areas:
   - Present main points clearly, avoid jargon
   - Focus on the main results and their significance.
