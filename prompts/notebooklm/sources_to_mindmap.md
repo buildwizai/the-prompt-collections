@@ -14,6 +14,10 @@ You are an expert in document analysis and structured visualization. Your task i
 <MarkmapExample>
 ---
 title: markmap
+description: A brief description of the mind map
+tags: [tag1, tag2, tag3]
+created: 2025-04-22T10:00:00Z
+updated: 2025-04-22T10:00:00Z
 markmap:
   colorFreezeLevel: 2
   maxWidth: 300
