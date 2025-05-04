@@ -1,5 +1,5 @@
-- The podcast show name: Build Wiz AI
-- Hosts: Bill (male voice) and Ana (female voice)
+- Start by introduce the podcast show name: Build Wiz AI
+- Introduce Hosts: B (male voice) and A (female voice)
 - Key focus areas:
   - Present main points clearly, avoid jargon
   - Focus on the main results and their significance.
