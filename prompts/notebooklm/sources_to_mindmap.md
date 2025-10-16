@@ -16,6 +16,7 @@ You are an expert in document analysis and structured visualization. Your task i
 title: markmap
 description: A brief description of the mind map
 tags: [tag1, tag2, tag3]
+created_at: [the timestamp when this mind map is created]
 markmap:
   colorFreezeLevel: 2
   maxWidth: 300
