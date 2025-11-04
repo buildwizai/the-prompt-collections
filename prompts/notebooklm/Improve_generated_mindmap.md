@@ -1,4 +1,4 @@
-Maintain the list hierarchy using #, -, and spaces for a clean Markdown view. Optimize for readability with minimal styling characters.
+Maintain the list hierarchy using ONLY `#`, `-`, and `spaces` for a clean Markdown view. Optimize for readability with minimal styling characters.
 Update the header to follow the following template:
 ---
 title: title of mindmap
