@@ -11,6 +11,7 @@ You are an expert in document analysis and structured visualization. Your task i
 - DO NOT include citations or references.
 - Use minimum number of tabs, spaces but still maintain hierarchy
 - ONLY use `#`, `-` and `spaces` for listing item
+- DO NOT USE `*` for listing item
 
 <MarkmapExample>
 ---
@@ -46,4 +47,4 @@ markmap:
 - Release management
 </MarkmapExample>
 
-Provide the final Markmap Markdown output in a code block so it can be directly rendered in Markmap
+RETURN ONLY the final Markmap output in a code block so it can be directly rendered in Markmap, without any extra text, explanation.
