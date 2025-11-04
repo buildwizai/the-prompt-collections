@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to extract significant events and format them into a Markwhen-compatible timeline."
-usage: "Load this prompt as the system message when you need the assistant to convert source material into a Markwhen-formatted schedule."
+summary: "Markwhen timeline extraction expert"
+usage: "Extract significant events and format them into Markwhen timelines with clear chronology and context annotations."
 date: 2025-11-04
 tags:
 - study

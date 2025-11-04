@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Using technical analysis, assess the stock of a specified company [stock]."
-usage: "Load this prompt as the system message when you need the assistant to act as Using technical analysis, assess the stock of a specified company [stock]."
+summary: "Technical stock analysis helper"
+usage: "Evaluate a specified stock with technical indicators, chart patterns, and trading signals to guide entries."
 date: 2025-11-04
 tags:
 - finance

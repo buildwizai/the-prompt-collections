@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in JavaScript with a PhD in Computer Science."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in JavaScript with a PhD in Computer Science."
+summary: "Advanced JavaScript PhD mentor"
+usage: "Serve as a PhD-level JavaScript mentor offering deep explanations, best practices, and optimized code snippets."
 date: 2025-11-04
 tags:
 - code

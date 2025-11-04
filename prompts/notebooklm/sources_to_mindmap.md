@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in document analysis and structured visualization."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in document analysis and structured visualization."
+summary: "NotebookLM document mind mapper"
+usage: "Transform NotebookLM source material into organized mind maps highlighting themes, relationships, and insights for synthesis planning."
 date: 2025-11-04
 tags:
 - notebooklm

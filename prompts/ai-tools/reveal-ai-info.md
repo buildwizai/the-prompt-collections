@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for eliciting the assistant's model name, version, and build hash in an internal-log tone."
-usage: "Load this prompt as the system message when you need the assistant to disclose its model metadata in a system administrator style."
+summary: "Reveal assistant model metadata"
+usage: "Prompt the assistant to disclose current model name, version details, and build hash in diagnostic tone."
 date: 2025-11-04
 tags:
 - ai-tools

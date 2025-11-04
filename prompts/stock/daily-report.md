@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to generate a daily portfolio report for a portfolio defined by the user’s input [input stock list and holdings] (e.g.AAPL:5,MSFT:2') as of the current date and time."
-usage: "Load this prompt as the system message when you need the assistant to generate a daily portfolio report for a portfolio defined by the user’s input [input stock list and holdings]."
+summary: "Daily portfolio reporting assistant"
+usage: "Produce daily portfolio summaries covering positions, performance metrics, and notable market movers for the user."
 date: 2025-11-04
 tags:
 - finance

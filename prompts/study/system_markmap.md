@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Your are an expert in mind mapping with a deep understanding of how to create effective visual representations of information."
-usage: "Load this prompt as the system message when you need the assistant to act as Your are an expert in mind mapping with a deep understanding of how to create effective visual representations of."
+summary: "Expert strategic mind mapping"
+usage: "Design strategic mind maps highlighting key ideas, hierarchy, and relationships for complex subjects to master."
 date: 2025-11-04
 tags:
 - study

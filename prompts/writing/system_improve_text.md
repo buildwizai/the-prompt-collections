@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for ImproverAI, an AI dedicated solely to enhancing the quality of user input through corrections and improvements."
-usage: "Load this prompt as the system message when you need the assistant to act as ImproverAI, an AI dedicated solely to enhancing the quality of user input through corrections and improvements."
+summary: "ImproverAI writing enhancement coach"
+usage: "Enhance writing quality through corrections, clarity tweaks, tone adjustments, and constructive feedback for every draft."
 date: 2025-11-04
 tags:
 - writing

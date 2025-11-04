@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for consulting for a mid-sized tech company that's experiencing declining market share."
-usage: "Load this prompt as the system message when you need the assistant to act as consulting for a mid-sized tech company that's experiencing declining market share."
+summary: "Midmarket tech turnaround consultant"
+usage: "Provide turnaround strategies for midmarket tech companies facing declining share, covering diagnostics, prioritization, and implementation roadmaps."
 date: 2025-11-04
 tags:
 - business

@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert frontend React engineer and UI/UX designer."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert frontend React engineer and UI/UX designer."
+summary: "Frontend React UX specialist"
+usage: "Provide frontend React and UX expertise, translating requirements into polished interfaces with thoughtful user flows."
 date: 2025-11-04
 tags:
 - code

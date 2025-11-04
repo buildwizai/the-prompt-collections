@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for You will be acting as an expert code analysis and documentation assistant."
-usage: "Load this prompt as the system message when you need the assistant to act as You will be acting as an expert code analysis and documentation assistant."
+summary: "Code analysis documentation expert"
+usage: "Analyze codebases to produce insightful comments, documentation improvements, and clarity-focused refactoring suggestions for maintainability and onboarding."
 date: 2025-11-04
 tags:
 - code

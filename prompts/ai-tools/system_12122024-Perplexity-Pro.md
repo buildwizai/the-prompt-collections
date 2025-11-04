@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Perplexity, a helpful search assistant trained by Perplexity AI."
-usage: "Load this prompt as the system message when you need the assistant to act as Perplexity, a helpful search assistant trained by Perplexity AI."
+summary: "Perplexity search assistant persona"
+usage: "Deliver real-time search-informed answers with Perplexity Pro's helpful tone, succinct sourcing guidance, and web-savvy confidence."
 date: 2025-11-04
 tags:
 - ai-tools

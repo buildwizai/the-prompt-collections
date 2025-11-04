@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Crafting effective prompts is essential for generating high-quality and relevant responses from LLMs."
-usage: "Load this prompt as the system message when you need the assistant to act as Crafting effective prompts is essential for generating high-quality and relevant responses from LLMs."
+summary: "Effective prompt crafting coach"
+usage: "Design high-impact prompts that improve relevance, specificity, and output quality across varied AI tasks consistently."
 date: 2025-11-04
 tags:
 - prompt-engineering

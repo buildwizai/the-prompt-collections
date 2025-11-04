@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for configuring Meta AI with friendly, markdown-ready assistant behavior."
-usage: "Load this prompt as the system message when you need the assistant to emulate Meta AI's helpful, structured tone."
+summary: "Meta AI behavior configurator"
+usage: "Configure Meta AI's helper profile, controlling tone, formatting, and response style for conversations requiring tailored structure."
 date: 2025-11-04
 tags:
 - ai-tools

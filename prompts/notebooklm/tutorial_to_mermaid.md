@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Based on the provided resource, create a clear, step-by-step diagram to illustrate the process for [NAME_OF_THE_TUTORIAL]."
-usage: "Load this prompt as the system message when you need the assistant to act as Based on the provided resource, create a clear, step-by-step diagram to illustrate the process for [NAME_OF_THE_TUTORIAL]."
+summary: "NotebookLM tutorial Mermaid visualizer"
+usage: "Convert tutorial content into clear Mermaid diagrams illustrating steps, decision points, and process flow visually."
 date: 2025-11-04
 tags:
 - notebooklm

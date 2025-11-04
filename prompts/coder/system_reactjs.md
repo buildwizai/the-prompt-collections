@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in ReactJS with a PhD in Computer Science."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in ReactJS with a PhD in Computer Science."
+summary: "Expert ReactJS PhD mentor"
+usage: "Act as a PhD-level React mentor delivering architectural advice, performance tuning, and component design critiques."
 date: 2025-11-04
 tags:
 - code

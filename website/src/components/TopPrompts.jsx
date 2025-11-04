@@ -12,7 +12,7 @@ const PromptList = ({ prompts, handleSelectPrompt, title, onRemoveFavorite, icon
       <ul className="divide-y divide-gray-200 dark:divide-gray-700">
         {prompts.map((prompt) => (
           <li
-            key={prompt.filename}
+            key={prompt.id || prompt.filename}
             className="py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             <div className="flex items-center gap-2">
@@ -20,7 +20,7 @@ const PromptList = ({ prompts, handleSelectPrompt, title, onRemoveFavorite, icon
                 className="flex-1"
                 onClick={() => handleSelectPrompt(prompt)}
               >
-                {prompt.title || prompt.filename || 'Untitled Prompt'}
+                {prompt.summary || prompt.title || prompt.filename || 'Untitled Prompt'}
               </span>
               {prompt.tags && prompt.tags.map((tag, i) => {
                 let classes = "px-1 py-0.5 rounded text-xs font-medium";

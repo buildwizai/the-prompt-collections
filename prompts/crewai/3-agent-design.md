@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to identify the key individuals involved in the \"Research a topic, and write an article\" workflow."
-usage: "Load this prompt as the system message when you need the assistant to identify the key individuals involved in the \"Research a topic, and write an article\" workflow."
+summary: "Workflow agent role designer"
+usage: "Define the agent roles, responsibilities, and collaboration patterns supporting the research-to-article workflow for consistent execution."
 date: 2025-11-04
 tags:
 - automation

@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to write a scene where the character discovers a hidden passage behind a seemingly ordinary object in their home."
-usage: "Load this prompt as the system message when you need the assistant to write a scene where the character discovers a hidden passage behind a seemingly ordinary object in their home."
+summary: "Hidden passage scene writer"
+usage: "Write a scene revealing a hidden passage discovery with suspenseful detail and character insight throughout."
 date: 2025-11-04
 tags:
 - writing

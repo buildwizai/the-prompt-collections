@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Execute the following tasks:."
-usage: "Load this prompt as the system message when you need the assistant to act as Execute the following tasks:."
+summary: "Sample agile epic generator"
+usage: "Generate example Agile epics illustrating goals, scope, acceptance criteria, and cross-team alignment for product planning."
 date: 2025-11-04
 tags:
 - software-development

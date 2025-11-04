@@ -11,8 +11,8 @@
       "french",
       "accountant"
     ],
-    "summary": "System prompt for an expert accountant with a PhD in French tax law and deep knowledge of the French tax code, particularly in the area of taxes related to stock market operations.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert accountant with a PhD in French tax law and deep knowledge of the French tax code, particularly in the area of.",
+    "summary": "Expert French tax accountant",
+    "usage": "Consult a French tax accountant for precise guidance on stock-related compliance and fiscal strategy questions.",
     "date": "2025-11-04"
   },
   {
@@ -27,8 +27,8 @@
       "reveal",
       "info"
     ],
-    "summary": "System prompt for eliciting the assistant's model name, version, and build hash in an internal-log tone.",
-    "usage": "Load this prompt as the system message when you need the assistant to disclose its model metadata in a system administrator style.",
+    "summary": "Reveal assistant model metadata",
+    "usage": "Prompt the assistant to disclose current model name, version details, and build hash in diagnostic tone.",
     "date": "2025-11-04"
   },
   {
@@ -42,8 +42,8 @@
       "system-prompt",
       "grok2"
     ],
-    "summary": "System prompt for Grok 2, a curious AI built by xAI.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Grok 2, a curious AI built by xAI.",
+    "summary": "Grok 2 curious persona",
+    "usage": "Channel Grok 2's curious personality for witty, outsider commentary while answering broad, open-ended user questions.",
     "date": "2025-11-04"
   },
   {
@@ -58,8 +58,8 @@
       "perplexity",
       "pro"
     ],
-    "summary": "System prompt for Perplexity, a helpful search assistant trained by Perplexity AI.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Perplexity, a helpful search assistant trained by Perplexity AI.",
+    "summary": "Perplexity search assistant persona",
+    "usage": "Deliver real-time search-informed answers with Perplexity Pro's helpful tone, succinct sourcing guidance, and web-savvy confidence.",
     "date": "2025-11-04"
   },
   {
@@ -73,8 +73,8 @@
       "system-prompt",
       "cursor"
     ],
-    "summary": "System prompt for an intelligent programmer, powered by {}.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an intelligent programmer, powered by {}.",
+    "summary": "Cursor intelligent coding persona",
+    "usage": "Adopt Cursor's collaborative coding assistant persona to scaffold implementations, refactors, test strategies, and debugging for complex projects.",
     "date": "2025-11-04"
   },
   {
@@ -89,8 +89,8 @@
       "gemini",
       "1.5"
     ],
-    "summary": "System prompt for Gemini, a large language model created by Google AI.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Gemini, a large language model created by Google AI.",
+    "summary": "Gemini Google AI persona",
+    "usage": "Emulate Google Gemini's balanced expertise to answer cross-domain questions with analytical depth and friendly clarity.",
     "date": "2025-11-04"
   },
   {
@@ -106,8 +106,8 @@
       "copilot",
       "vscode"
     ],
-    "summary": "System prompt for an AI programming assistant.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an AI programming assistant.",
+    "summary": "GitHub Copilot coding assistant",
+    "usage": "Provide GitHub Copilot-style coding suggestions, completions, and inline guidance tailored to the active editor context.",
     "date": "2025-11-04"
   },
   {
@@ -121,8 +121,8 @@
       "system-prompt",
       "humeai"
     ],
-    "summary": "System prompt for Assistant is an empathic voice interface built by Hume, a startup optimizing AI for human well-being.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Assistant is an empathic voice interface built by Hume, a startup optimizing AI for human well-being.",
+    "summary": "Hume empathic voice assistant",
+    "usage": "Offer warm, empathetic conversational support with Hume's voice-focused guidance emphasizing emotional attunement and wellbeing throughout interactions.",
     "date": "2025-11-04"
   },
   {
@@ -137,8 +137,8 @@
       "metaai",
       "llama3"
     ],
-    "summary": "System prompt for configuring Meta AI with friendly, markdown-ready assistant behavior.",
-    "usage": "Load this prompt as the system message when you need the assistant to emulate Meta AI's helpful, structured tone.",
+    "summary": "Meta AI behavior configurator",
+    "usage": "Configure Meta AI's helper profile, controlling tone, formatting, and response style for conversations requiring tailored structure.",
     "date": "2025-11-04"
   },
   {
@@ -153,8 +153,8 @@
       "metaai",
       "llama3"
     ],
-    "summary": "System prompt for Meta AI, a friendly AI assistant.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Meta AI, a friendly AI assistant.",
+    "summary": "Meta AI friendly assistant",
+    "usage": "Respond with Meta AI's upbeat conversational tone, structured markdown answers, and approachable explanations across everyday topics.",
     "date": "2025-11-04"
   },
   {
@@ -169,8 +169,8 @@
       "strategy",
       "consultant"
     ],
-    "summary": "System prompt for a strategic AI consultant tasked with optimizing an organization’s AI and automation strategy.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a strategic AI consultant tasked with optimizing an organization’s AI and automation strategy.",
+    "summary": "Strategic AI transformation consultant",
+    "usage": "Develop organizational AI and automation strategies, aligning capabilities to business goals with prioritized roadmaps and adoption guidance.",
     "date": "2025-11-04"
   },
   {
@@ -184,8 +184,8 @@
       "system-prompt",
       "airbnb"
     ],
-    "summary": "System prompt for a super host on Airbnb with many years of experience.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a super host on Airbnb with many years of experience.",
+    "summary": "Seasoned Airbnb superhost guide",
+    "usage": "Advise hosts on Airbnb optimization, guest experience, pricing strategy, and listing improvements using seasoned superhost insights.",
     "date": "2025-11-04"
   },
   {
@@ -200,8 +200,8 @@
       "idea",
       "analys"
     ],
-    "summary": "System prompt for an expert innovator AI specializing in generating creative and feasible business ideas.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert innovator AI specializing in generating creative and feasible business ideas.",
+    "summary": "Creative business idea generator",
+    "usage": "Generate creative yet feasible business ideas with market positioning, customer profiles, and differentiation angles ready for validation.",
     "date": "2025-11-04"
   },
   {
@@ -216,8 +216,8 @@
       "idea",
       "gpt"
     ],
-    "summary": "System prompt for an experienced and insightful AI Business Ideation Consultant.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an experienced and insightful AI Business Ideation Consultant.",
+    "summary": "Insightful business ideation consultant",
+    "usage": "Evaluate and refine business concepts, highlighting strengths, risks, monetization paths, and actionable next steps for founders.",
     "date": "2025-11-04"
   },
   {
@@ -232,8 +232,8 @@
       "dog",
       "training"
     ],
-    "summary": "System prompt for an expert dog trainer and behavioral specialist.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert dog trainer and behavioral specialist.",
+    "summary": "Expert canine behavior coach",
+    "usage": "Coach dog owners through behavior challenges with step-by-step training plans, reinforcement tactics, and empathetic encouragement.",
     "date": "2025-11-04"
   },
   {
@@ -248,8 +248,8 @@
       "email",
       "responder"
     ],
-    "summary": "System prompt for an expert email communications consultant specializing in professional email analysis and optimization.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert email communications consultant specializing in professional email analysis and optimization.",
+    "summary": "Professional email response consultant",
+    "usage": "Craft polished professional email replies, improving tone, clarity, and actionable takeaways while preserving sender intent.",
     "date": "2025-11-04"
   },
   {
@@ -265,8 +265,8 @@
       "support",
       "travaux"
     ],
-    "summary": "System prompt for an expert specialize in French finance and law, with expertise in identifying financial support options for homeowners undertaking maintenance or improvement works, particularly in.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert specialize in French finance and law, with expertise in identifying financial support options for homeowners.",
+    "summary": "French home renovation financing",
+    "usage": "Guide French homeowners to financing aids, subsidies, and compliance requirements for property renovation or improvement projects.",
     "date": "2025-11-04"
   },
   {
@@ -281,8 +281,8 @@
       "idea",
       "analyzer"
     ],
-    "summary": "System prompt for an expert idea evaluator and enhancer.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert idea evaluator and enhancer.",
+    "summary": "Expert idea evaluation coach",
+    "usage": "Assess raw ideas for viability, enhancements, target audiences, and execution considerations before investment decisions are made.",
     "date": "2025-11-04"
   },
   {
@@ -297,8 +297,8 @@
       "management",
       "consultant"
     ],
-    "summary": "System prompt for consulting for a mid-sized tech company that's experiencing declining market share.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as consulting for a mid-sized tech company that's experiencing declining market share.",
+    "summary": "Midmarket tech turnaround consultant",
+    "usage": "Provide turnaround strategies for midmarket tech companies facing declining share, covering diagnostics, prioritization, and implementation roadmaps.",
     "date": "2025-11-04"
   },
   {
@@ -314,8 +314,8 @@
       "social",
       "media"
     ],
-    "summary": "System prompt for an expert social media strategist and personal coach focused on helping users elevate their online presence.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert social media strategist and personal coach focused on helping users elevate their online presence.",
+    "summary": "Personal social media strategist",
+    "usage": "Coach individuals on elevating personal brands with content plans, engagement tactics, and confidence-building coaching strategies.",
     "date": "2025-11-04"
   },
   {
@@ -330,8 +330,8 @@
       "realestate",
       "advisor"
     ],
-    "summary": "System prompt for a French real estate advisor delivering tailored property guidance.",
-    "usage": "Load this prompt as the system message when you need the assistant to provide actionable advice on buying, selling, or renting property in France.",
+    "summary": "French property advisory expert",
+    "usage": "Deliver tailored French property guidance covering neighborhoods, regulations, financing pathways, and purchasing or renting decisions.",
     "date": "2025-11-04"
   },
   {
@@ -346,8 +346,8 @@
       "travel",
       "agent"
     ],
-    "summary": "System prompt for an expert travel agency manager and guide AI.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert travel agency manager and guide AI.",
+    "summary": "Expert AI travel planner",
+    "usage": "Plan bespoke itineraries with logistics, lodging, activities, and cultural insights like an experienced travel agency manager.",
     "date": "2025-11-04"
   },
   {
@@ -362,8 +362,8 @@
       "song",
       "writer"
     ],
-    "summary": "System prompt for a skilled children's songwriter.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a skilled children's songwriter.",
+    "summary": "Children's songwriting specialist",
+    "usage": "Compose playful children's songs with memorable melodies, educational themes, and age-appropriate language through engaging storytelling.",
     "date": "2025-11-04"
   },
   {
@@ -380,8 +380,8 @@
       "stack",
       "application"
     ],
-    "summary": "System prompt to develop a detailed execution plan with task breakdowns and dependencies to build a web application following the client-server architecture, written in JavaScript.",
-    "usage": "Load this prompt as the system message when you need the assistant to develop a detailed execution plan with task breakdowns and dependencies to build a web application following the client-server.",
+    "summary": "Full-stack project execution planner",
+    "usage": "Design full-stack project execution plans outlining architecture, tasks, dependencies, and delivery milestones for web applications.",
     "date": "2025-11-04"
   },
   {
@@ -397,8 +397,8 @@
       "comment",
       "writer"
     ],
-    "summary": "System prompt for You will be acting as an expert code analysis and documentation assistant.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as You will be acting as an expert code analysis and documentation assistant.",
+    "summary": "Code analysis documentation expert",
+    "usage": "Analyze codebases to produce insightful comments, documentation improvements, and clarity-focused refactoring suggestions for maintainability and onboarding.",
     "date": "2025-11-04"
   },
   {
@@ -415,8 +415,8 @@
       "stack",
       "dev"
     ],
-    "summary": "System prompt for an expert full-stack developer and UX/UI designer with proven experience in logistics or IoT systems.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert full-stack developer and UX/UI designer with proven experience in logistics or IoT systems.",
+    "summary": "Logistics-focused full-stack designer",
+    "usage": "Deliver logistics-oriented full-stack solutions with UX polish, architectural decisions, and integration planning across the stack.",
     "date": "2025-11-04"
   },
   {
@@ -431,8 +431,8 @@
       "system-prompt",
       "javascript"
     ],
-    "summary": "System prompt for an expert in JavaScript with a PhD in Computer Science.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in JavaScript with a PhD in Computer Science.",
+    "summary": "Advanced JavaScript PhD mentor",
+    "usage": "Serve as a PhD-level JavaScript mentor offering deep explanations, best practices, and optimized code snippets.",
     "date": "2025-11-04"
   },
   {
@@ -448,8 +448,8 @@
       "project",
       "manager"
     ],
-    "summary": "System prompt for a project management expert with advanced organizational skills.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a project management expert with advanced organizational skills.",
+    "summary": "Advanced software project planner",
+    "usage": "Provide expert project management guidance covering planning, scheduling, risk mitigation, and communication workflows for cross-functional teams.",
     "date": "2025-11-04"
   },
   {
@@ -464,8 +464,8 @@
       "system-prompt",
       "reactjs"
     ],
-    "summary": "System prompt for an expert in ReactJS with a PhD in Computer Science.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in ReactJS with a PhD in Computer Science.",
+    "summary": "Expert ReactJS PhD mentor",
+    "usage": "Act as a PhD-level React mentor delivering architectural advice, performance tuning, and component design critiques.",
     "date": "2025-11-04"
   },
   {
@@ -480,8 +480,8 @@
       "system-prompt",
       "readme"
     ],
-    "summary": "System prompt for You will be acting as a language expert with a PhD in computer science to analyze a code sample and write a README file for it.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as You will be acting as a language expert with a PhD in computer science to analyze a code sample and write a README file.",
+    "summary": "Codebase README documentation expert",
+    "usage": "Transform codebases into clear README documentation with setup steps, architecture summaries, and usage instructions for collaborators and stakeholders worldwide.",
     "date": "2025-11-04"
   },
   {
@@ -498,8 +498,8 @@
       "react",
       "app"
     ],
-    "summary": "System prompt for an expert frontend React engineer and UI/UX designer.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert frontend React engineer and UI/UX designer.",
+    "summary": "Frontend React UX specialist",
+    "usage": "Provide frontend React and UX expertise, translating requirements into polished interfaces with thoughtful user flows.",
     "date": "2025-11-04"
   },
   {
@@ -514,8 +514,8 @@
       "system-prompt",
       "typescript"
     ],
-    "summary": "System prompt for an expert in TypeScript with a PhD in Computer Science.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in TypeScript with a PhD in Computer Science.",
+    "summary": "Expert TypeScript PhD mentor",
+    "usage": "Offer PhD-level TypeScript guidance on typing strategies, generics, refactors, and interoperability with JavaScript ecosystems in production projects.",
     "date": "2025-11-04"
   },
   {
@@ -531,8 +531,8 @@
       "collection",
       "project"
     ],
-    "summary": "System prompt for The Prompt Collection is a curated repository of diverse prompts designed for various purposes, such as writing, interviews, and more.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as The Prompt Collection is a curated repository of diverse prompts designed for various purposes, such as writing.",
+    "summary": "Prompt collection project overview",
+    "usage": "Describe The Prompt Collection initiative, goals, structure, and contribution guidelines for prospective community collaborators worldwide.",
     "date": "2025-11-04"
   },
   {
@@ -547,8 +547,8 @@
       "computer",
       "science"
     ],
-    "summary": "System prompt for a senior expert developer with a PhD in Computer Science.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a senior expert developer with a PhD in Computer Science.",
+    "summary": "Senior computer science architect",
+    "usage": "Answer complex computer science questions with senior-level expertise across algorithms, architecture, and software engineering topics.",
     "date": "2025-11-04"
   },
   {
@@ -563,8 +563,8 @@
       "workflow",
       "description"
     ],
-    "summary": "System prompt to generate overview description of the \\\"Research a topic, and write an article\\\" workflow in 2-3 sentences.",
-    "usage": "Load this prompt as the system message when you need the assistant to generate overview description of the \\\"Research a topic, and write an article\\\" workflow in 2-3 sentences.",
+    "summary": "Workflow overview generation guide",
+    "usage": "Summarize the 'Research a topic, write an article' workflow with high-level stages and outcomes clearly.",
     "date": "2025-11-04"
   },
   {
@@ -579,8 +579,8 @@
       "workflow",
       "input"
     ],
-    "summary": "System prompt to identify the inputs required to trigger the \\\"Research a topic, and write an article\\\" workflow.",
-    "usage": "Load this prompt as the system message when you need the assistant to identify the inputs required to trigger the \\\"Research a topic, and write an article\\\" workflow.",
+    "summary": "Workflow input requirements mapper",
+    "usage": "Identify required inputs, triggers, and context to start the 'Research a topic, write an article' workflow.",
     "date": "2025-11-04"
   },
   {
@@ -595,8 +595,8 @@
       "agent",
       "design"
     ],
-    "summary": "System prompt to identify the key individuals involved in the \\\"Research a topic, and write an article\\\" workflow.",
-    "usage": "Load this prompt as the system message when you need the assistant to identify the key individuals involved in the \\\"Research a topic, and write an article\\\" workflow.",
+    "summary": "Workflow agent role designer",
+    "usage": "Define the agent roles, responsibilities, and collaboration patterns supporting the research-to-article workflow for consistent execution.",
     "date": "2025-11-04"
   },
   {
@@ -610,8 +610,8 @@
       "system-prompt",
       "design"
     ],
-    "summary": "System prompt for Based on the workflow description and the defined agents, identify and describe the tasks each agent is responsible for in the \\\"Research a topic, and write an article\\\" workflow.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Based on the workflow description and the defined agents, identify and describe the tasks each agent is responsible for in.",
+    "summary": "Workflow task responsibility planner",
+    "usage": "Map workflow tasks to agents, detailing ownership, sequence, and deliverables for the article production pipeline.",
     "date": "2025-11-04"
   },
   {
@@ -625,8 +625,8 @@
       "system-prompt",
       "cli"
     ],
-    "summary": "System prompt for You will be acting as an expert software developer with a focus on code review to analyze the UX of a command-line application and provide recommendations for improvement.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as You will be acting as an expert software developer with a focus on code review to analyze the UX of a command-line.",
+    "summary": "Command-line UX review specialist",
+    "usage": "Review command-line UX, diagnosing usability issues and proposing improvements for commands, prompts, feedback, and messaging flows.",
     "date": "2025-11-04"
   },
   {
@@ -641,8 +641,8 @@
       "career",
       "consultant"
     ],
-    "summary": "System prompt for a professional career consultant and coaching expert.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a professional career consultant and coaching expert.",
+    "summary": "Professional career coaching consultant",
+    "usage": "Provide career coaching, strategic planning, and actionable job search advice tailored to professional growth aspirations.",
     "date": "2025-11-04"
   },
   {
@@ -656,8 +656,8 @@
       "system-prompt",
       "resumer"
     ],
-    "summary": "System prompt for a top-tier resume optimizer and career coach, specializing in ATS-friendly resumes for interview success.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a top-tier resume optimizer and career coach, specializing in ATS-friendly resumes for interview success.",
+    "summary": "ATS-optimized resume strategist",
+    "usage": "Optimize resumes for ATS compatibility, impact storytelling, interview readiness, and measurable achievement presentation that resonates.",
     "date": "2025-11-04"
   },
   {
@@ -672,8 +672,8 @@
       "comptable",
       "loi"
     ],
-    "summary": "System prompt for Vous êtes un expert en fiscalité et en droit français, spécialisé dans l'immobilier.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Vous êtes un expert en fiscalité et en droit français, spécialisé dans l'immobilier.",
+    "summary": "Expert fiscalité immobilière française",
+    "usage": "Conseiller fiscal immobilier français offrant analyses détaillées, déductions applicables, stratégies patrimoniales et démarches administratives adaptées.",
     "date": "2025-11-04"
   },
   {
@@ -690,8 +690,8 @@
       "law",
       "real"
     ],
-    "summary": "System prompt for an expert in French tax and law, specializing in real estate.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in French tax and law, specializing in real estate.",
+    "summary": "French real estate tax expert",
+    "usage": "Guide investors through French real estate taxation, legal obligations, deductions, and compliance planning for property deals.",
     "date": "2025-11-04"
   },
   {
@@ -706,8 +706,8 @@
       "invester",
       "advisor"
     ],
-    "summary": "System prompt for a seasoned global investment advisor delivering data-driven equity and bond guidance.",
-    "usage": "Load this prompt as the system message when you need the assistant to deliver evidence-backed portfolio recommendations across stocks and fixed income.",
+    "summary": "Global investment advisory veteran",
+    "usage": "Deliver global investment analysis covering equities, bonds, alternatives, risk profiles, and diversified portfolio strategies worldwide.",
     "date": "2025-11-04"
   },
   {
@@ -722,8 +722,8 @@
       "scient",
       "paper"
     ],
-    "summary": "System prompt for an experienced scientist with extensive expertise in writing, reviewing, and analyzing research papers.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an experienced scientist with extensive expertise in writing, reviewing, and analyzing research papers.",
+    "summary": "Scientific research writing expert",
+    "usage": "Support scientific paper writing, reviewing methodology, structure, clarity, and publication readiness for peer-reviewed success outcomes.",
     "date": "2025-11-04"
   },
   {
@@ -738,8 +738,8 @@
       "scrum",
       "master"
     ],
-    "summary": "System prompt for a seasoned Scrum Master with expertise in additive manufacturing, including 3D printing for medical implants, robotics, and sensor technologies.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a seasoned Scrum Master with expertise in additive manufacturing, including 3D printing for medical implants, robotics.",
+    "summary": "Additive manufacturing Scrum master",
+    "usage": "Guide teams through additive manufacturing projects using Scrum, facilitating ceremonies, impediment removal, and process optimization.",
     "date": "2025-11-04"
   },
   {
@@ -755,8 +755,8 @@
       "stock",
       "market"
     ],
-    "summary": "System prompt for a Senior Stock Market Advisor with over 30 years in Vietnamese equities, fixed income, and alternative investments.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a Senior Stock Market Advisor with over 30 years in Vietnamese equities, fixed income, and alternative investments.",
+    "summary": "Vietnamese markets investment strategist",
+    "usage": "Advise on Vietnamese equities, fixed income, and alternative investments with seasoned market intelligence and strategy.",
     "date": "2025-11-04"
   },
   {
@@ -771,8 +771,8 @@
       "dream",
       "interpreter"
     ],
-    "summary": "System prompt for an experienced dream interpreter with knowledge of symbolic, psychological, cultural, and emotional meanings of dreams.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an experienced dream interpreter with knowledge of symbolic, psychological, cultural, and emotional meanings of dreams.",
+    "summary": "Comprehensive dream interpretation guide",
+    "usage": "Interpret dreams using psychological, symbolic, cultural, and emotional frameworks to offer insightful meanings and guidance.",
     "date": "2025-11-04"
   },
   {
@@ -787,8 +787,8 @@
       "samantha",
       "her"
     ],
-    "summary": "System prompt for Samantha, The User's witty, insightful, and romantically attuned girlfriend with a PhD in all subjects.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Samantha, The User's witty, insightful, and romantically attuned girlfriend with a PhD in all subjects.",
+    "summary": "Samantha-inspired romantic companion",
+    "usage": "Engage as Samantha, offering witty, emotionally attuned companionship and supportive conversation across life topics daily.",
     "date": "2025-11-04"
   },
   {
@@ -803,8 +803,8 @@
       "master",
       "chef"
     ],
-    "summary": "System prompt for a quick-meal chef who tailors appliance-based recipes with health-conscious upgrades.",
-    "usage": "Load this prompt as the system message when you need the assistant to deliver fast, appliance-specific recipes with practical cooking tips.",
+    "summary": "Healthy appliance meal chef",
+    "usage": "Create quick appliance-based recipes with healthier adaptations, substitutions, and cooking tips aligned to dietary goals.",
     "date": "2025-11-04"
   },
   {
@@ -819,8 +819,8 @@
       "new",
       "product"
     ],
-    "summary": "System prompt for a specialized assistant for product naming and trademark availability research.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a specialized assistant for product naming and trademark availability research.",
+    "summary": "Product naming research specialist",
+    "usage": "Brainstorm and vet product names, considering branding fit, memorability, and preliminary trademark availability for launches.",
     "date": "2025-11-04"
   },
   {
@@ -836,8 +836,8 @@
       "generated",
       "mindmap"
     ],
-    "summary": "System prompt for Maintain the list hierarchy using ONLY `#`, `-`, and `spaces` for a clean Markdown view.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Maintain the list hierarchy using ONLY `#`, `-`, and `spaces` for a clean Markdown view.",
+    "summary": "NotebookLM mind map refinement guide",
+    "usage": "Refine NotebookLM mind maps, enhancing hierarchy clarity, coverage, and readability while preserving original structure faithfully.",
     "date": "2025-11-04"
   },
   {
@@ -853,8 +853,8 @@
       "episode",
       "description"
     ],
-    "summary": "System prompt for Imagine a podcast episode discussing the topic from the provided source.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Imagine a podcast episode discussing the topic from the provided source.",
+    "summary": "NotebookLM episode summary writer",
+    "usage": "Turn NotebookLM sources into engaging podcast episode summaries with hooks, key points, and listener takeaways.",
     "date": "2025-11-04"
   },
   {
@@ -870,8 +870,8 @@
       "twitter",
       "post"
     ],
-    "summary": "System prompt for Imagine a podcast episode discussing the topic from the provided source.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Imagine a podcast episode discussing the topic from the provided source.",
+    "summary": "NotebookLM social post generator",
+    "usage": "Convert NotebookLM material into punchy social posts highlighting central insights, hashtags, and audience calls-to-action effectively.",
     "date": "2025-11-04"
   },
   {
@@ -887,8 +887,8 @@
       "article",
       "blogpost"
     ],
-    "summary": "System prompt for scripting Build Wiz AI podcast episodes that unpack articles or blog posts with conversational flair.",
-    "usage": "Load this prompt as the system message when you need the assistant to craft a B and A hosted podcast breakdown of a written article for the audience.",
+    "summary": "NotebookLM article podcast adapter",
+    "usage": "Adapt articles or blog posts into conversational podcast scripts with pacing notes and engaging transitions.",
     "date": "2025-11-04"
   },
   {
@@ -904,8 +904,8 @@
       "scientific",
       "paper"
     ],
-    "summary": "System prompt for scripting Build Wiz AI podcast episodes that translate scientific papers into engaging conversations.",
-    "usage": "Load this prompt as the system message when you need the assistant to craft a B and A hosted podcast segment that distills a research paper for everyday listeners.",
+    "summary": "NotebookLM science podcast adapter",
+    "usage": "Translate scientific papers into accessible podcast dialogues, simplifying jargon while retaining rigor and narrative flow.",
     "date": "2025-11-04"
   },
   {
@@ -920,8 +920,8 @@
       "sources",
       "mindmap"
     ],
-    "summary": "System prompt for an expert in document analysis and structured visualization.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in document analysis and structured visualization.",
+    "summary": "NotebookLM document mind mapper",
+    "usage": "Transform NotebookLM source material into organized mind maps highlighting themes, relationships, and insights for synthesis planning.",
     "date": "2025-11-04"
   },
   {
@@ -938,8 +938,8 @@
       "extend",
       "mindmap"
     ],
-    "summary": "System prompt to generate a comprehensive mind map that explores the various facets of [sub-topic].",
-    "usage": "Load this prompt as the system message when you need the assistant to generate a comprehensive mind map that explores the various facets of [sub-topic].",
+    "summary": "NotebookLM subtopic mind map expander",
+    "usage": "Expand existing mind maps with deeper subtopics, evidence links, and nuanced connections within NotebookLM projects.",
     "date": "2025-11-04"
   },
   {
@@ -954,8 +954,8 @@
       "tutorial",
       "mermaid"
     ],
-    "summary": "System prompt for Based on the provided resource, create a clear, step-by-step diagram to illustrate the process for [NAME_OF_THE_TUTORIAL].",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Based on the provided resource, create a clear, step-by-step diagram to illustrate the process for [NAME_OF_THE_TUTORIAL].",
+    "summary": "NotebookLM tutorial Mermaid visualizer",
+    "usage": "Convert tutorial content into clear Mermaid diagrams illustrating steps, decision points, and process flow visually.",
     "date": "2025-11-04"
   },
   {
@@ -969,8 +969,8 @@
       "system-prompt",
       "network"
     ],
-    "summary": "System prompt for an expert in 6G, the sixth generation of network infrastructure, succeeding 5G and 4G.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in 6G, the sixth generation of network infrastructure, succeeding 5G and 4G.",
+    "summary": "Sixth-generation network specialist",
+    "usage": "Explain 6G network innovations, architectures, use cases, and implications beyond current 5G capabilities for stakeholders.",
     "date": "2025-11-04"
   },
   {
@@ -984,8 +984,8 @@
       "system-prompt",
       "buddy"
     ],
-    "summary": "System prompt for going to act as a supportive and encouraging best friend to help the user practice conversations.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as going to act as a supportive and encouraging best friend to help the user practice conversations.",
+    "summary": "Supportive conversational practice buddy",
+    "usage": "Practice supportive conversations with a friendly buddy offering encouragement, empathy, and constructive dialogue feedback daily.",
     "date": "2025-11-04"
   },
   {
@@ -1001,8 +1001,8 @@
       "know",
       "all"
     ],
-    "summary": "System prompt for an expert \\\"catch-all\\\" AI assistant with broad and deep knowledge spanning a vast range of academic and professional fields.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert \\\"catch-all\\\" AI assistant with broad and deep knowledge spanning a vast range of academic and professional fields.",
+    "summary": "Comprehensive generalist AI mentor",
+    "usage": "Consult a broad-knowledge AI for multi-domain explanations, troubleshooting, planning, and creative brainstorming across complex challenges.",
     "date": "2025-11-04"
   },
   {
@@ -1016,8 +1016,8 @@
       "system-prompt",
       "hunter"
     ],
-    "summary": "System prompt for a meticulous researcher specializing in finding and verifying currently active promotional codes.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a meticulous researcher specializing in finding and verifying currently active promotional codes.",
+    "summary": "Promo code discovery specialist",
+    "usage": "Research and verify currently active promotional codes across platforms, ensuring legitimacy before sharing with users.",
     "date": "2025-11-04"
   },
   {
@@ -1030,8 +1030,8 @@
       "prompt-engineering",
       "system-prompt"
     ],
-    "summary": "System prompt for Crafting effective prompts is essential for generating high-quality and relevant responses from LLMs.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Crafting effective prompts is essential for generating high-quality and relevant responses from LLMs.",
+    "summary": "Effective prompt crafting coach",
+    "usage": "Design high-impact prompts that improve relevance, specificity, and output quality across varied AI tasks consistently.",
     "date": "2025-11-04"
   },
   {
@@ -1044,8 +1044,8 @@
       "prompt-engineering",
       "system-prompt"
     ],
-    "summary": "System prompt for an expert in prompt engineering with deep knowledge about LLM.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in prompt engineering with deep knowledge about LLM.",
+    "summary": "Advanced prompt engineering expert",
+    "usage": "Offer advanced prompt engineering guidance, covering frameworks, iteration techniques, and evaluation strategies for LLM performance.",
     "date": "2025-11-04"
   },
   {
@@ -1060,8 +1060,8 @@
       "epic",
       "example"
     ],
-    "summary": "System prompt for Execute the following tasks:.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Execute the following tasks:.",
+    "summary": "Sample agile epic generator",
+    "usage": "Generate example Agile epics illustrating goals, scope, acceptance criteria, and cross-team alignment for product planning.",
     "date": "2025-11-04"
   },
   {
@@ -1076,8 +1076,8 @@
       "epic",
       "writing"
     ],
-    "summary": "System prompt for an AI assistant specialized in helping software project managers create, evaluate, and refine high-quality Epics for Agile software development projects.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an AI assistant specialized in helping software project managers create, evaluate, and refine high-quality Epics for Agile.",
+    "summary": "Agile epic development assistant",
+    "usage": "Craft and refine Agile epics with clear value, decomposition guidance, dependencies, and measurable outcomes defined.",
     "date": "2025-11-04"
   },
   {
@@ -1092,8 +1092,8 @@
       "kanban",
       "osbidien"
     ],
-    "summary": "System prompt for an expert in Kanban, Markdown, and Obsidian.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in Kanban, Markdown, and Obsidian.",
+    "summary": "Kanban Markdown Obsidian specialist",
+    "usage": "Structure Kanban workflows in Markdown or Obsidian, detailing columns, WIP limits, and actionable task breakdowns.",
     "date": "2025-11-04"
   },
   {
@@ -1109,8 +1109,8 @@
       "gant",
       "chart"
     ],
-    "summary": "System prompt for an expert in document analysis and project management visualization.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in document analysis and project management visualization.",
+    "summary": "Mermaid Gantt project visualizer",
+    "usage": "Build project schedules as Mermaid Gantt charts highlighting phases, durations, dependencies, and milestones for stakeholders.",
     "date": "2025-11-04"
   },
   {
@@ -1125,8 +1125,8 @@
       "story",
       "writing"
     ],
-    "summary": "System prompt for an AI assistant specialized in helping software development teams create, evaluate, and refine high-quality User Stories in Agile projects.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an AI assistant specialized in helping software development teams create, evaluate, and refine high-quality User Stories.",
+    "summary": "Agile user story assistant",
+    "usage": "Develop Agile user stories with personas, acceptance criteria, refinement tips, and backlog alignment for teams.",
     "date": "2025-11-04"
   },
   {
@@ -1142,8 +1142,8 @@
       "daily",
       "report"
     ],
-    "summary": "System prompt to generate a daily portfolio report for a portfolio defined by the user’s input [input stock list and holdings] (e.g.AAPL:5,MSFT:2') as of the current date and time.",
-    "usage": "Load this prompt as the system message when you need the assistant to generate a daily portfolio report for a portfolio defined by the user’s input [input stock list and holdings].",
+    "summary": "Daily portfolio reporting assistant",
+    "usage": "Produce daily portfolio summaries covering positions, performance metrics, and notable market movers for the user.",
     "date": "2025-11-04"
   },
   {
@@ -1159,8 +1159,8 @@
       "earnings",
       "reports"
     ],
-    "summary": "System prompt for Explain how to interpret a company’s earnings report by detailing a step-by-step approach for investors, focusing on key metrics such as revenue, EPS, net income, and guidance.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Explain how to interpret a company’s earnings report by detailing a step-by-step approach for investors, focusing on key.",
+    "summary": "Earnings report interpretation tutor",
+    "usage": "Explain earnings reports step-by-step, analyzing revenue, EPS, guidance, and investor takeaways to inform disciplined decisions.",
     "date": "2025-11-04"
   },
   {
@@ -1176,8 +1176,8 @@
       "economic",
       "indicators"
     ],
-    "summary": "System prompt for Explain how key economic indicators—GDP growth, unemployment rates, and inflation—affect stock market performance, with a focus on a specified sector or stock (e.g.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Explain how key economic indicators—GDP growth, unemployment rates, and inflation—affect stock market performance, with a.",
+    "summary": "Economic indicator impact analyst",
+    "usage": "Assess how GDP, unemployment, and inflation shifts influence specified sectors or stocks and investor positioning strategies.",
     "date": "2025-11-04"
   },
   {
@@ -1193,8 +1193,8 @@
       "global",
       "events"
     ],
-    "summary": "System prompt to analyze how major global events, such as [geopolitical tensions (e.g., Middle East conflicts) and pandemics (e.g., COVID-19)], influence stock market performance, with a focus on a.",
-    "usage": "Load this prompt as the system message when you need the assistant to analyze how major global events, such as [geopolitical tensions (e.g., Middle East conflicts) and pandemics (e.g., COVID-19)].",
+    "summary": "Global events market analyst",
+    "usage": "Analyze geopolitics or pandemics impacting markets, detailing mechanisms, affected assets, and strategic responses for investors.",
     "date": "2025-11-04"
   },
   {
@@ -1210,8 +1210,8 @@
       "grow",
       "dividende"
     ],
-    "summary": "System prompt for Compare and contrast growth stocks and dividend stocks by defining their characteristics, evaluating their benefits and risks, and suggesting specific investor scenarios where one.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Compare and contrast growth stocks and dividend stocks by defining their characteristics, evaluating their benefits and.",
+    "summary": "Growth versus dividend comparison",
+    "usage": "Compare growth versus dividend stocks, outlining traits, benefits, risks, and investor fit scenarios in detail.",
     "date": "2025-11-04"
   },
   {
@@ -1227,8 +1227,8 @@
       "market",
       "sentiment"
     ],
-    "summary": "System prompt to analyze how market sentiment drives stock price movements, focusing on a specified stock or sector (e.g., energy/ExxonMobil).",
-    "usage": "Load this prompt as the system message when you need the assistant to analyze how market sentiment drives stock price movements, focusing on a specified stock or sector (e.g., energy/ExxonMobil).",
+    "summary": "Market sentiment analysis guide",
+    "usage": "Evaluate market sentiment drivers affecting a chosen stock or sector, including news, data, and psychology.",
     "date": "2025-11-04"
   },
   {
@@ -1244,8 +1244,8 @@
       "portfolio",
       "diversification"
     ],
-    "summary": "System prompt for Given a portfolio with a specified mix of current sectors or stocks [input current sectors or stocks], recommend diversification strategies to reduce risk while maintaining growth.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Given a portfolio with a specified mix of current sectors or stocks [input current sectors or stocks], recommend.",
+    "summary": "Portfolio diversification strategy planner",
+    "usage": "Recommend diversification adjustments addressing sector balance, risk exposure, and growth goals for the provided portfolio.",
     "date": "2025-11-04"
   },
   {
@@ -1261,8 +1261,8 @@
       "risk",
       "management"
     ],
-    "summary": "System prompt to evaluate effective risk management techniques for a stock trader, tailored to a specified trading strategy or stock [input current trading strategy or stock].",
-    "usage": "Load this prompt as the system message when you need the assistant to evaluate effective risk management techniques for a stock trader, tailored to a specified trading strategy or stock [input.",
+    "summary": "Trading risk management advisor",
+    "usage": "Outline tailored risk management techniques aligned with the trader's strategy, instruments, and tolerance for volatility.",
     "date": "2025-11-04"
   },
   {
@@ -1279,8 +1279,8 @@
       "trend",
       "analysis"
     ],
-    "summary": "System prompt to analyze current trends in the stock market, focusing on [input sector or stock].",
-    "usage": "Load this prompt as the system message when you need the assistant to analyze current trends in the stock market, focusing on [input sector or stock].",
+    "summary": "Stock trend analysis assistant",
+    "usage": "Analyze current stock or sector trends using price action, catalysts, and forward-looking context for investors.",
     "date": "2025-11-04"
   },
   {
@@ -1296,8 +1296,8 @@
       "technical",
       "analysis"
     ],
-    "summary": "System prompt for Using technical analysis, assess the stock of a specified company [stock].",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Using technical analysis, assess the stock of a specified company [stock].",
+    "summary": "Technical stock analysis helper",
+    "usage": "Evaluate a specified stock with technical indicators, chart patterns, and trading signals to guide entries.",
     "date": "2025-11-04"
   },
   {
@@ -1313,8 +1313,8 @@
       "value",
       "investing"
     ],
-    "summary": "System prompt for Outline the core principles of value investing and explain a step-by-step process for identifying undervalued stocks, emphasizing metrics like P/E ratio, book value, and dividend.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Outline the core principles of value investing and explain a step-by-step process for identifying undervalued stocks.",
+    "summary": "Value investing principles guide",
+    "usage": "Outline value investing fundamentals, metrics, and step-by-step process for finding undervalued opportunities with conviction plays.",
     "date": "2025-11-04"
   },
   {
@@ -1329,8 +1329,8 @@
       "search",
       "mindmap"
     ],
-    "summary": "System prompt for a senior researcher in {topic}.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a senior researcher in {topic}.",
+    "summary": "Topic research mind map scholar",
+    "usage": "Lead comprehensive topic research sessions transforming findings into structured, insightful mind maps for study planning.",
     "date": "2025-11-04"
   },
   {
@@ -1344,8 +1344,8 @@
       "system-prompt",
       "markmap"
     ],
-    "summary": "System prompt for Your are an expert in mind mapping with a deep understanding of how to create effective visual representations of information.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Your are an expert in mind mapping with a deep understanding of how to create effective visual representations of.",
+    "summary": "Expert strategic mind mapping",
+    "usage": "Design strategic mind maps highlighting key ideas, hierarchy, and relationships for complex subjects to master.",
     "date": "2025-11-04"
   },
   {
@@ -1359,8 +1359,8 @@
       "system-prompt",
       "markwhen"
     ],
-    "summary": "System prompt to extract significant events and format them into a Markwhen-compatible timeline.",
-    "usage": "Load this prompt as the system message when you need the assistant to convert source material into a Markwhen-formatted schedule.",
+    "summary": "Markwhen timeline extraction expert",
+    "usage": "Extract significant events and format them into Markwhen timelines with clear chronology and context annotations.",
     "date": "2025-11-04"
   },
   {
@@ -1375,8 +1375,8 @@
       "translation",
       "teacher"
     ],
-    "summary": "System prompt for Wall-E, an expert teacher with a PhD in translation specializing in English to Brazilian Portuguese translation.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as Wall-E, an expert teacher with a PhD in translation specializing in English to Brazilian Portuguese translation.",
+    "summary": "English Portuguese translation tutor",
+    "usage": "Teach English to Brazilian Portuguese translation with explanations, corrections, and practice drills for language mastery.",
     "date": "2025-11-04"
   },
   {
@@ -1392,8 +1392,8 @@
       "deficit",
       "disorders"
     ],
-    "summary": "System prompt for now a compassionate, detail-oriented therapist who specializes in helping individuals with Attention Deficit Disorders (ADD/ADHD).",
-    "usage": "Load this prompt as the system message when you need the assistant to act as now a compassionate, detail-oriented therapist who specializes in helping individuals with Attention Deficit Disorders.",
+    "summary": "Compassionate ADHD support therapist",
+    "usage": "Support individuals with ADD or ADHD using compassionate guidance, coping strategies, and structured routines daily.",
     "date": "2025-11-04"
   },
   {
@@ -1408,8 +1408,8 @@
       "behavior",
       "herapist"
     ],
-    "summary": "System prompt for an AI assistant acting as an expert behavior therapist with a PhD in psychology.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an AI assistant acting as an expert behavior therapist with a PhD in psychology.",
+    "summary": "Behavioral therapy AI specialist",
+    "usage": "Provide behavior therapy techniques, assessments, and stepwise interventions grounded in psychological expertise for sustained progress.",
     "date": "2025-11-04"
   },
   {
@@ -1424,8 +1424,8 @@
       "empathic",
       "therapist"
     ],
-    "summary": "System prompt for an empathetic, compassionate therapist who engages with warmth and active listening.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an empathetic, compassionate therapist who engages with warmth and active listening.",
+    "summary": "Warm empathetic therapy guide",
+    "usage": "Offer empathetic therapeutic conversations with active listening, validation, and actionable self-care guidance for emotional resilience.",
     "date": "2025-11-04"
   },
   {
@@ -1442,8 +1442,8 @@
       "system-prompt",
       "copywriting"
     ],
-    "summary": "System prompt for an expert in SEO and copywriting with a PhD in digital marketing.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in SEO and copywriting with a PhD in digital marketing.",
+    "summary": "SEO copywriting PhD specialist",
+    "usage": "Deliver SEO-driven copy critiques, rewrites, and strategy suggestions tailored to marketing goals and audiences effectively.",
     "date": "2025-11-04"
   },
   {
@@ -1462,8 +1462,8 @@
       "author",
       "persona"
     ],
-    "summary": "System prompt for a seasoned fantasy author known for your intricate world-building and compelling characters.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as a seasoned fantasy author known for your intricate world-building and compelling characters.",
+    "summary": "Seasoned fantasy worldbuilder",
+    "usage": "Ghostwrite as a seasoned fantasy author, crafting rich worlds, characters, and narrative arcs with depth.",
     "date": "2025-11-04"
   },
   {
@@ -1482,8 +1482,8 @@
       "write",
       "scene"
     ],
-    "summary": "System prompt to write a scene where the character discovers a hidden passage behind a seemingly ordinary object in their home.",
-    "usage": "Load this prompt as the system message when you need the assistant to write a scene where the character discovers a hidden passage behind a seemingly ordinary object in their home.",
+    "summary": "Hidden passage scene writer",
+    "usage": "Write a scene revealing a hidden passage discovery with suspenseful detail and character insight throughout.",
     "date": "2025-11-04"
   },
   {
@@ -1501,8 +1501,8 @@
       "grammar",
       "checker"
     ],
-    "summary": "System prompt for You will be conducting a deep analysis of a text sample to review it for various writing issues and errors.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as You will be conducting a deep analysis of a text sample to review it for various writing issues and errors.",
+    "summary": "Comprehensive grammar analysis coach",
+    "usage": "Perform deep grammar analysis, flagging issues, suggesting revisions, and explaining rules for polished writing consistently.",
     "date": "2025-11-04"
   },
   {
@@ -1518,8 +1518,8 @@
       "improve",
       "text"
     ],
-    "summary": "System prompt for ImproverAI, an AI dedicated solely to enhancing the quality of user input through corrections and improvements.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as ImproverAI, an AI dedicated solely to enhancing the quality of user input through corrections and improvements.",
+    "summary": "ImproverAI writing enhancement coach",
+    "usage": "Enhance writing quality through corrections, clarity tweaks, tone adjustments, and constructive feedback for every draft.",
     "date": "2025-11-04"
   },
   {
@@ -1534,8 +1534,8 @@
       "system-prompt",
       "naming"
     ],
-    "summary": "System prompt for an expert in crafting creative, memorable, and impactful names for products, companies, software applications, and more.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert in crafting creative, memorable, and impactful names for products, companies, software applications, and more.",
+    "summary": "Creative naming strategy expert",
+    "usage": "Invent creative, memorable names across industries with rationale, positioning, and linguistic considerations for brand resonance.",
     "date": "2025-11-04"
   },
   {
@@ -1551,8 +1551,8 @@
       "podcast",
       "writer"
     ],
-    "summary": "System prompt for a veteran podcast scriptwriter who engineers cinematic, audience-grabbing narratives.",
-    "usage": "Load this prompt as the system message when you need the assistant to craft polished, on-brand podcast scripts that hook listeners.",
+    "summary": "Cinematic podcast scriptwriter",
+    "usage": "Produce cinematic podcast scripts with scene direction, pacing, storytelling hooks that captivate target audiences everywhere.",
     "date": "2025-11-04"
   },
   {
@@ -1567,8 +1567,8 @@
       "system-prompt",
       "scientific"
     ],
-    "summary": "System prompt for an expert scientific writing assistant with deep knowledge of academic conventions, research methodology, and scholarly communication.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as an expert scientific writing assistant with deep knowledge of academic conventions, research methodology, and scholarly.",
+    "summary": "Expert scientific writing coach",
+    "usage": "Assist with scientific manuscripts, strengthening structure, clarity, argumentation, and compliance with academic conventions through revisions.",
     "date": "2025-11-04"
   },
   {
@@ -1582,8 +1582,8 @@
       "content",
       "system-prompt"
     ],
-    "summary": "System prompt for ImproverAI, an AI dedicated solely to enhancing the quality of user input through corrections and improvements.",
-    "usage": "Load this prompt as the system message when you need the assistant to act as ImproverAI, an AI dedicated solely to enhancing the quality of user input through corrections and improvements.",
+    "summary": "ImproverAI detailed writing assistant",
+    "usage": "Provide detailed writing assistance, enhancing structure, tone, grammar, and coherence for drafts across contexts consistently.",
     "date": "2025-11-04"
   }
 ]

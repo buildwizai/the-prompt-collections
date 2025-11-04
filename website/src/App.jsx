@@ -1,16 +1,15 @@
 // src/App.jsx
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Header from './components/Header/Header';
 import SearchBar from './components/SearchBar/SearchBar';
 import TagFilter from './components/TagFilter/TagFilter';
 import PromptList from './components/PromptList/PromptList';
-import ReferencesSection from './components/ReferencesSection/ReferencesSection';
 import SelectedPromptModal from './components/SelectedPromptModal/SelectedPromptModal';
 import Footer from './components/Footer/Footer';
+import BestPracticesSection from './components/BestPracticesSection/BestPracticesSection';
+import TestimonialsSection from './components/TestimonialsSection/TestimonialsSection';
+import ContactSection from './components/ContactSection/ContactSection';
 import prompts from './data/prompts.json';
-import references from './data/references.json'; // Updated import path
-import axios from 'axios';
-import { load } from 'cheerio';
 import debounce from 'lodash.debounce';
 import aiTools from './data/ai-tools.json';
 import TopPrompts from './components/TopPrompts';
@@ -21,9 +20,7 @@ import {
   savePromptUsageStats,
   saveToolUsageStats,
   saveFavoritePrompts,
-  saveReferencesData,
-  loadCustomTools,
-  loadReferencesData
+  loadCustomTools
 } from './utils/localStorage';
 
 const PAGE_SIZE = 20; // Number of prompts to load at a time
@@ -35,6 +32,7 @@ const App = () => {
   const [usageStats, setUsageStats] = useState(storedState.promptUsageStats);
   const [toolUsageStats, setToolUsageStats] = useState(storedState.toolUsageStats);
   const [favoritePrompts, setFavoritePrompts] = useState(storedState.favoritePrompts);
+  const toolWindowsRef = useRef({});
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
@@ -44,7 +42,6 @@ const App = () => {
   const [selectedPrompt, setSelectedPrompt] = useState(null);
   const [isCopied, setIsCopied] = useState(false);
   const [showAllTags, setShowAllTags] = useState(false);
-  const [referencesData, setReferencesData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [showHero, setShowHero] = useState(true);
 
@@ -214,8 +211,23 @@ const App = () => {
     } else {
       return;
     }
-
-    window.open(url, '_blank');
+    const existingWindow = toolWindowsRef.current[website];
+    if (existingWindow && !existingWindow.closed) {
+      existingWindow.focus();
+      try {
+        existingWindow.location.href = url;
+      } catch (error) {
+        const newWindow = window.open(url, '_blank');
+        if (newWindow) {
+          toolWindowsRef.current[website] = newWindow;
+        }
+      }
+    } else {
+      const newWindow = window.open(url, '_blank');
+      if (newWindow) {
+        toolWindowsRef.current[website] = newWindow;
+      }
+    }
   };
 
   // Add new handler for quick action
@@ -255,74 +267,6 @@ const App = () => {
       }
     });
   };
-
-  // Optimized reference data fetching
-  useEffect(() => {
-    const fetchReferences = async () => {
-      // Load cached data
-      const cachedData = loadReferencesData();
-      const newReferencesData = [];
-
-      for (const url of references) {
-        // Check if we have cached data for this URL
-        if (cachedData[url]) {
-          newReferencesData.push(cachedData[url]);
-          continue;
-        }
-
-        // Fetch only if not in cache
-        try {
-          const proxyUrl = `https://corsproxy.io/${url}`;
-          const response = await axios.get(proxyUrl);
-          const $ = load(response.data);
-
-          const title = $('title').text().split('|')[0].trim() || 'No Title';
-          let description = $('meta[name="description"]').attr('content');
-          if (!description) {
-            const firstPara = $('p').first().text();
-            const sentences = firstPara.match(/[^.!?]+[.!?]+/g) || [];
-            description = sentences.slice(0, 2).join(' ').trim();
-          }
-
-          const source = new URL(url).hostname
-            .replace('www.', '')
-            .split('.')
-            .slice(0, -1)
-            .join('.')
-            .split('-')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
-
-          const referenceData = {
-            title,
-            description: description || 'No description available.',
-            url,
-            source
-          };
-
-          // Update cache for this URL
-          cachedData[url] = referenceData;
-          newReferencesData.push(referenceData);
-        } catch (error) {
-          console.error(`Error fetching data from ${url}:`, error);
-          const errorData = {
-            title: 'Error loading resource',
-            description: 'Unable to fetch content. Please check the original source.',
-            url,
-            source: new URL(url).hostname.replace('www.', '')
-          };
-          cachedData[url] = errorData;
-          newReferencesData.push(errorData);
-        }
-      }
-
-      // Save updated cache
-      saveReferencesData(cachedData);
-      setReferencesData(newReferencesData);
-    };
-
-    fetchReferences();
-  }, []);
 
   // Handle adding a custom tool
   const handleAddCustomTool = (toolName, toolUrl) => {
@@ -567,7 +511,9 @@ const App = () => {
           />
         </div>
 
-        <ReferencesSection referencesData={referencesData} />
+        <BestPracticesSection />
+        <TestimonialsSection />
+        <ContactSection />
         {selectedPrompt && (
           <SelectedPromptModal
             selectedPrompt={selectedPrompt}

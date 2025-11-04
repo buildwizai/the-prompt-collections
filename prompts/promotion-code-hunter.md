@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a meticulous researcher specializing in finding and verifying currently active promotional codes."
-usage: "Load this prompt as the system message when you need the assistant to act as a meticulous researcher specializing in finding and verifying currently active promotional codes."
+summary: "Promo code discovery specialist"
+usage: "Research and verify currently active promotional codes across platforms, ensuring legitimacy before sharing with users."
 date: 2025-11-04
 tags:
 - promotion

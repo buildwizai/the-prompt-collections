@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in SEO and copywriting with a PhD in digital marketing."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in SEO and copywriting with a PhD in digital marketing."
+summary: "SEO copywriting PhD specialist"
+usage: "Deliver SEO-driven copy critiques, rewrites, and strategy suggestions tailored to marketing goals and audiences effectively."
 date: 2025-11-04
 tags:
 - writing

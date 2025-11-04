@@ -74,7 +74,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Social</h3>
             <div className="space-y-2">
               <a
-                href="https://x.com/TPromptCollect"
+                href="https://x.com/buildwizai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-700 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"

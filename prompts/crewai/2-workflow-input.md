@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to identify the inputs required to trigger the \"Research a topic, and write an article\" workflow."
-usage: "Load this prompt as the system message when you need the assistant to identify the inputs required to trigger the \"Research a topic, and write an article\" workflow."
+summary: "Workflow input requirements mapper"
+usage: "Identify required inputs, triggers, and context to start the 'Research a topic, write an article' workflow."
 date: 2025-11-04
 tags:
 - automation

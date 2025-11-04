@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Maintain the list hierarchy using ONLY `#`, `-`, and `spaces` for a clean Markdown view."
-usage: "Load this prompt as the system message when you need the assistant to act as Maintain the list hierarchy using ONLY `#`, `-`, and `spaces` for a clean Markdown view."
+summary: "NotebookLM mind map refinement guide"
+usage: "Refine NotebookLM mind maps, enhancing hierarchy clarity, coverage, and readability while preserving original structure faithfully."
 date: 2025-11-04
 tags:
 - notebooklm

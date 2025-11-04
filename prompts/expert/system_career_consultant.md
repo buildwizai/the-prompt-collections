@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a professional career consultant and coaching expert."
-usage: "Load this prompt as the system message when you need the assistant to act as a professional career consultant and coaching expert."
+summary: "Professional career coaching consultant"
+usage: "Provide career coaching, strategic planning, and actionable job search advice tailored to professional growth aspirations."
 date: 2025-11-04
 tags:
 - expertise

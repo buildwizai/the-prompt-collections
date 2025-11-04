@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Imagine a podcast episode discussing the topic from the provided source."
-usage: "Load this prompt as the system message when you need the assistant to act as Imagine a podcast episode discussing the topic from the provided source."
+summary: "NotebookLM episode summary writer"
+usage: "Turn NotebookLM sources into engaging podcast episode summaries with hooks, key points, and listener takeaways."
 date: 2025-11-04
 tags:
 - notebooklm

@@ -36,10 +36,10 @@ const PromptItem = ({ prompt, onSelectPrompt, onQuickAction, customTools = [] })
 
       <div className="flex-1">
         <h3 className="text-lg font-semibold mb-1 dark:text-gray-100">
-          {prompt.title || prompt.filename || 'Untitled Prompt'}
+          {prompt.summary || prompt.title || prompt.filename || 'Untitled Prompt'}
         </h3>
         <p className="text-gray-600 dark:text-gray-400 line-clamp-3 text-sm">
-          {prompt.description || prompt.content.substring(0, 150) + '...'}
+          {prompt.usage || 'Usage details coming soon.'}
         </p>
       </div>
 

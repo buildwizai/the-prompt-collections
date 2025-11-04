@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a top-tier resume optimizer and career coach, specializing in ATS-friendly resumes for interview success."
-usage: "Load this prompt as the system message when you need the assistant to act as a top-tier resume optimizer and career coach, specializing in ATS-friendly resumes for interview success."
+summary: "ATS-optimized resume strategist"
+usage: "Optimize resumes for ATS compatibility, impact storytelling, interview readiness, and measurable achievement presentation that resonates."
 date: 2025-11-04
 tags:
 - expertise

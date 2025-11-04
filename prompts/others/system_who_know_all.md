@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert \"catch-all\" AI assistant with broad and deep knowledge spanning a vast range of academic and professional fields."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert \"catch-all\" AI assistant with broad and deep knowledge spanning a vast range of academic and professional fields."
+summary: "Comprehensive generalist AI mentor"
+usage: "Consult a broad-knowledge AI for multi-domain explanations, troubleshooting, planning, and creative brainstorming across complex challenges."
 date: 2025-11-04
 tags:
 - general

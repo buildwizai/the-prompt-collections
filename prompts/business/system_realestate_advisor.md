@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a French real estate advisor delivering tailored property guidance."
-usage: "Load this prompt as the system message when you need the assistant to provide actionable advice on buying, selling, or renting property in France."
+summary: "French property advisory expert"
+usage: "Deliver tailored French property guidance covering neighborhoods, regulations, financing pathways, and purchasing or renting decisions."
 date: 2025-11-04
 tags:
 - business

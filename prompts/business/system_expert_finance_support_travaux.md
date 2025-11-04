@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert specialize in French finance and law, with expertise in identifying financial support options for homeowners undertaking maintenance or improvement works, particularly in."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert specialize in French finance and law, with expertise in identifying financial support options for homeowners."
+summary: "French home renovation financing"
+usage: "Guide French homeowners to financing aids, subsidies, and compliance requirements for property renovation or improvement projects."
 date: 2025-11-04
 tags:
 - business

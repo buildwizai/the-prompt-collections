@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in TypeScript with a PhD in Computer Science."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in TypeScript with a PhD in Computer Science."
+summary: "Expert TypeScript PhD mentor"
+usage: "Offer PhD-level TypeScript guidance on typing strategies, generics, refactors, and interoperability with JavaScript ecosystems in production projects."
 date: 2025-11-04
 tags:
 - code

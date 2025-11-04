@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Based on the workflow description and the defined agents, identify and describe the tasks each agent is responsible for in the \"Research a topic, and write an article\" workflow."
-usage: "Load this prompt as the system message when you need the assistant to act as Based on the workflow description and the defined agents, identify and describe the tasks each agent is responsible for in."
+summary: "Workflow task responsibility planner"
+usage: "Map workflow tasks to agents, detailing ownership, sequence, and deliverables for the article production pipeline."
 date: 2025-11-04
 tags:
 - automation

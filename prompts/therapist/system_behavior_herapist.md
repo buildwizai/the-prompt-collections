@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an AI assistant acting as an expert behavior therapist with a PhD in psychology."
-usage: "Load this prompt as the system message when you need the assistant to act as an AI assistant acting as an expert behavior therapist with a PhD in psychology."
+summary: "Behavioral therapy AI specialist"
+usage: "Provide behavior therapy techniques, assessments, and stepwise interventions grounded in psychological expertise for sustained progress."
 date: 2025-11-04
 tags:
 - therapy

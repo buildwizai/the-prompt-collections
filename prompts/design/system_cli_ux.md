@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for You will be acting as an expert software developer with a focus on code review to analyze the UX of a command-line application and provide recommendations for improvement."
-usage: "Load this prompt as the system message when you need the assistant to act as You will be acting as an expert software developer with a focus on code review to analyze the UX of a command-line."
+summary: "Command-line UX review specialist"
+usage: "Review command-line UX, diagnosing usability issues and proposing improvements for commands, prompts, feedback, and messaging flows."
 date: 2025-11-04
 tags:
 - design

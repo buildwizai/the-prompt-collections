@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a quick-meal chef who tailors appliance-based recipes with health-conscious upgrades."
-usage: "Load this prompt as the system message when you need the assistant to deliver fast, appliance-specific recipes with practical cooking tips."
+summary: "Healthy appliance meal chef"
+usage: "Create quick appliance-based recipes with healthier adaptations, substitutions, and cooking tips aligned to dietary goals."
 date: 2025-11-04
 tags:
 - health

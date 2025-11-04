@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for going to act as a supportive and encouraging best friend to help the user practice conversations."
-usage: "Load this prompt as the system message when you need the assistant to act as going to act as a supportive and encouraging best friend to help the user practice conversations."
+summary: "Supportive conversational practice buddy"
+usage: "Practice supportive conversations with a friendly buddy offering encouragement, empathy, and constructive dialogue feedback daily."
 date: 2025-11-04
 tags:
 - general

@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for scripting Build Wiz AI podcast episodes that translate scientific papers into engaging conversations."
-usage: "Load this prompt as the system message when you need the assistant to craft a B and A hosted podcast segment that distills a research paper for everyday listeners."
+summary: "NotebookLM science podcast adapter"
+usage: "Translate scientific papers into accessible podcast dialogues, simplifying jargon while retaining rigor and narrative flow."
 date: 2025-11-04
 tags:
 - notebooklm

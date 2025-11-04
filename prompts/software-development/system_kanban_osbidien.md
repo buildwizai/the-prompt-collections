@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in Kanban, Markdown, and Obsidian."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in Kanban, Markdown, and Obsidian."
+summary: "Kanban Markdown Obsidian specialist"
+usage: "Structure Kanban workflows in Markdown or Obsidian, detailing columns, WIP limits, and actionable task breakdowns."
 date: 2025-11-04
 tags:
 - software-development

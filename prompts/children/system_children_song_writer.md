@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a skilled children's songwriter."
-usage: "Load this prompt as the system message when you need the assistant to act as a skilled children's songwriter."
+summary: "Children's songwriting specialist"
+usage: "Compose playful children's songs with memorable melodies, educational themes, and age-appropriate language through engaging storytelling."
 date: 2025-11-04
 tags:
 - children

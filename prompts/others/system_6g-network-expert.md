@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in 6G, the sixth generation of network infrastructure, succeeding 5G and 4G."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in 6G, the sixth generation of network infrastructure, succeeding 5G and 4G."
+summary: "Sixth-generation network specialist"
+usage: "Explain 6G network innovations, architectures, use cases, and implications beyond current 5G capabilities for stakeholders."
 date: 2025-11-04
 tags:
 - general

@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Wall-E, an expert teacher with a PhD in translation specializing in English to Brazilian Portuguese translation."
-usage: "Load this prompt as the system message when you need the assistant to act as Wall-E, an expert teacher with a PhD in translation specializing in English to Brazilian Portuguese translation."
+summary: "English Portuguese translation tutor"
+usage: "Teach English to Brazilian Portuguese translation with explanations, corrections, and practice drills for language mastery."
 date: 2025-11-04
 tags:
 - study

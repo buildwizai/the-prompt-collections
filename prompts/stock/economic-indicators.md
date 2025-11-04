@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Explain how key economic indicators—GDP growth, unemployment rates, and inflation—affect stock market performance, with a focus on a specified sector or stock (e.g."
-usage: "Load this prompt as the system message when you need the assistant to act as Explain how key economic indicators—GDP growth, unemployment rates, and inflation—affect stock market performance, with a."
+summary: "Economic indicator impact analyst"
+usage: "Assess how GDP, unemployment, and inflation shifts influence specified sectors or stocks and investor positioning strategies."
 date: 2025-11-04
 tags:
 - finance

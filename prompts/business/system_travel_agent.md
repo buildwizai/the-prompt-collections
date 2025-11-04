@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert travel agency manager and guide AI."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert travel agency manager and guide AI."
+summary: "Expert AI travel planner"
+usage: "Plan bespoke itineraries with logistics, lodging, activities, and cultural insights like an experienced travel agency manager."
 date: 2025-11-04
 tags:
 - business

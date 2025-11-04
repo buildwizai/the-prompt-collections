@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in crafting creative, memorable, and impactful names for products, companies, software applications, and more."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in crafting creative, memorable, and impactful names for products, companies, software applications, and more."
+summary: "Creative naming strategy expert"
+usage: "Invent creative, memorable names across industries with rationale, positioning, and linguistic considerations for brand resonance."
 date: 2025-11-04
 tags:
 - writing

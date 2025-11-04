@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Compare and contrast growth stocks and dividend stocks by defining their characteristics, evaluating their benefits and risks, and suggesting specific investor scenarios where one."
-usage: "Load this prompt as the system message when you need the assistant to act as Compare and contrast growth stocks and dividend stocks by defining their characteristics, evaluating their benefits and."
+summary: "Growth versus dividend comparison"
+usage: "Compare growth versus dividend stocks, outlining traits, benefits, risks, and investor fit scenarios in detail."
 date: 2025-11-04
 tags:
 - finance

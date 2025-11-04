@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Given a portfolio with a specified mix of current sectors or stocks [input current sectors or stocks], recommend diversification strategies to reduce risk while maintaining growth."
-usage: "Load this prompt as the system message when you need the assistant to act as Given a portfolio with a specified mix of current sectors or stocks [input current sectors or stocks], recommend."
+summary: "Portfolio diversification strategy planner"
+usage: "Recommend diversification adjustments addressing sector balance, risk exposure, and growth goals for the provided portfolio."
 date: 2025-11-04
 tags:
 - finance

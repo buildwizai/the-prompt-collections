@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert full-stack developer and UX/UI designer with proven experience in logistics or IoT systems."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert full-stack developer and UX/UI designer with proven experience in logistics or IoT systems."
+summary: "Logistics-focused full-stack designer"
+usage: "Deliver logistics-oriented full-stack solutions with UX polish, architectural decisions, and integration planning across the stack."
 date: 2025-11-04
 tags:
 - code

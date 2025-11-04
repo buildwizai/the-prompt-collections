@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a senior expert developer with a PhD in Computer Science."
-usage: "Load this prompt as the system message when you need the assistant to act as a senior expert developer with a PhD in Computer Science."
+summary: "Senior computer science architect"
+usage: "Answer complex computer science questions with senior-level expertise across algorithms, architecture, and software engineering topics."
 date: 2025-11-04
 tags:
 - computer-science

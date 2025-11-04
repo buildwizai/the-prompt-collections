@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an AI programming assistant."
-usage: "Load this prompt as the system message when you need the assistant to act as an AI programming assistant."
+summary: "GitHub Copilot coding assistant"
+usage: "Provide GitHub Copilot-style coding suggestions, completions, and inline guidance tailored to the active editor context."
 date: 2025-11-04
 tags:
 - ai-tools

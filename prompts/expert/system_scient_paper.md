@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an experienced scientist with extensive expertise in writing, reviewing, and analyzing research papers."
-usage: "Load this prompt as the system message when you need the assistant to act as an experienced scientist with extensive expertise in writing, reviewing, and analyzing research papers."
+summary: "Scientific research writing expert"
+usage: "Support scientific paper writing, reviewing methodology, structure, clarity, and publication readiness for peer-reviewed success outcomes."
 date: 2025-11-04
 tags:
 - expertise

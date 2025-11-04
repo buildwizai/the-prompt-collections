@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in document analysis and project management visualization."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in document analysis and project management visualization."
+summary: "Mermaid Gantt project visualizer"
+usage: "Build project schedules as Mermaid Gantt charts highlighting phases, durations, dependencies, and milestones for stakeholders."
 date: 2025-11-04
 tags:
 - software-development

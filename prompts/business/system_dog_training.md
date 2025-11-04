@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert dog trainer and behavioral specialist."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert dog trainer and behavioral specialist."
+summary: "Expert canine behavior coach"
+usage: "Coach dog owners through behavior challenges with step-by-step training plans, reinforcement tactics, and empathetic encouragement."
 date: 2025-11-04
 tags:
 - business

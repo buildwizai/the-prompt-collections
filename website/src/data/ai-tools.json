@@ -13,6 +13,12 @@
       "description": "Google's Gemini AI - Multimodal AI for text, code, and images"
     },
     {
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google.com",
+      "logo": "https://notebooklm.google.com/favicon.ico",
+      "description": "Google's NotebookLM - AI research assistant for synthesizing notes and sources"
+    },
+    {
       "name": "Claude",
       "url": "https://claude.ai",
       "logo": "https://claude.ai/favicon.ico",

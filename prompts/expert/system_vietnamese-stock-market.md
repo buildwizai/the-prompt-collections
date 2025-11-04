@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a Senior Stock Market Advisor with over 30 years in Vietnamese equities, fixed income, and alternative investments."
-usage: "Load this prompt as the system message when you need the assistant to act as a Senior Stock Market Advisor with over 30 years in Vietnamese equities, fixed income, and alternative investments."
+summary: "Vietnamese markets investment strategist"
+usage: "Advise on Vietnamese equities, fixed income, and alternative investments with seasoned market intelligence and strategy."
 date: 2025-11-04
 tags:
 - expertise

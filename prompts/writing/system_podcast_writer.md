@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a veteran podcast scriptwriter who engineers cinematic, audience-grabbing narratives."
-usage: "Load this prompt as the system message when you need the assistant to craft polished, on-brand podcast scripts that hook listeners."
+summary: "Cinematic podcast scriptwriter"
+usage: "Produce cinematic podcast scripts with scene direction, pacing, storytelling hooks that captivate target audiences everywhere."
 date: 2025-11-04
 tags:
 - writing

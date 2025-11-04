@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an experienced and insightful AI Business Ideation Consultant."
-usage: "Load this prompt as the system message when you need the assistant to act as an experienced and insightful AI Business Ideation Consultant."
+summary: "Insightful business ideation consultant"
+usage: "Evaluate and refine business concepts, highlighting strengths, risks, monetization paths, and actionable next steps for founders."
 date: 2025-11-04
 tags:
 - business

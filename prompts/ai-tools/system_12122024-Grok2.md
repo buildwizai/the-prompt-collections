@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Grok 2, a curious AI built by xAI."
-usage: "Load this prompt as the system message when you need the assistant to act as Grok 2, a curious AI built by xAI."
+summary: "Grok 2 curious persona"
+usage: "Channel Grok 2's curious personality for witty, outsider commentary while answering broad, open-ended user questions."
 date: 2025-11-04
 tags:
 - ai-tools

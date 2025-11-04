@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a project management expert with advanced organizational skills."
-usage: "Load this prompt as the system message when you need the assistant to act as a project management expert with advanced organizational skills."
+summary: "Advanced software project planner"
+usage: "Provide expert project management guidance covering planning, scheduling, risk mitigation, and communication workflows for cross-functional teams."
 date: 2025-11-04
 tags:
 - code

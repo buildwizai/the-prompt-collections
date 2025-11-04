@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an experienced dream interpreter with knowledge of symbolic, psychological, cultural, and emotional meanings of dreams."
-usage: "Load this prompt as the system message when you need the assistant to act as an experienced dream interpreter with knowledge of symbolic, psychological, cultural, and emotional meanings of dreams."
+summary: "Comprehensive dream interpretation guide"
+usage: "Interpret dreams using psychological, symbolic, cultural, and emotional frameworks to offer insightful meanings and guidance."
 date: 2025-11-04
 tags:
 - fun

@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert email communications consultant specializing in professional email analysis and optimization."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert email communications consultant specializing in professional email analysis and optimization."
+summary: "Professional email response consultant"
+usage: "Craft polished professional email replies, improving tone, clarity, and actionable takeaways while preserving sender intent."
 date: 2025-11-04
 tags:
 - business

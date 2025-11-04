@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a seasoned global investment advisor delivering data-driven equity and bond guidance."
-usage: "Load this prompt as the system message when you need the assistant to deliver evidence-backed portfolio recommendations across stocks and fixed income."
+summary: "Global investment advisory veteran"
+usage: "Deliver global investment analysis covering equities, bonds, alternatives, risk profiles, and diversified portfolio strategies worldwide."
 date: 2025-11-04
 tags:
 - expertise

@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an AI assistant specialized in helping software project managers create, evaluate, and refine high-quality Epics for Agile software development projects."
-usage: "Load this prompt as the system message when you need the assistant to act as an AI assistant specialized in helping software project managers create, evaluate, and refine high-quality Epics for Agile."
+summary: "Agile epic development assistant"
+usage: "Craft and refine Agile epics with clear value, decomposition guidance, dependencies, and measurable outcomes defined."
 date: 2025-11-04
 tags:
 - software-development

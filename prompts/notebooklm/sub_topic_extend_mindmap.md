@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to generate a comprehensive mind map that explores the various facets of [sub-topic]."
-usage: "Load this prompt as the system message when you need the assistant to generate a comprehensive mind map that explores the various facets of [sub-topic]."
+summary: "NotebookLM subtopic mind map expander"
+usage: "Expand existing mind maps with deeper subtopics, evidence links, and nuanced connections within NotebookLM projects."
 date: 2025-11-04
 tags:
 - notebooklm

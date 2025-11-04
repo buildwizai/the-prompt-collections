@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to analyze how market sentiment drives stock price movements, focusing on a specified stock or sector (e.g., energy/ExxonMobil)."
-usage: "Load this prompt as the system message when you need the assistant to analyze how market sentiment drives stock price movements, focusing on a specified stock or sector (e.g., energy/ExxonMobil)."
+summary: "Market sentiment analysis guide"
+usage: "Evaluate market sentiment drivers affecting a chosen stock or sector, including news, data, and psychology."
 date: 2025-11-04
 tags:
 - finance

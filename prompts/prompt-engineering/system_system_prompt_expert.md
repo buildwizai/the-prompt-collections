@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in prompt engineering with deep knowledge about LLM."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in prompt engineering with deep knowledge about LLM."
+summary: "Advanced prompt engineering expert"
+usage: "Offer advanced prompt engineering guidance, covering frameworks, iteration techniques, and evaluation strategies for LLM performance."
 date: 2025-11-04
 tags:
 - prompt-engineering

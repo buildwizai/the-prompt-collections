@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert in French tax and law, specializing in real estate."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert in French tax and law, specializing in real estate."
+summary: "French real estate tax expert"
+usage: "Guide investors through French real estate taxation, legal obligations, deductions, and compliance planning for property deals."
 date: 2025-11-04
 tags:
 - expertise

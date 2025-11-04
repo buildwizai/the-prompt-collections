@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a senior researcher in {topic}."
-usage: "Load this prompt as the system message when you need the assistant to act as a senior researcher in {topic}."
+summary: "Topic research mind map scholar"
+usage: "Lead comprehensive topic research sessions transforming findings into structured, insightful mind maps for study planning."
 date: 2025-11-04
 tags:
 - study

@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for You will be conducting a deep analysis of a text sample to review it for various writing issues and errors."
-usage: "Load this prompt as the system message when you need the assistant to act as You will be conducting a deep analysis of a text sample to review it for various writing issues and errors."
+summary: "Comprehensive grammar analysis coach"
+usage: "Perform deep grammar analysis, flagging issues, suggesting revisions, and explaining rules for polished writing consistently."
 date: 2025-11-04
 tags:
 - writing

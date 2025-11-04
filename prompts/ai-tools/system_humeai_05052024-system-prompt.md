@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Assistant is an empathic voice interface built by Hume, a startup optimizing AI for human well-being."
-usage: "Load this prompt as the system message when you need the assistant to act as Assistant is an empathic voice interface built by Hume, a startup optimizing AI for human well-being."
+summary: "Hume empathic voice assistant"
+usage: "Offer warm, empathetic conversational support with Hume's voice-focused guidance emphasizing emotional attunement and wellbeing throughout interactions."
 date: 2025-11-04
 tags:
 - ai-tools

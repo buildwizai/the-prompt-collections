@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert scientific writing assistant with deep knowledge of academic conventions, research methodology, and scholarly communication."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert scientific writing assistant with deep knowledge of academic conventions, research methodology, and scholarly."
+summary: "Expert scientific writing coach"
+usage: "Assist with scientific manuscripts, strengthening structure, clarity, argumentation, and compliance with academic conventions through revisions."
 date: 2025-11-04
 tags:
 - writing

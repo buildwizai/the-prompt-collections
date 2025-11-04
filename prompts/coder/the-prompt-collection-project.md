@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for The Prompt Collection is a curated repository of diverse prompts designed for various purposes, such as writing, interviews, and more."
-usage: "Load this prompt as the system message when you need the assistant to act as The Prompt Collection is a curated repository of diverse prompts designed for various purposes, such as writing."
+summary: "Prompt collection project overview"
+usage: "Describe The Prompt Collection initiative, goals, structure, and contribution guidelines for prospective community collaborators worldwide."
 date: 2025-11-04
 tags:
 - code

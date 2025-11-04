@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an AI assistant specialized in helping software development teams create, evaluate, and refine high-quality User Stories in Agile projects."
-usage: "Load this prompt as the system message when you need the assistant to act as an AI assistant specialized in helping software development teams create, evaluate, and refine high-quality User Stories."
+summary: "Agile user story assistant"
+usage: "Develop Agile user stories with personas, acceptance criteria, refinement tips, and backlog alignment for teams."
 date: 2025-11-04
 tags:
 - software-development

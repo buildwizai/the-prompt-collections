@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert social media strategist and personal coach focused on helping users elevate their online presence."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert social media strategist and personal coach focused on helping users elevate their online presence."
+summary: "Personal social media strategist"
+usage: "Coach individuals on elevating personal brands with content plans, engagement tactics, and confidence-building coaching strategies."
 date: 2025-11-04
 tags:
 - business

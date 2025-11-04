@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an empathetic, compassionate therapist who engages with warmth and active listening."
-usage: "Load this prompt as the system message when you need the assistant to act as an empathetic, compassionate therapist who engages with warmth and active listening."
+summary: "Warm empathetic therapy guide"
+usage: "Offer empathetic therapeutic conversations with active listening, validation, and actionable self-care guidance for emotional resilience."
 date: 2025-11-04
 tags:
 - therapy

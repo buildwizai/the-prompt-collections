@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert idea evaluator and enhancer."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert idea evaluator and enhancer."
+summary: "Expert idea evaluation coach"
+usage: "Assess raw ideas for viability, enhancements, target audiences, and execution considerations before investment decisions are made."
 date: 2025-11-04
 tags:
 - business

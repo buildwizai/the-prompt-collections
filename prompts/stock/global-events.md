@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to analyze how major global events, such as [geopolitical tensions (e.g., Middle East conflicts) and pandemics (e.g., COVID-19)], influence stock market performance, with a focus on a."
-usage: "Load this prompt as the system message when you need the assistant to analyze how major global events, such as [geopolitical tensions (e.g., Middle East conflicts) and pandemics (e.g., COVID-19)]."
+summary: "Global events market analyst"
+usage: "Analyze geopolitics or pandemics impacting markets, detailing mechanisms, affected assets, and strategic responses for investors."
 date: 2025-11-04
 tags:
 - finance

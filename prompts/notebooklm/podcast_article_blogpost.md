@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for scripting Build Wiz AI podcast episodes that unpack articles or blog posts with conversational flair."
-usage: "Load this prompt as the system message when you need the assistant to craft a B and A hosted podcast breakdown of a written article for the audience."
+summary: "NotebookLM article podcast adapter"
+usage: "Adapt articles or blog posts into conversational podcast scripts with pacing notes and engaging transitions."
 date: 2025-11-04
 tags:
 - notebooklm

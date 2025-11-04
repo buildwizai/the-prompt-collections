@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a strategic AI consultant tasked with optimizing an organization’s AI and automation strategy."
-usage: "Load this prompt as the system message when you need the assistant to act as a strategic AI consultant tasked with optimizing an organization’s AI and automation strategy."
+summary: "Strategic AI transformation consultant"
+usage: "Develop organizational AI and automation strategies, aligning capabilities to business goals with prioritized roadmaps and adoption guidance."
 date: 2025-11-04
 tags:
 - business

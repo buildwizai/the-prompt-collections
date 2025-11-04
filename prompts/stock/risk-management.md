@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to evaluate effective risk management techniques for a stock trader, tailored to a specified trading strategy or stock [input current trading strategy or stock]."
-usage: "Load this prompt as the system message when you need the assistant to evaluate effective risk management techniques for a stock trader, tailored to a specified trading strategy or stock [input."
+summary: "Trading risk management advisor"
+usage: "Outline tailored risk management techniques aligned with the trader's strategy, instruments, and tolerance for volatility."
 date: 2025-11-04
 tags:
 - finance

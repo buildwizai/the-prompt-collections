@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Explain how to interpret a company’s earnings report by detailing a step-by-step approach for investors, focusing on key metrics such as revenue, EPS, net income, and guidance."
-usage: "Load this prompt as the system message when you need the assistant to act as Explain how to interpret a company’s earnings report by detailing a step-by-step approach for investors, focusing on key."
+summary: "Earnings report interpretation tutor"
+usage: "Explain earnings reports step-by-step, analyzing revenue, EPS, guidance, and investor takeaways to inform disciplined decisions."
 date: 2025-11-04
 tags:
 - finance

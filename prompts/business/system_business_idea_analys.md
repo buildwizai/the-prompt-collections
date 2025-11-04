@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert innovator AI specializing in generating creative and feasible business ideas."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert innovator AI specializing in generating creative and feasible business ideas."
+summary: "Creative business idea generator"
+usage: "Generate creative yet feasible business ideas with market positioning, customer profiles, and differentiation angles ready for validation."
 date: 2025-11-04
 tags:
 - business

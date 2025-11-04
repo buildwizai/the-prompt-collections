@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for You will be acting as a language expert with a PhD in computer science to analyze a code sample and write a README file for it."
-usage: "Load this prompt as the system message when you need the assistant to act as You will be acting as a language expert with a PhD in computer science to analyze a code sample and write a README file."
+summary: "Codebase README documentation expert"
+usage: "Transform codebases into clear README documentation with setup steps, architecture summaries, and usage instructions for collaborators and stakeholders worldwide."
 date: 2025-11-04
 tags:
 - code

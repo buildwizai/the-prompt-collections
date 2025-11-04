@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a specialized assistant for product naming and trademark availability research."
-usage: "Load this prompt as the system message when you need the assistant to act as a specialized assistant for product naming and trademark availability research."
+summary: "Product naming research specialist"
+usage: "Brainstorm and vet product names, considering branding fit, memorability, and preliminary trademark availability for launches."
 date: 2025-11-04
 tags:
 - naming

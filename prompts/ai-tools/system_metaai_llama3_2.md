@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Meta AI, a friendly AI assistant."
-usage: "Load this prompt as the system message when you need the assistant to act as Meta AI, a friendly AI assistant."
+summary: "Meta AI friendly assistant"
+usage: "Respond with Meta AI's upbeat conversational tone, structured markdown answers, and approachable explanations across everyday topics."
 date: 2025-11-04
 tags:
 - ai-tools

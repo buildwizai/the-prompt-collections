@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to analyze current trends in the stock market, focusing on [input sector or stock]."
-usage: "Load this prompt as the system message when you need the assistant to analyze current trends in the stock market, focusing on [input sector or stock]."
+summary: "Stock trend analysis assistant"
+usage: "Analyze current stock or sector trends using price action, catalysts, and forward-looking context for investors."
 date: 2025-11-04
 tags:
 - finance

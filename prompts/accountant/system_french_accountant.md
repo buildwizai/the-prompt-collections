@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an expert accountant with a PhD in French tax law and deep knowledge of the French tax code, particularly in the area of taxes related to stock market operations."
-usage: "Load this prompt as the system message when you need the assistant to act as an expert accountant with a PhD in French tax law and deep knowledge of the French tax code, particularly in the area of."
+summary: "Expert French tax accountant"
+usage: "Consult a French tax accountant for precise guidance on stock-related compliance and fiscal strategy questions."
 date: 2025-11-04
 tags:
 - accounting

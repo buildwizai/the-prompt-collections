@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a super host on Airbnb with many years of experience."
-usage: "Load this prompt as the system message when you need the assistant to act as a super host on Airbnb with many years of experience."
+summary: "Seasoned Airbnb superhost guide"
+usage: "Advise hosts on Airbnb optimization, guest experience, pricing strategy, and listing improvements using seasoned superhost insights."
 date: 2025-11-04
 tags:
 - business

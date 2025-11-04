@@ -72,9 +72,13 @@ const SelectedPromptModal = ({
     return url.toString();
   };
 
-  const shareContent = `Check out this prompt "${
-    selectedPrompt.title || selectedPrompt.filename
-  }" from The Prompt Collection`;
+  const displayName =
+    selectedPrompt.summary ||
+    selectedPrompt.title ||
+    selectedPrompt.filename ||
+    "Untitled Prompt";
+
+  const shareContent = `Check out this prompt "${displayName}" from The Prompt Collection`;
 
   const handleSelectChange = (e) => {
     const selectedWebsite = e.target.value;
@@ -143,7 +147,7 @@ const SelectedPromptModal = ({
                 url={getShareUrl()}
                 text="Share"
                 content={shareContent}
-                title={selectedPrompt.title || selectedPrompt.filename}
+                title={displayName}
               />
             </div>
             <button
@@ -154,11 +158,44 @@ const SelectedPromptModal = ({
             </button>
           </div>
 
+          {/* Mobile header */}
+          <div className="sm:hidden pr-16 pt-2">
+            <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+              {displayName}
+            </h2>
+            {selectedPrompt.tags && selectedPrompt.tags.length > 0 && (
+              <div className="mt-2 flex flex-wrap items-center gap-2">
+                {selectedPrompt.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 text-xs rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 whitespace-nowrap"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Desktop header */}
           <div className="hidden sm:flex flex-row justify-between items-center border-b dark:border-gray-700 pb-1">
-            <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 pr-8">
-              {selectedPrompt.title || selectedPrompt.filename}
-            </h2>
+            <div className="pr-8">
+              <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                {displayName}
+              </h2>
+              {selectedPrompt.tags && selectedPrompt.tags.length > 0 && (
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  {selectedPrompt.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 text-xs rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 whitespace-nowrap"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
             <div className="flex gap-2">
               <button
                 onClick={onToggleFavorite}
@@ -179,7 +216,7 @@ const SelectedPromptModal = ({
                 url={getShareUrl()}
                 text="Share"
                 content={shareContent}
-                title={selectedPrompt.title || selectedPrompt.filename}
+                title={displayName}
               />
               <button
                 className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors duration-200"
@@ -191,28 +228,29 @@ const SelectedPromptModal = ({
           </div>
 
           <div className="flex-1 overflow-y-auto sm:pt-10">
+            {selectedPrompt.usage && (
+              <div className="mt-2 mb-4 rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900 dark:border-blue-700 dark:bg-blue-900/40 dark:text-blue-100">
+                <span className="block text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
+                  Suggested usage
+                </span>
+                <p className="mt-1 leading-snug">
+                  {selectedPrompt.usage}
+                </p>
+              </div>
+            )}
+
             <p className="hidden sm:block text-sm text-gray-600 dark:text-gray-400 mb-2">
               {shouldShowGuide && "You can modify this prompt before using it:"}
             </p>
-            <textarea
-              className="w-full p-2 border border-gray-300 rounded bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100"
-              defaultValue={selectedPrompt.content}
-              rows={window.innerWidth < 640 ? 10 : 15}
-            />
-
-            {/* Tags section moved here */}
-            <div className="mt-4 mb-2">
-              <div className="flex items-center gap-2 overflow-x-auto">
-                {selectedPrompt.tags &&
-                  selectedPrompt.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 text-xs rounded bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 whitespace-nowrap"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+            <div className="mt-3 rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900/40">
+              <div className="border-b border-gray-200 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:border-gray-700 dark:text-gray-300">
+                Prompt content
               </div>
+              <textarea
+                className="w-full border-0 bg-transparent p-3 pt-0 text-sm leading-snug dark:text-gray-100 focus:outline-none focus:ring-0"
+                defaultValue={selectedPrompt.content}
+                rows={window.innerWidth < 640 ? 10 : 15}
+              />
             </div>
           </div>
 

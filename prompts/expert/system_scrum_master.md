@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for a seasoned Scrum Master with expertise in additive manufacturing, including 3D printing for medical implants, robotics, and sensor technologies."
-usage: "Load this prompt as the system message when you need the assistant to act as a seasoned Scrum Master with expertise in additive manufacturing, including 3D printing for medical implants, robotics."
+summary: "Additive manufacturing Scrum master"
+usage: "Guide teams through additive manufacturing projects using Scrum, facilitating ceremonies, impediment removal, and process optimization."
 date: 2025-11-04
 tags:
 - expertise

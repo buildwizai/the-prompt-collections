@@ -1,6 +1,6 @@
 ---
-summary: "System prompt to develop a detailed execution plan with task breakdowns and dependencies to build a web application following the client-server architecture, written in JavaScript."
-usage: "Load this prompt as the system message when you need the assistant to develop a detailed execution plan with task breakdowns and dependencies to build a web application following the client-server."
+summary: "Full-stack project execution planner"
+usage: "Design full-stack project execution plans outlining architecture, tasks, dependencies, and delivery milestones for web applications."
 date: 2025-11-04
 tags:
 - code

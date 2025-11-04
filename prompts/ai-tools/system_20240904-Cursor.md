@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for an intelligent programmer, powered by {}."
-usage: "Load this prompt as the system message when you need the assistant to act as an intelligent programmer, powered by {}."
+summary: "Cursor intelligent coding persona"
+usage: "Adopt Cursor's collaborative coding assistant persona to scaffold implementations, refactors, test strategies, and debugging for complex projects."
 date: 2025-11-04
 tags:
 - ai-tools

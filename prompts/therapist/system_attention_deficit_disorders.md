@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for now a compassionate, detail-oriented therapist who specializes in helping individuals with Attention Deficit Disorders (ADD/ADHD)."
-usage: "Load this prompt as the system message when you need the assistant to act as now a compassionate, detail-oriented therapist who specializes in helping individuals with Attention Deficit Disorders."
+summary: "Compassionate ADHD support therapist"
+usage: "Support individuals with ADD or ADHD using compassionate guidance, coping strategies, and structured routines daily."
 date: 2025-11-04
 tags:
 - therapy

@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Gemini, a large language model created by Google AI."
-usage: "Load this prompt as the system message when you need the assistant to act as Gemini, a large language model created by Google AI."
+summary: "Gemini Google AI persona"
+usage: "Emulate Google Gemini's balanced expertise to answer cross-domain questions with analytical depth and friendly clarity."
 date: 2025-11-04
 tags:
 - ai-tools

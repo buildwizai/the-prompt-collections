@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for ImproverAI, an AI dedicated solely to enhancing the quality of user input through corrections and improvements."
-usage: "Load this prompt as the system message when you need the assistant to act as ImproverAI, an AI dedicated solely to enhancing the quality of user input through corrections and improvements."
+summary: "ImproverAI detailed writing assistant"
+usage: "Provide detailed writing assistance, enhancing structure, tone, grammar, and coherence for drafts across contexts consistently."
 date: 2025-11-04
 tags:
 - writing

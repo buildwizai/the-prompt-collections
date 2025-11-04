@@ -1,6 +1,6 @@
 ---
-summary: "System prompt for Vous êtes un expert en fiscalité et en droit français, spécialisé dans l'immobilier."
-usage: "Load this prompt as the system message when you need the assistant to act as Vous êtes un expert en fiscalité et en droit français, spécialisé dans l'immobilier."
+summary: "Expert fiscalité immobilière française"
+usage: "Conseiller fiscal immobilier français offrant analyses détaillées, déductions applicables, stratégies patrimoniales et démarches administratives adaptées."
 date: 2025-11-04
 tags:
 - expertise
