@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import logoUrl from '../../assets/logo-mark.svg';
 import { FaGithub, FaTwitter, FaStar, FaCodeBranch, FaRocket } from 'react-icons/fa';
 import { fetchRepoData } from '../../utils/github';
 
@@ -21,6 +22,15 @@ const Footer = () => {
   return (
     <footer className="py-6 mt-8 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
+        {/* Brand */}
+        <div className="flex items-center justify-between border-b border-gray-200/60 dark:border-gray-700/60 pb-4 mb-6">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex items-center justify-center rounded-md p-1 bg-cyan-500/10 ring-1 ring-cyan-300/40">
+              <img src={logoUrl} alt="TPC logo" className="h-8 w-8 select-none" draggable="false" />
+            </span>
+            <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">The Prompt Collection</span>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* GitHub Project Info */}
           <div>

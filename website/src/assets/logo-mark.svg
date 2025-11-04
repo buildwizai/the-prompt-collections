@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">TPC Mark – Neon Hex with P</title>
+  <desc id="desc">Transparent background. Neon blue hexagon outline with a single P letter inside.</desc>
+  <defs>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8CF9FF"/>
+      <stop offset="50%" stop-color="#5EE7FF"/>
+      <stop offset="100%" stop-color="#2BD4FF"/>
+    </linearGradient>
+    <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .font { font-family: 'Poppins', 'Avenir Next', Avenir, 'Nunito Sans', 'Segoe UI', system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Hexagon border with glow -->
+  <g>
+    <polygon points="128,24 205.5,68 205.5,188 128,232 50.5,188 50.5,68"
+             fill="none" stroke="url(#neon)" stroke-width="12" opacity="0.6" filter="url(#glow-strong)"/>
+    <polygon points="128,24 205.5,68 205.5,188 128,232 50.5,188 50.5,68"
+             fill="none" stroke="url(#neon)" stroke-width="5"/>
+  </g>
+
+  <!-- P letter -->
+  <g class="font" text-anchor="middle" fill="url(#neon)" stroke="#CFFFFF" stroke-opacity="0.25" paint-order="stroke" filter="url(#glow-soft)">
+    <text x="128" y="140" font-size="120" font-weight="700" letter-spacing="0.5" dominant-baseline="middle">P</text>
+  </g>
+</svg>
+

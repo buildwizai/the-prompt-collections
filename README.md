@@ -1,10 +1,15 @@
 # The Prompt Collection
 
-![Logo](./logo.jpg)
+<p align="left">
+  <img src="./logo.svg" alt="The Prompt Collection logo" height="80" />
+  
+</p>
 
 **The Prompt Collection** is a curated repository of diverse prompts designed for various purposes, such as writing, interviews, and more. Each category and subcategory includes a set of prompts along with corresponding system prompts to provide context and enhance relevance.
 
 This project is hosted at [prompts.buildwizai.com](https://prompts.buildwizai.com), where users can browse, search, and interact with prompts in a user-friendly interface.
+
+The site header now uses the new SVG logo for a crisp look on all displays and themes.
 
 ---
 

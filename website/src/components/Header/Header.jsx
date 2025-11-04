@@ -1,13 +1,24 @@
 // src/components/Header/Header.jsx
 import React from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import logoUrl from '../../assets/logo-mark.svg';
 
 const Header = ({ isDarkMode, onToggleDarkMode }) => {
   return (
     <header className="flex justify-between items-center py-4 mb-4">
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-        The Prompt Collection
-      </h1>
+      <a href="/" className="flex items-center gap-3 group" aria-label="The Prompt Collection home">
+        <span className="inline-flex items-center justify-center rounded-md p-1.5 bg-cyan-500/10 ring-1 ring-cyan-300/40 backdrop-blur-[1px]">
+          <img
+            src={logoUrl}
+            alt="TPC logo"
+            className="h-10 w-10 select-none filter drop-shadow-[0_0_8px_rgba(43,212,255,0.85)]"
+            draggable="false"
+          />
+        </span>
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:opacity-90">
+          The Prompt Collection
+        </h1>
+      </a>
 
       <label className="relative inline-flex items-center cursor-pointer">
         <input

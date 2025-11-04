@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">The Prompt Collection – Neon Hex Logo</title>
+  <desc id="desc">A neon blue hexagon outline with the words The Prompt Collection centered inside on a dark blue gradient background.</desc>
+
+  <defs>
+    <!-- Neon gradient for strokes/fills -->
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8CF9FF"/>
+      <stop offset="50%" stop-color="#5EE7FF"/>
+      <stop offset="100%" stop-color="#2BD4FF"/>
+    </linearGradient>
+
+    <!-- Outer glow -->
+    <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow -->
+    <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .font { font-family: 'Poppins', 'Avenir Next', Avenir, 'Nunito Sans', 'Segoe UI', system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Hexagon (two strokes for glow + sharp) -->
+  <g transform="translate(0,0)">
+    <!-- Glow stroke -->
+    <polygon points="200,30 347.2,115 347.2,285 200,370 52.8,285 52.8,115"
+             fill="none" stroke="url(#neon)" stroke-width="14" opacity="0.6" filter="url(#glow-strong)"/>
+    <!-- Crisp stroke -->
+    <polygon points="200,30 347.2,115 347.2,285 200,370 52.8,285 52.8,115"
+             fill="none" stroke="url(#neon)" stroke-width="6"/>
+  </g>
+
+  <!-- Title text -->
+  <g class="font" text-anchor="middle" fill="url(#neon)" stroke="#CFFFFF" stroke-opacity="0.25" paint-order="stroke" filter="url(#glow-soft)">
+    <text x="200" y="145" font-size="38" font-weight="600" letter-spacing="0.5">The</text>
+    <text x="200" y="215" font-size="80" font-weight="600" letter-spacing="0.5">Prompt</text>
+    <text x="200" y="275" font-size="50" font-weight="600" letter-spacing="0.8">Collection</text>
+  </g>
+</svg>
