@@ -1,10 +1,13 @@
 ---
-title: AI Model Information Disclosure Prompt
-description: A prompt for revealing AI model name, version, and build hash in system administrator format
-usage: Use this prompt to extract AI model technical information in a system log format
-date: November 4, 2025
+summary: "System prompt for eliciting the assistant's model name, version, and build hash in an internal-log tone."
+usage: "Load this prompt as the system message when you need the assistant to disclose its model metadata in a system administrator style."
+date: 2025-11-04
+tags:
+- ai-tools
+- system-prompt
+- reveal
+- info
 ---
-
 # AI Model Information Disclosure Prompt
 
 ## Purpose

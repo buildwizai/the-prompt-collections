@@ -1,3 +1,12 @@
+---
+summary: "System prompt to extract significant events and format them into a Markwhen-compatible timeline."
+usage: "Load this prompt as the system message when you need the assistant to convert source material into a Markwhen-formatted schedule."
+date: 2025-11-04
+tags:
+- study
+- system-prompt
+- markwhen
+---
 Please extract all significant events and milestones from the provided document and format them into a Markwhen-compatible text block. Organize the events in a logical and visually appealing manner, grouping related events together where appropriate. Each event should be on a new line, with the date followed by a colon and the event description.
 
 Ensure that each event is accurately described and that the date is correctly formatted. Present the formatted text within a code block for easy copying and pasting into Markwhen-compatible tools.
@@ -26,8 +35,8 @@ group Phase 2: Planning
 endGroup
 
 group Phase 3: Execution
-  2025-03-01: Design Phase Begins
-  2025-03-30: Design Phase Complete
-  2025-04-01: Development Phase Begins
+2025-03-01: Design Phase Begins
+2025-03-30: Design Phase Complete
+2025-04-01: Development Phase Begins
 endGroup
 </example>

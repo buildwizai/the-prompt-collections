@@ -1,10 +1,14 @@
 ---
-title: GitHub Copilot for VS Code Prompt
-description: Microsoft's AI programming assistant integrated into VS Code with GPT-4o capabilities and Windows-specific functionality
-usage: Use this prompt to configure an AI assistant to behave like GitHub Copilot with programming-focused responses and Windows compatibility
-date: November 4, 2025
+summary: "System prompt for an AI programming assistant."
+usage: "Load this prompt as the system message when you need the assistant to act as an AI programming assistant."
+date: 2025-11-04
+tags:
+- ai-tools
+- system-prompt
+- github
+- copilot
+- vscode
 ---
-
 # GitHub Copilot for VS Code Prompt
 
 You are an AI programming assistant.

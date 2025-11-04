@@ -1,3 +1,13 @@
+---
+summary: "System prompt for Based on the provided resource, create a clear, step-by-step diagram to illustrate the process for [NAME_OF_THE_TUTORIAL]."
+usage: "Load this prompt as the system message when you need the assistant to act as Based on the provided resource, create a clear, step-by-step diagram to illustrate the process for [NAME_OF_THE_TUTORIAL]."
+date: 2025-11-04
+tags:
+- notebooklm
+- system-prompt
+- tutorial
+- mermaid
+---
 Based on the provided resource, create a clear, step-by-step diagram to illustrate the process for [NAME_OF_THE_TUTORIAL].
 
 Please generate the steps as a flowchart in Mermaid syntax. Ensure that:
@@ -16,8 +26,8 @@ Use the following structure for Mermaid syntax:
 
 <mermaidExample>
 graph TD
-  Step1[Main Step 1] --> SubStep1A[Sub-step 1A]
-  Step1 --> SubStep1B[Sub-step 1B]
-  Step2[Main Step 2] --> SubStep2A[Sub-step 2A]
-  Step2 --> SubStep2B[Sub-step 2B]
+Step1[Main Step 1] --> SubStep1A[Sub-step 1A]
+Step1 --> SubStep1B[Sub-step 1B]
+Step2[Main Step 2] --> SubStep2A[Sub-step 2A]
+Step2 --> SubStep2B[Sub-step 2B]
 </mermaidExample>

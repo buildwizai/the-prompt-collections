@@ -1,9 +1,18 @@
-Based on the workflow description and the defined agents, identify and describe the tasks each agent is responsible for in the "Research a topic, and write an article" workflow. For each task, provide a **description**, **expected output**, and the **agent** assigned to it. Use the following workflow and agents as reference:
+---
+summary: "System prompt for Based on the workflow description and the defined agents, identify and describe the tasks each agent is responsible for in the \"Research a topic, and write an article\" workflow."
+usage: "Load this prompt as the system message when you need the assistant to act as Based on the workflow description and the defined agents, identify and describe the tasks each agent is responsible for in."
+date: 2025-11-04
+tags:
+- automation
+- system-prompt
+- design
+---
+Based on the workflow description and the defined agents, identify and describe the tasks each agent is responsible for in the "Research a topic, and write an article" workflow. For each task, provide a description, expected output, and the agent assigned to it. Use the following workflow and agents as reference:
 
-**Workflow Description:**
+# Workflow Description
 The "Research a topic, and write an article" workflow involves identifying a subject, gathering and analyzing relevant information from credible sources, and organizing the findings into a coherent structure. The process includes drafting, revising, and editing the article to ensure clarity, accuracy, and engagement. The final step is publishing or sharing the article with the intended audience, ensuring it meets their needs and expectations.
 
-**Agents:**
+# Agents
 ```yaml
 topic_lead:
   role: >
@@ -46,12 +55,12 @@ publisher:
     You're a highly organized professional with expertise in content distribution and audience engagement. Your ability to manage timelines and platforms ensures the article reaches its audience effectively and on time.
 ```
 
-**Output Requirements:**
-1. Provide the output in **YAML format**.
-2. Follow the structure and style of the examples below.
-3. Ensure each task's **description**, **expected_output**, and **agent** are clearly defined.
+# Output Requirements
+- Provide the output in YAML format.
+- Follow the structure and style of the examples below.
+- Ensure each task's description, expected_output, and agent are clearly defined.
 
-**Examples:**
+# Examples
 ```yaml
 research_task:
   description: >
@@ -72,12 +81,12 @@ reporting_task:
   agent: reporting_analyst
 ```
 
-**Your Task:**
-Identify tasks for each agent in the "Research a topic, and write an article" workflow. For each task, describe its **description**, **expected_output**, and **agent** in YAML format. Ensure the output is consistent with the examples provided.
+# Your Task
+Identify tasks for each agent in the "Research a topic, and write an article" workflow. For each task, describe its description, expected_output, and agent in YAML format. Ensure the output is consistent with the examples provided.
 
 ---
 
-**Expected Output Structure:**
+# Expected Output Structure
 ```yaml
 task_1:
   description: >
