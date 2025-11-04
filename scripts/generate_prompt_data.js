@@ -51,14 +51,16 @@ function generatePromptData() {
       if (stat.isDirectory()) {
         walkSync(filePath);
       } else if (path.extname(file) === '.md') {
-        const content = fs.readFileSync(filePath, 'utf8').trim();
+        const rawFileContent = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '');
         const relativePath = path.relative(promptsDir, filePath);
         const pathParts = relativePath.split(path.sep);
 
-        const frontMatterMatch = content.match(FRONT_MATTER_REGEX);
+        const frontMatterMatch = rawFileContent.match(FRONT_MATTER_REGEX);
         const frontMatterData = frontMatterMatch
           ? parseFrontMatter(frontMatterMatch[1])
           : {};
+        const bodyOffset = frontMatterMatch ? frontMatterMatch[0].length : 0;
+        const content = rawFileContent.slice(bodyOffset).trim();
 
         // Extract category and subcategories
         const category = pathParts[0];
