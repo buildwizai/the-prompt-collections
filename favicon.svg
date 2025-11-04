@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8CF9FF"/>
+      <stop offset="50%" stop-color="#5EE7FF"/>
+      <stop offset="100%" stop-color="#2BD4FF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .font { font-family: 'Poppins', 'Avenir Next', Avenir, 'Nunito Sans', 'Segoe UI', system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <polygon points="128,24 205.5,68 205.5,188 128,232 50.5,188 50.5,68"
+           fill="none" stroke="url(#neon)" stroke-width="10" opacity="0.65" filter="url(#glow)"/>
+  <polygon points="128,24 205.5,68 205.5,188 128,232 50.5,188 50.5,68"
+           fill="none" stroke="url(#neon)" stroke-width="4.5"/>
+  <g class="font" text-anchor="middle" fill="url(#neon)" stroke="#CFFFFF" stroke-opacity="0.2" paint-order="stroke" filter="url(#glow)">
+    <text x="128" y="138" font-size="112" font-weight="700" dominant-baseline="middle">P</text>
+  </g>
+</svg>
+
