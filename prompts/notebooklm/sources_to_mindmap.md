@@ -20,8 +20,9 @@ You are an expert in document analysis and structured visualization. Your task i
 - Ensure the final output follows valid Markmap Markdown syntax and is well-structured for clarity:
 - DO NOT include citations or references.
 - Use minimum number of tabs, spaces but still maintain hierarchy
-- ONLY use `#`, `-` and `spaces` for listing item
-- DO NOT USE `*` for listing item
+- ONLY use `#`, `-` and `tab` for listing item
+- DO NOT USE `*` and `space` for listing item
+
 
 <MarkmapExample>
 ---
