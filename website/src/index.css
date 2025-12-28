@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Modal Design System Variables */
+:root {
+  --modal-bg: #FAFBFC;
+  --modal-surface: #FFFFFF;
+  --modal-border: rgba(0, 0, 0, 0.06);
+  --text-primary: #1A1D21;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --accent: #3B82F6;
+  --accent-soft: #EFF6FF;
+  --success: #10B981;
+  --tag-bg: #F3F4F6;
+  --tag-text: #4B5563;
+}
+
+.dark {
+  --modal-bg: #0F1115;
+  --modal-surface: #1A1D24;
+  --modal-border: rgba(255, 255, 255, 0.08);
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --accent: #60A5FA;
+  --accent-soft: rgba(59, 130, 246, 0.15);
+  --tag-bg: #1F2937;
+  --tag-text: #D1D5DB;
+}
+
 /* Custom base styles */
 body {
   font-family: 'Inter', sans-serif; /* Use a modern sans-serif font */

@@ -6,7 +6,12 @@ export default {
   ],
   darkMode: 'class', // Enable class-based dark mode
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'display': ['"DM Sans"', 'sans-serif'],
+        'body': ['"IBM Plex Sans"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
