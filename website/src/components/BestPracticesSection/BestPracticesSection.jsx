@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLightbulb } from "react-icons/fa";
 
 const bestPractices = [

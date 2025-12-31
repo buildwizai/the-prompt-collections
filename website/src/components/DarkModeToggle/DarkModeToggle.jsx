@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const DarkModeToggle = ({ isDark, onToggle }) => {
   return (
@@ -38,6 +38,11 @@ const DarkModeToggle = ({ isDark, onToggle }) => {
       )}
     </button>
   );
+};
+
+DarkModeToggle.propTypes = {
+  isDark: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.isRequired,
 };
 
 export default DarkModeToggle;

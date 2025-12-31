@@ -1,5 +1,5 @@
 // src/components/Header/Header.jsx
-import React from "react";
+import PropTypes from "prop-types";
 import { FaSun, FaMoon } from "react-icons/fa";
 import logoUrl from "../../assets/logo-mark.svg";
 
@@ -37,6 +37,11 @@ const Header = ({ isDarkMode, onToggleDarkMode }) => {
       </label>
     </header>
   );
+};
+
+Header.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  onToggleDarkMode: PropTypes.func.isRequired,
 };
 
 export default Header;

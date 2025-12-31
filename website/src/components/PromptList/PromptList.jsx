@@ -1,6 +1,6 @@
-import React from "react";
+import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
-import PromptItem from "./PromptItem"; // New import
+import PromptItem from "./PromptItem";
 import { FolderOpen } from "lucide-react";
 
 const PromptList = ({
@@ -92,6 +92,27 @@ const PromptList = ({
       </div>
     </div>
   );
+};
+
+PromptList.propTypes = {
+  prompts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  loadMorePrompts: PropTypes.func.isRequired,
+  hasMore: PropTypes.bool.isRequired,
+  onSelectPrompt: PropTypes.func.isRequired,
+  onQuickAction: PropTypes.func,
+  selectedCategory: PropTypes.string,
+  onCategoryClick: PropTypes.func.isRequired,
+  onBackToCategories: PropTypes.func.isRequired,
+  groupedPrompts: PropTypes.objectOf(PropTypes.array).isRequired,
+  showCategoryList: PropTypes.bool.isRequired,
+  totalPrompts: PropTypes.number.isRequired,
+  totalFilteredPrompts: PropTypes.number.isRequired,
+  customTools: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default PromptList;

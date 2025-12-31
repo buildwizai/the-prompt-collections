@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import logoUrl from "../../assets/logo-mark.svg";
 import { FaGithub, FaTwitter, FaStar, FaCodeBranch, FaRocket } from "react-icons/fa";
 import { fetchRepoData } from "../../utils/github";

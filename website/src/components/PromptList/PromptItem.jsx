@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { Zap } from "lucide-react";
 import aiTools from "../../data/ai-tools.json";
 import { getMostFrequentTool } from "../../utils/localStorage";
@@ -70,6 +70,27 @@ const PromptItem = ({ prompt, onSelectPrompt, onQuickAction, customTools = [] })
       </div>
     </div>
   );
+};
+
+PromptItem.propTypes = {
+  prompt: PropTypes.shape({
+    filename: PropTypes.string,
+    summary: PropTypes.string,
+    title: PropTypes.string,
+    usage: PropTypes.string,
+    content: PropTypes.string,
+    category: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.string),
+    usageCount: PropTypes.number,
+  }).isRequired,
+  onSelectPrompt: PropTypes.func.isRequired,
+  onQuickAction: PropTypes.func,
+  customTools: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default PromptItem;

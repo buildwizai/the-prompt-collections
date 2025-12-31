@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { FaBook } from "react-icons/fa";
 
 const ReferencesSection = ({ referencesData }) => {
@@ -33,6 +33,17 @@ const ReferencesSection = ({ referencesData }) => {
       </div>
     </section>
   );
+};
+
+ReferencesSection.propTypes = {
+  referencesData: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      source: PropTypes.string,
+    })
+  ),
 };
 
 export default ReferencesSection;

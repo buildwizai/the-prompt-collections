@@ -1,5 +1,6 @@
 // src/components/SelectedPromptModal/SelectedPromptModal.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { disableScroll, enableScroll } from "../../utils/scrollLock";
 import { X, Copy, Check, Edit, Trash2, Plus, Save, Zap, Heart, ChevronDown } from "lucide-react";
 import ShareButton from "../ShareButton/ShareButton";
@@ -369,6 +370,32 @@ const SelectedPromptModal = ({
       </div>
     </div>
   );
+};
+
+SelectedPromptModal.propTypes = {
+  selectedPrompt: PropTypes.shape({
+    filename: PropTypes.string,
+    summary: PropTypes.string,
+    title: PropTypes.string,
+    usage: PropTypes.string,
+    content: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+  onClose: PropTypes.func.isRequired,
+  onCopy: PropTypes.func.isRequired,
+  isCopied: PropTypes.bool.isRequired,
+  onStartConversation: PropTypes.func.isRequired,
+  customTools: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onAddCustomTool: PropTypes.func.isRequired,
+  onDeleteCustomTool: PropTypes.func.isRequired,
+  onModifyCustomTool: PropTypes.func.isRequired,
+  isFavorite: PropTypes.bool.isRequired,
+  onToggleFavorite: PropTypes.func.isRequired,
 };
 
 export default SelectedPromptModal;

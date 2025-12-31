@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
                 >
                   <div className="flex flex-col h-full p-6 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 shadow-sm">
                     <p className="text-sm text-gray-700 dark:text-gray-300 flex-1">
-                      "{testimonial.quote}"
+                      &ldquo;{testimonial.quote}&rdquo;
                     </p>
                     <div className="mt-4">
                       <p className="text-sm font-semibold text-gray-900 dark:text-white">

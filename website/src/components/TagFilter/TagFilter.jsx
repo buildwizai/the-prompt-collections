@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import "../../styles/animations.css";
 import ShareButton from "../ShareButton/ShareButton";
 import { Heart } from "lucide-react";
@@ -62,6 +62,17 @@ const TagFilter = ({
       </div>
     </div>
   );
+};
+
+TagFilter.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selectedTags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onTagToggle: PropTypes.func.isRequired,
+  showAllTags: PropTypes.bool.isRequired,
+  onToggleShowAllTags: PropTypes.func.isRequired,
+  tagCounts: PropTypes.objectOf(PropTypes.number).isRequired,
+  showShareButton: PropTypes.bool,
+  favoritePrompts: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default TagFilter;

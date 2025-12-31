@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
 
 const initialForm = {

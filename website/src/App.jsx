@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Header from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import TagFilter from "./components/TagFilter/TagFilter";
@@ -30,7 +30,7 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(storedState.darkMode);
   const [customTools, setCustomTools] = useState(storedState.customTools);
   const [usageStats, setUsageStats] = useState(storedState.promptUsageStats);
-  const [toolUsageStats, setToolUsageStats] = useState(storedState.toolUsageStats);
+  const [, setToolUsageStats] = useState(storedState.toolUsageStats);
   const [favoritePrompts, setFavoritePrompts] = useState(storedState.favoritePrompts);
   const toolWindowsRef = useRef({});
 
@@ -214,7 +214,7 @@ const App = () => {
       existingWindow.focus();
       try {
         existingWindow.location.href = url;
-      } catch (error) {
+      } catch {
         const newWindow = window.open(url, "_blank");
         if (newWindow) {
           toolWindowsRef.current[website] = newWindow;
@@ -377,7 +377,8 @@ const App = () => {
       const tags = tagsParam.split(",");
       setSelectedTags(tags);
     }
-  }, []); // Removed [groupedPrompts]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Determine whether to show the category list or filtered prompts
   const showCategoryList = !searchQuery && selectedTags.length === 0 && !selectedCategory;

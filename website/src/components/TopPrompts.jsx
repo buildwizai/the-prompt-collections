@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { Trash2, Zap, Heart } from "lucide-react";
 
 const PromptList = ({ prompts, handleSelectPrompt, title, onRemoveFavorite, icon: Icon }) => {
@@ -67,6 +67,14 @@ const PromptList = ({ prompts, handleSelectPrompt, title, onRemoveFavorite, icon
   );
 };
 
+PromptList.propTypes = {
+  prompts: PropTypes.arrayOf(PropTypes.object),
+  handleSelectPrompt: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  onRemoveFavorite: PropTypes.func,
+  icon: PropTypes.elementType,
+};
+
 const TopPrompts = ({ topPrompts, favoritePrompts, handleSelectPrompt, onRemoveFavorite }) => {
   return (
     <section className="mt-8">
@@ -87,6 +95,13 @@ const TopPrompts = ({ topPrompts, favoritePrompts, handleSelectPrompt, onRemoveF
       </div>
     </section>
   );
+};
+
+TopPrompts.propTypes = {
+  topPrompts: PropTypes.arrayOf(PropTypes.object),
+  favoritePrompts: PropTypes.arrayOf(PropTypes.object),
+  handleSelectPrompt: PropTypes.func.isRequired,
+  onRemoveFavorite: PropTypes.func,
 };
 
 export default TopPrompts;

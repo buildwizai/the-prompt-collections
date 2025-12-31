@@ -1,5 +1,6 @@
 // src/components/CustomToolsSection/CustomToolsSection.jsx
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 const CustomToolsSection = ({ customTools, onAdd, onDelete, onModify }) => {
@@ -77,6 +78,18 @@ const CustomToolsSection = ({ customTools, onAdd, onDelete, onModify }) => {
       </ul>
     </div>
   );
+};
+
+CustomToolsSection.propTypes = {
+  customTools: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onAdd: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onModify: PropTypes.func.isRequired,
 };
 
 export default CustomToolsSection;

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState, cloneElement } from "react";
+import PropTypes from "prop-types";
 import { FiShare2, FiTwitter, FiFacebook, FiLinkedin, FiMail, FiLink, FiX } from "react-icons/fi";
 
 const ShareButton = ({ url, text = "Share", content, title }) => {
@@ -95,7 +96,7 @@ const ShareButton = ({ url, text = "Share", content, title }) => {
                   }
                 }}
               >
-                {React.cloneElement(option.icon, {
+                {cloneElement(option.icon, {
                   className: `w-4 h-4 text-gray-500 dark:text-gray-400 ${option.iconClassName}`,
                 })}
                 <span>{option.name}</span>
@@ -113,6 +114,13 @@ const ShareButton = ({ url, text = "Share", content, title }) => {
       )}
     </div>
   );
+};
+
+ShareButton.propTypes = {
+  url: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  content: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default ShareButton;
