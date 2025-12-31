@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaBook } from 'react-icons/fa';
+import React from "react";
+import { FaBook } from "react-icons/fa";
 
 const ReferencesSection = ({ referencesData }) => {
   if (!referencesData || referencesData.length === 0) return null;
@@ -20,8 +20,12 @@ const ReferencesSection = ({ referencesData }) => {
               rel="noopener noreferrer"
               className="p-4 rounded-lg border border-gray-100 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors"
             >
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{reference.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{reference.description}</p>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                {reference.title}
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                {reference.description}
+              </p>
               <span className="text-xs text-blue-600 dark:text-blue-400">{reference.source}</span>
             </a>
           ))}

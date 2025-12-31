@@ -1,5 +1,5 @@
 // src/components/SearchBar/SearchBar.jsx
-import React from 'react';
+import React from "react";
 
 const SearchBar = ({ onSearch }) => {
   return (

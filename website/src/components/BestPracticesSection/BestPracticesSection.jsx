@@ -1,27 +1,32 @@
-import React from 'react';
-import { FaLightbulb } from 'react-icons/fa';
+import React from "react";
+import { FaLightbulb } from "react-icons/fa";
 
 const bestPractices = [
   {
-    title: 'Define Clear Objectives',
-    description: 'Know what outcome you expect before drafting the prompt so the model has a focused target.'
+    title: "Define Clear Objectives",
+    description:
+      "Know what outcome you expect before drafting the prompt so the model has a focused target.",
   },
   {
-    title: 'Give Context and Constraints',
-    description: 'Include relevant background, tone, audience, and format requirements to guide the response style.'
+    title: "Give Context and Constraints",
+    description:
+      "Include relevant background, tone, audience, and format requirements to guide the response style.",
   },
   {
-    title: 'Break Complex Tasks Down',
-    description: 'Use step-by-step instructions or numbered tasks to help the model reason through each part.'
+    title: "Break Complex Tasks Down",
+    description:
+      "Use step-by-step instructions or numbered tasks to help the model reason through each part.",
   },
   {
-    title: 'Iterate and Refine',
-    description: 'Review the output, adjust the prompt with clarifications or follow-up constraints, and run it again.'
+    title: "Iterate and Refine",
+    description:
+      "Review the output, adjust the prompt with clarifications or follow-up constraints, and run it again.",
   },
   {
-    title: 'Provide Exemplars When Possible',
-    description: 'Add short examples of good outputs to set expectations and reduce guessing from the model.'
-  }
+    title: "Provide Exemplars When Possible",
+    description:
+      "Add short examples of good outputs to set expectations and reduce guessing from the model.",
+  },
 ];
 
 const BestPracticesSection = () => {

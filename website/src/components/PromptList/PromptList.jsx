@@ -1,7 +1,7 @@
-import React from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import PromptItem from './PromptItem'; // New import
-import { FolderOpen } from 'lucide-react';
+import React from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
+import PromptItem from "./PromptItem"; // New import
+import { FolderOpen } from "lucide-react";
 
 const PromptList = ({
   prompts,
@@ -16,7 +16,7 @@ const PromptList = ({
   showCategoryList,
   totalPrompts,
   totalFilteredPrompts, // Add this new prop
-  customTools // Add this new prop
+  customTools, // Add this new prop
 }) => {
   if (showCategoryList) {
     return (
@@ -27,7 +27,9 @@ const PromptList = ({
             Browse by Category
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Browse through our collection of <span className="font-semibold text-blue-600 dark:text-blue-400">{totalPrompts}</span> carefully curated prompts
+            Browse through our collection of{" "}
+            <span className="font-semibold text-blue-600 dark:text-blue-400">{totalPrompts}</span>{" "}
+            carefully curated prompts
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -63,8 +65,10 @@ const PromptList = ({
             </button>
           )}
           <div className="text-sm text-gray-600 dark:text-gray-400 ml-0 sm:ml-auto">
-            {totalFilteredPrompts} prompts found {/* Show total filtered count instead of visible prompts */}
-            {prompts.length < totalFilteredPrompts && ` (showing ${prompts.length})`} {/* Show current visible count if less than total */}
+            {totalFilteredPrompts} prompts found{" "}
+            {/* Show total filtered count instead of visible prompts */}
+            {prompts.length < totalFilteredPrompts && ` (showing ${prompts.length})`}{" "}
+            {/* Show current visible count if less than total */}
           </div>
         </div>
 

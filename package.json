@@ -1,0 +1,19 @@
+{
+  "name": "the-prompt-collection",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev --prefix website",
+    "build": "node scripts/generate_prompt_data.js && npm run build --prefix website",
+    "lint": "npm run lint --prefix website",
+    "lint:fix": "npm run lint:fix --prefix website",
+    "format": "prettier --write \"website/src/**/*.{js,jsx,css}\" \"scripts/**/*.js\"",
+    "format:check": "prettier --check \"website/src/**/*.{js,jsx,css}\" \"scripts/**/*.js\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2"
+  }
+}

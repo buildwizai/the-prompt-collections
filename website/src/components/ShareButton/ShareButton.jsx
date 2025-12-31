@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { FiShare2, FiTwitter, FiFacebook, FiLinkedin, FiMail, FiLink, FiX } from 'react-icons/fi';
+import React, { useState } from "react";
+import { FiShare2, FiTwitter, FiFacebook, FiLinkedin, FiMail, FiLink, FiX } from "react-icons/fi";
 
-const ShareButton = ({ url, text = 'Share', content, title }) => {
+const ShareButton = ({ url, text = "Share", content, title }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
@@ -13,35 +13,39 @@ const ShareButton = ({ url, text = 'Share', content, title }) => {
 
   const shareOptions = [
     {
-      name: 'Twitter',
+      name: "Twitter",
       icon: <FiTwitter />,
       url: `https://twitter.com/intent/tweet?text=${generateShareContent()}`,
-      className: "hover:bg-sky-50 dark:hover:bg-sky-900/50 hover:text-[#1DA1F2] dark:hover:text-[#1DA1F2] group text-gray-700 dark:text-gray-300",
-      iconClassName: "group-hover:text-[#1DA1F2]"
+      className:
+        "hover:bg-sky-50 dark:hover:bg-sky-900/50 hover:text-[#1DA1F2] dark:hover:text-[#1DA1F2] group text-gray-700 dark:text-gray-300",
+      iconClassName: "group-hover:text-[#1DA1F2]",
     },
     {
-      name: 'Facebook',
+      name: "Facebook",
       icon: <FiFacebook />,
       url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-      className: "hover:bg-blue-50 dark:hover:bg-blue-900/50 hover:text-[#4267B2] dark:hover:text-[#4267B2] group text-gray-700 dark:text-gray-300",
-      iconClassName: "group-hover:text-[#4267B2]"
+      className:
+        "hover:bg-blue-50 dark:hover:bg-blue-900/50 hover:text-[#4267B2] dark:hover:text-[#4267B2] group text-gray-700 dark:text-gray-300",
+      iconClassName: "group-hover:text-[#4267B2]",
     },
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: <FiLinkedin />,
       url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
-      className: "hover:bg-blue-50 dark:hover:bg-blue-900/50 hover:text-[#0077b5] dark:hover:text-[#0077b5] group text-gray-700 dark:text-gray-300",
-      iconClassName: "group-hover:text-[#0077b5]"
+      className:
+        "hover:bg-blue-50 dark:hover:bg-blue-900/50 hover:text-[#0077b5] dark:hover:text-[#0077b5] group text-gray-700 dark:text-gray-300",
+      iconClassName: "group-hover:text-[#0077b5]",
     },
     {
-      name: 'Email',
+      name: "Email",
       icon: <FiMail />,
-      url: `mailto:?subject=${encodeURIComponent(title || 'Check out this prompt!')}&body=${generateShareContent()}`,
-      className: "hover:bg-red-50 dark:hover:bg-red-900/50 hover:text-red-600 dark:hover:text-red-400 group text-gray-700 dark:text-gray-300",
-      iconClassName: "group-hover:text-red-600 dark:group-hover:text-red-400"
+      url: `mailto:?subject=${encodeURIComponent(title || "Check out this prompt!")}&body=${generateShareContent()}`,
+      className:
+        "hover:bg-red-50 dark:hover:bg-red-900/50 hover:text-red-600 dark:hover:text-red-400 group text-gray-700 dark:text-gray-300",
+      iconClassName: "group-hover:text-red-600 dark:group-hover:text-red-400",
     },
     {
-      name: 'Copy Link',
+      name: "Copy Link",
       icon: <FiLink />,
       action: async () => {
         await navigator.clipboard.writeText(url);
@@ -49,8 +53,9 @@ const ShareButton = ({ url, text = 'Share', content, title }) => {
         setTimeout(() => setShowToast(false), 2000);
         setShowMenu(false);
       },
-      className: "hover:bg-purple-50 dark:hover:bg-purple-900/50 hover:text-purple-600 dark:hover:text-purple-400 group text-gray-700 dark:text-gray-300",
-      iconClassName: "group-hover:text-purple-600 dark:group-hover:text-purple-400"
+      className:
+        "hover:bg-purple-50 dark:hover:bg-purple-900/50 hover:text-purple-600 dark:hover:text-purple-400 group text-gray-700 dark:text-gray-300",
+      iconClassName: "group-hover:text-purple-600 dark:group-hover:text-purple-400",
     },
   ];
 
@@ -85,13 +90,13 @@ const ShareButton = ({ url, text = 'Share', content, title }) => {
                   if (option.action) {
                     option.action();
                   } else {
-                    window.open(option.url, '_blank');
+                    window.open(option.url, "_blank");
                     setShowMenu(false);
                   }
                 }}
               >
                 {React.cloneElement(option.icon, {
-                  className: `w-4 h-4 text-gray-500 dark:text-gray-400 ${option.iconClassName}`
+                  className: `w-4 h-4 text-gray-500 dark:text-gray-400 ${option.iconClassName}`,
                 })}
                 <span>{option.name}</span>
               </button>

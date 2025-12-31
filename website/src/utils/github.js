@@ -1,6 +1,6 @@
 // utils/github.js
 export const fetchRepoData = async () => {
-  const repoUrl = 'https://api.github.com/repos/buildwizai/the-prompt-collections';
+  const repoUrl = "https://api.github.com/repos/buildwizai/the-prompt-collections";
   const commitsUrl = `${repoUrl}/commits/main`;
   const workflowsUrl = `${repoUrl}/actions/runs`;
 
@@ -11,7 +11,7 @@ export const fetchRepoData = async () => {
   ]);
 
   if (!repoResponse.ok || !commitResponse.ok || !workflowsResponse.ok) {
-    throw new Error('Failed to fetch repository data');
+    throw new Error("Failed to fetch repository data");
   }
 
   const repoData = await repoResponse.json();

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+echo "🔍 Running pre-commit checks..."
+
+# Run Prettier check
+echo "📝 Checking formatting..."
+npm run format:check
+if [ $? -ne 0 ]; then
+  echo "❌ Formatting issues found. Run 'npm run format' to fix."
+  exit 1
+fi
+
+# Run ESLint (warning only, doesn't block commit)
+echo "🔧 Running linter..."
+npm run lint || echo "⚠️  Linting warnings detected (non-blocking)"
+
+# Run build to catch any build errors
+echo "🏗️ Verifying build..."
+npm run build
+if [ $? -ne 0 ]; then
+  echo "❌ Build failed. Please fix the errors before committing."
+  exit 1
+fi
+
+echo "✅ All pre-commit checks passed!"

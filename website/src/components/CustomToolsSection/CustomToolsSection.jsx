@@ -1,10 +1,10 @@
 // src/components/CustomToolsSection/CustomToolsSection.jsx
-import React, { useState } from 'react';
-import { FaEdit, FaTrash } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 const CustomToolsSection = ({ customTools, onAdd, onDelete, onModify }) => {
-  const [toolName, setToolName] = useState('');
-  const [toolUrl, setToolUrl] = useState('');
+  const [toolName, setToolName] = useState("");
+  const [toolUrl, setToolUrl] = useState("");
   const [editingTool, setEditingTool] = useState(null);
 
   const handleSubmit = (e) => {
@@ -14,8 +14,8 @@ const CustomToolsSection = ({ customTools, onAdd, onDelete, onModify }) => {
     } else {
       onAdd(toolName, toolUrl);
     }
-    setToolName('');
-    setToolUrl('');
+    setToolName("");
+    setToolUrl("");
     setEditingTool(null);
   };
 
@@ -43,7 +43,7 @@ const CustomToolsSection = ({ customTools, onAdd, onDelete, onModify }) => {
             type="submit"
             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700"
           >
-            {editingTool ? 'Update' : 'Add'}
+            {editingTool ? "Update" : "Add"}
           </button>
         </div>
       </form>

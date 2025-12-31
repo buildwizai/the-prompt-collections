@@ -1,18 +1,7 @@
 // src/components/SelectedPromptModal/SelectedPromptModal.jsx
 import React, { useState, useEffect } from "react";
 import { disableScroll, enableScroll } from "../../utils/scrollLock";
-import {
-  X,
-  Copy,
-  Check,
-  Edit,
-  Trash2,
-  Plus,
-  Save,
-  Zap,
-  Heart,
-  ChevronDown,
-} from "lucide-react";
+import { X, Copy, Check, Edit, Trash2, Plus, Save, Zap, Heart, ChevronDown } from "lucide-react";
 import ShareButton from "../ShareButton/ShareButton";
 import "../../styles/animations.css";
 import aiTools from "../../data/ai-tools.json";
@@ -73,10 +62,7 @@ const SelectedPromptModal = ({
   };
 
   const displayName =
-    selectedPrompt.summary ||
-    selectedPrompt.title ||
-    selectedPrompt.filename ||
-    "Untitled Prompt";
+    selectedPrompt.summary || selectedPrompt.title || selectedPrompt.filename || "Untitled Prompt";
 
   const shareContent = `Check out this prompt "${displayName}" from The Prompt Collection`;
 
@@ -84,9 +70,7 @@ const SelectedPromptModal = ({
     const selectedWebsite = e.target.value;
     if (selectedWebsite === "add-custom-tool") {
       setShowCustomToolForm(true);
-      const hasOpenWebUI = customTools.some(
-        (tool) => tool.name.toLowerCase() === "openwebui"
-      );
+      const hasOpenWebUI = customTools.some((tool) => tool.name.toLowerCase() === "openwebui");
       if (!hasOpenWebUI) {
         setToolName("OpenWebUI");
         setToolUrl("http://localhost:3000");
@@ -123,7 +107,7 @@ const SelectedPromptModal = ({
       {/* Modal Container */}
       <div className="flex min-h-screen items-center justify-center p-4">
         <div
-          className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-[var(--modal-border)] bg-[var(--modal-surface)] shadow-xl shadow-black/5 dark:shadow-black/20 animate-modal-entry"
+          className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl border border-[var(--modal-border)] bg-[var(--modal-surface)] shadow-xl shadow-black/5 dark:shadow-black/20 animate-modal-entry"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Top Action Buttons */}
@@ -156,7 +140,7 @@ const SelectedPromptModal = ({
           {/* Content */}
           <div className="p-6 sm:p-8">
             {/* Header Section */}
-            <div className="pr-28 animate-fade-slide-up">
+            <div className="pr-24 sm:pr-28 animate-fade-slide-up">
               <h2 className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
                 {displayName}
               </h2>
@@ -229,10 +213,14 @@ const SelectedPromptModal = ({
                   >
                     <option value="">Select an AI</option>
                     {aiTools.tools.map((tool) => (
-                      <option key={tool.name} value={tool.name}>{tool.name}</option>
+                      <option key={tool.name} value={tool.name}>
+                        {tool.name}
+                      </option>
                     ))}
                     {customTools.map((tool) => (
-                      <option key={tool.name} value={tool.name}>{tool.name}</option>
+                      <option key={tool.name} value={tool.name}>
+                        {tool.name}
+                      </option>
                     ))}
                     <option value="add-custom-tool">+ Add New AI</option>
                   </select>
@@ -282,7 +270,8 @@ const SelectedPromptModal = ({
                 </h3>
                 {shouldShowGuide && (
                   <p className="text-xs text-[var(--text-muted)] mb-4">
-                    Add your own AI tool or local setup. The prompt will be copied and the URL opened.
+                    Add your own AI tool or local setup. The prompt will be copied and the URL
+                    opened.
                   </p>
                 )}
                 <form onSubmit={handleAddOrUpdateTool} className="flex flex-col sm:flex-row gap-2">

@@ -1,37 +1,37 @@
 // generatePrompts.js
-const fs = require('fs');
-const { faker } = require('@faker-js/faker'); // Updated import
+const fs = require("fs");
+const { faker } = require("@faker-js/faker"); // Updated import
 
 // Define categories and tags for prompts
 const categories = [
-  'ai-tools',
-  'coding',
-  'productivity',
-  'writing',
-  'marketing',
-  'education',
-  'health',
-  'finance',
-  'entertainment',
-  'uncategorized',
+  "ai-tools",
+  "coding",
+  "productivity",
+  "writing",
+  "marketing",
+  "education",
+  "health",
+  "finance",
+  "entertainment",
+  "uncategorized",
 ];
 
 const tags = [
-  'system',
-  'ai',
-  'github',
-  'copilot',
-  'vscode',
-  'python',
-  'javascript',
-  'react',
-  'nodejs',
-  'writing-tips',
-  'marketing-strategy',
-  'education-tools',
-  'health-tips',
-  'finance-tools',
-  'entertainment-news',
+  "system",
+  "ai",
+  "github",
+  "copilot",
+  "vscode",
+  "python",
+  "javascript",
+  "react",
+  "nodejs",
+  "writing-tips",
+  "marketing-strategy",
+  "education-tools",
+  "health-tips",
+  "finance-tools",
+  "entertainment-news",
 ];
 
 // Function to generate a random prompt
@@ -59,6 +59,6 @@ const generatePrompt = (id) => {
 const prompts = Array.from({ length: 1000 }, (_, index) => generatePrompt(index + 1));
 
 // Save prompts to a JSON file
-fs.writeFileSync('prompts.json', JSON.stringify(prompts, null, 2));
+fs.writeFileSync("prompts.json", JSON.stringify(prompts, null, 2));
 
-console.log('Generated prompts.json with 1000 prompts.');
+console.log("Generated prompts.json with 1000 prompts.");

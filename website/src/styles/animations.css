@@ -1,8 +1,17 @@
 @keyframes float-slow {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(5px, -5px); }
-  50% { transform: translate(-5px, 5px); }
-  75% { transform: translate(-5px, -5px); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, -5px);
+  }
+  50% {
+    transform: translate(-5px, 5px);
+  }
+  75% {
+    transform: translate(-5px, -5px);
+  }
 }
 
 @keyframes modalEntry {
@@ -17,17 +26,35 @@
 }
 
 @keyframes float-medium {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(8px, -8px); }
-  50% { transform: translate(-8px, 8px); }
-  75% { transform: translate(-8px, -8px); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(8px, -8px);
+  }
+  50% {
+    transform: translate(-8px, 8px);
+  }
+  75% {
+    transform: translate(-8px, -8px);
+  }
 }
 
 @keyframes float-fast {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(12px, -12px); }
-  50% { transform: translate(-12px, 12px); }
-  75% { transform: translate(-12px, -12px); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, 12px);
+  }
+  75% {
+    transform: translate(-12px, -12px);
+  }
 }
 
 .animate-float-slow {
@@ -62,17 +89,40 @@
   animation: fadeSlideUp 0.4s ease-out forwards;
 }
 
-.animate-delay-50 { animation-delay: 0.05s; opacity: 0; }
-.animate-delay-100 { animation-delay: 0.1s; opacity: 0; }
-.animate-delay-150 { animation-delay: 0.15s; opacity: 0; }
-.animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
-.animate-delay-250 { animation-delay: 0.25s; opacity: 0; }
-.animate-delay-300 { animation-delay: 0.3s; opacity: 0; }
+.animate-delay-50 {
+  animation-delay: 0.05s;
+  opacity: 0;
+}
+.animate-delay-100 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+.animate-delay-150 {
+  animation-delay: 0.15s;
+  opacity: 0;
+}
+.animate-delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+.animate-delay-250 {
+  animation-delay: 0.25s;
+  opacity: 0;
+}
+.animate-delay-300 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
 
 /* Subtle button hover effect */
 @keyframes buttonPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
-  50% { box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
 }
 
 .animate-button-pulse:hover {

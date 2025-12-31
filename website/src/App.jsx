@@ -1,18 +1,18 @@
 // src/App.jsx
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import Header from './components/Header/Header';
-import SearchBar from './components/SearchBar/SearchBar';
-import TagFilter from './components/TagFilter/TagFilter';
-import PromptList from './components/PromptList/PromptList';
-import SelectedPromptModal from './components/SelectedPromptModal/SelectedPromptModal';
-import Footer from './components/Footer/Footer';
-import BestPracticesSection from './components/BestPracticesSection/BestPracticesSection';
-import TestimonialsSection from './components/TestimonialsSection/TestimonialsSection';
-import ContactSection from './components/ContactSection/ContactSection';
-import prompts from './data/prompts.json';
-import debounce from 'lodash.debounce';
-import aiTools from './data/ai-tools.json';
-import TopPrompts from './components/TopPrompts';
+import React, { useState, useEffect, useCallback, useRef } from "react";
+import Header from "./components/Header/Header";
+import SearchBar from "./components/SearchBar/SearchBar";
+import TagFilter from "./components/TagFilter/TagFilter";
+import PromptList from "./components/PromptList/PromptList";
+import SelectedPromptModal from "./components/SelectedPromptModal/SelectedPromptModal";
+import Footer from "./components/Footer/Footer";
+import BestPracticesSection from "./components/BestPracticesSection/BestPracticesSection";
+import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection";
+import ContactSection from "./components/ContactSection/ContactSection";
+import prompts from "./data/prompts.json";
+import debounce from "lodash.debounce";
+import aiTools from "./data/ai-tools.json";
+import TopPrompts from "./components/TopPrompts";
 import {
   loadStoredState,
   saveDarkMode,
@@ -20,8 +20,8 @@ import {
   savePromptUsageStats,
   saveToolUsageStats,
   saveFavoritePrompts,
-  loadCustomTools
-} from './utils/localStorage';
+  loadCustomTools,
+} from "./utils/localStorage";
 
 const PAGE_SIZE = 20; // Number of prompts to load at a time
 
@@ -34,7 +34,7 @@ const App = () => {
   const [favoritePrompts, setFavoritePrompts] = useState(storedState.favoritePrompts);
   const toolWindowsRef = useRef({});
 
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);
   const [visiblePrompts, setVisiblePrompts] = useState([]);
   const [hasMore, setHasMore] = useState(true);
@@ -85,7 +85,7 @@ const App = () => {
 
   // Group prompts by category
   const groupedPrompts = prompts.reduce((acc, prompt) => {
-    const category = prompt.category || 'Uncategorized';
+    const category = prompt.category || "Uncategorized";
     if (!acc[category]) {
       acc[category] = [];
     }
@@ -96,12 +96,12 @@ const App = () => {
   // Filter prompts based on search query and selected tags
   const filterPrompts = useCallback(() => {
     return prompts.filter((prompt) => {
-      const category = prompt.category || '';
+      const category = prompt.category || "";
       const subcategories = prompt.subcategories || [];
-      const content = prompt.content || '';
+      const content = prompt.content || "";
 
       // Check if favorites filter is active
-      if (selectedTags.includes('favorites') && !favoritePrompts.includes(prompt.filename)) {
+      if (selectedTags.includes("favorites") && !favoritePrompts.includes(prompt.filename)) {
         return false;
       }
 
@@ -114,7 +114,7 @@ const App = () => {
 
       const matchesTags =
         selectedTags.length === 0 ||
-        selectedTags.every((tag) => tag === 'favorites' || (prompt.tags || []).includes(tag));
+        selectedTags.every((tag) => tag === "favorites" || (prompt.tags || []).includes(tag));
 
       return matchesSearch && matchesTags;
     });
@@ -167,9 +167,7 @@ const App = () => {
   // Toggle a tag in the selected tags list
   const handleTagToggle = (tag) => {
     setSelectedTags((prevTags) =>
-      prevTags.includes(tag)
-        ? prevTags.filter((t) => t !== tag)
-        : [...prevTags, tag]
+      prevTags.includes(tag) ? prevTags.filter((t) => t !== tag) : [...prevTags, tag]
     );
   };
 
@@ -200,10 +198,10 @@ const App = () => {
     });
 
     // Find the tool URL from either ai-tools.json or custom tools
-    const predefinedTool = aiTools.tools.find(tool => tool.name === website);
-    const customTool = customTools.find(tool => tool.name === website);
+    const predefinedTool = aiTools.tools.find((tool) => tool.name === website);
+    const customTool = customTools.find((tool) => tool.name === website);
 
-    let url = '';
+    let url = "";
     if (predefinedTool) {
       url = predefinedTool.url;
     } else if (customTool) {
@@ -217,13 +215,13 @@ const App = () => {
       try {
         existingWindow.location.href = url;
       } catch (error) {
-        const newWindow = window.open(url, '_blank');
+        const newWindow = window.open(url, "_blank");
         if (newWindow) {
           toolWindowsRef.current[website] = newWindow;
         }
       }
     } else {
-      const newWindow = window.open(url, '_blank');
+      const newWindow = window.open(url, "_blank");
       if (newWindow) {
         toolWindowsRef.current[website] = newWindow;
       }
@@ -233,14 +231,14 @@ const App = () => {
   // Add new handler for quick action
   const handleQuickAction = (prompt) => {
     // Determine the top AI tool (from aiTools and customTools)
-    const stats = JSON.parse(localStorage.getItem('toolUsageStats')) || {};
+    const stats = JSON.parse(localStorage.getItem("toolUsageStats")) || {};
     const allTools = [...aiTools.tools, ...customTools];
     let maxUsage = -1;
-    allTools.forEach(tool => {
+    allTools.forEach((tool) => {
       const usage = stats[tool.name] || 0;
       if (usage > maxUsage) maxUsage = usage;
     });
-    const candidates = allTools.filter(tool => (stats[tool.name] || 0) === maxUsage);
+    const candidates = allTools.filter((tool) => (stats[tool.name] || 0) === maxUsage);
     if (candidates.length === 0) return;
     const randomIndex = Math.floor(Math.random() * candidates.length);
     const topTool = candidates[randomIndex];
@@ -254,16 +252,16 @@ const App = () => {
 
     // Copy the prompt content to clipboard and then open the tool's URL
     navigator.clipboard.writeText(prompt.content).then(() => {
-      const predefinedTool = aiTools.tools.find(tool => tool.name === topTool.name);
-      const customTool = customTools.find(tool => tool.name === topTool.name);
-      let url = '';
+      const predefinedTool = aiTools.tools.find((tool) => tool.name === topTool.name);
+      const customTool = customTools.find((tool) => tool.name === topTool.name);
+      let url = "";
       if (predefinedTool) {
         url = predefinedTool.url;
       } else if (customTool) {
         url = customTool.url;
       }
       if (url) {
-        window.open(url, '_blank');
+        window.open(url, "_blank");
       }
     });
   };
@@ -282,9 +280,7 @@ const App = () => {
   // Handle modifying a custom tool
   const handleModifyCustomTool = (oldName, newName, newUrl) => {
     setCustomTools((prev) =>
-      prev.map((tool) =>
-        tool.name === oldName ? { name: newName, url: newUrl } : tool
-      )
+      prev.map((tool) => (tool.name === oldName ? { name: newName, url: newUrl } : tool))
     );
   };
 
@@ -292,10 +288,12 @@ const App = () => {
   useEffect(() => {
     const handleUrlParams = () => {
       const params = new URLSearchParams(window.location.search);
-      const sharedPromptName = params.get('prompt');
+      const sharedPromptName = params.get("prompt");
 
       if (sharedPromptName) {
-        const promptToShow = prompts.find(p => p.filename === decodeURIComponent(sharedPromptName));
+        const promptToShow = prompts.find(
+          (p) => p.filename === decodeURIComponent(sharedPromptName)
+        );
         if (promptToShow) {
           setSelectedPrompt(promptToShow);
         }
@@ -304,9 +302,9 @@ const App = () => {
 
     // Handle initial load and browser back/forward
     handleUrlParams();
-    window.addEventListener('popstate', handleUrlParams);
+    window.addEventListener("popstate", handleUrlParams);
 
-    return () => window.removeEventListener('popstate', handleUrlParams);
+    return () => window.removeEventListener("popstate", handleUrlParams);
   }, []);
 
   // Update URL when modal opens/closes
@@ -314,27 +312,27 @@ const App = () => {
     const url = new URL(window.location);
 
     if (selectedPrompt) {
-      url.searchParams.set('prompt', encodeURIComponent(selectedPrompt.filename));
+      url.searchParams.set("prompt", encodeURIComponent(selectedPrompt.filename));
     } else {
-      url.searchParams.delete('prompt');
+      url.searchParams.delete("prompt");
     }
 
     // Only update if URL actually changed to avoid unnecessary history entries
     if (url.toString() !== window.location.href) {
-      window.history.pushState({}, '', url);
+      window.history.pushState({}, "", url);
     }
   }, [selectedPrompt]);
 
   // Handle modal close via browser back button
   useEffect(() => {
     const handlePopState = () => {
-      if (!new URLSearchParams(window.location.search).has('prompt')) {
+      if (!new URLSearchParams(window.location.search).has("prompt")) {
         setSelectedPrompt(null);
       }
     };
 
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
   // Update URL with selected filters - move outside component or memoize
@@ -343,14 +341,14 @@ const App = () => {
 
     const url = new URL(window.location);
     if (selectedTags.length > 0) {
-      url.searchParams.set('tags', selectedTags.join(','));
+      url.searchParams.set("tags", selectedTags.join(","));
     } else {
-      url.searchParams.delete('tags');
+      url.searchParams.delete("tags");
     }
 
     // Only update if URL actually changed
     if (url.toString() !== window.location.href) {
-      window.history.pushState({}, '', url);
+      window.history.pushState({}, "", url);
     }
   }, [selectedTags]);
 
@@ -367,8 +365,8 @@ const App = () => {
   // Handle initial URL params - only run once on mount
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const categoryParam = params.get('category');
-    const tagsParam = params.get('tags');
+    const categoryParam = params.get("category");
+    const tagsParam = params.get("tags");
 
     if (categoryParam && groupedPrompts[categoryParam]) {
       setSelectedCategory(categoryParam);
@@ -376,7 +374,7 @@ const App = () => {
     }
 
     if (tagsParam) {
-      const tags = tagsParam.split(',');
+      const tags = tagsParam.split(",");
       setSelectedTags(tags);
     }
   }, []); // Removed [groupedPrompts]
@@ -385,8 +383,8 @@ const App = () => {
   const showCategoryList = !searchQuery && selectedTags.length === 0 && !selectedCategory;
 
   const getFilterShareContent = () => {
-    if (selectedTags.length === 0) return '';
-    return `Check out these prompts with tags: ${selectedTags.join(', ')} from The Prompt Collection`;
+    if (selectedTags.length === 0) return "";
+    return `Check out these prompts with tags: ${selectedTags.join(", ")} from The Prompt Collection`;
   };
 
   // Get total number of filtered prompts
@@ -415,16 +413,16 @@ const App = () => {
     .sort(([, countA], [, countB]) => countB - countA)
     .slice(0, 5)
     .map(([filename, count]) => {
-      const prompt = prompts.find(p => p.filename === filename);
+      const prompt = prompts.find((p) => p.filename === filename);
       return prompt ? { ...prompt, usageCount: count } : null;
     })
-    .filter(prompt => prompt);
+    .filter((prompt) => prompt);
 
   const handleToggleFavorite = (prompt) => {
     setFavoritePrompts((prev) => {
       const isFavorite = prev.includes(prompt.filename);
       const newFavorites = isFavorite
-        ? prev.filter(filename => filename !== prompt.filename)
+        ? prev.filter((filename) => filename !== prompt.filename)
         : [...prev, prompt.filename];
       saveFavoritePrompts(newFavorites);
       return newFavorites;
@@ -433,13 +431,13 @@ const App = () => {
 
   // Get favorite prompts data - updated to sort by usage count
   const favoritesData = favoritePrompts
-    .map(filename => {
-      const prompt = prompts.find(p => p.filename === filename);
+    .map((filename) => {
+      const prompt = prompts.find((p) => p.filename === filename);
       return prompt ? { ...prompt, usageCount: usageStats[filename] || 0 } : null;
     })
-    .filter(prompt => prompt)
+    .filter((prompt) => prompt)
     .sort((a, b) => (b.usageCount || 0) - (a.usageCount || 0)) // Sort by usage count
-    .slice(0, 5);  // Take only top 5
+    .slice(0, 5); // Take only top 5
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -460,14 +458,18 @@ const App = () => {
         )}
 
         {/* Search and Filters Section - Show search only when no filters are active */}
-        <div className={`flex flex-col items-center justify-center ${showHero ? '' : 'py-2'} ${selectedTags.length > 0 ? 'space-y-2' : 'space-y-4'}`}>
-          {(!selectedCategory && selectedTags.length === 0) && (
+        <div
+          className={`flex flex-col items-center justify-center ${showHero ? "" : "py-2"} ${selectedTags.length > 0 ? "space-y-2" : "space-y-4"}`}
+        >
+          {!selectedCategory && selectedTags.length === 0 && (
             <div className="w-full max-w-2xl mx-auto">
               <SearchBar onSearch={handleSearch} />
             </div>
           )}
 
-          <div className="w-full mx-auto space-y-0">  {/* reduced spacing from space-y-1 to space-y-0 */}
+          <div className="w-full mx-auto space-y-0">
+            {" "}
+            {/* reduced spacing from space-y-1 to space-y-0 */}
             <TagFilter
               tags={visibleTags}
               selectedTags={selectedTags}
@@ -493,7 +495,9 @@ const App = () => {
         </div>
 
         {/* Prompts List with full width */}
-        <div className={`w-full ${(!showHero && (selectedCategory || selectedTags.length > 0)) ? 'mt-1' : 'mt-4'}`}>
+        <div
+          className={`w-full ${!showHero && (selectedCategory || selectedTags.length > 0) ? "mt-1" : "mt-4"}`}
+        >
           <PromptList
             prompts={visiblePrompts}
             loadMorePrompts={loadMorePrompts}

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Trash2, Zap, Heart } from 'lucide-react';
+import React from "react";
+import { Trash2, Zap, Heart } from "lucide-react";
 
 const PromptList = ({ prompts, handleSelectPrompt, title, onRemoveFavorite, icon: Icon }) => {
   if (!prompts || prompts.length === 0) return null;
@@ -16,29 +16,36 @@ const PromptList = ({ prompts, handleSelectPrompt, title, onRemoveFavorite, icon
             className="py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100"
           >
             <div className="flex items-center gap-2">
-              <span
-                className="flex-1"
-                onClick={() => handleSelectPrompt(prompt)}
-              >
-                {prompt.summary || prompt.title || prompt.filename || 'Untitled Prompt'}
+              <span className="flex-1" onClick={() => handleSelectPrompt(prompt)}>
+                {prompt.summary || prompt.title || prompt.filename || "Untitled Prompt"}
               </span>
-              {prompt.tags && prompt.tags.map((tag, i) => {
-                let classes = "px-1 py-0.5 rounded text-xs font-medium";
-                if (tag === 'system') {
-                  classes += " bg-red-200 text-red-800 dark:bg-red-900 dark:text-red-100";
-                } else if (tag === prompt.category) {
-                  classes += " bg-blue-200 text-blue-800 dark:bg-blue-900 dark:text-blue-100";
-                } else {
-                  classes += " bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200";
-                }
-                return (
-                  <span key={i} className={classes}>
-                    {tag}
-                  </span>
-                );
-              })}
+              {prompt.tags &&
+                prompt.tags.map((tag, i) => {
+                  let classes = "px-1 py-0.5 rounded text-xs font-medium";
+                  if (tag === "system") {
+                    classes += " bg-red-200 text-red-800 dark:bg-red-900 dark:text-red-100";
+                  } else if (tag === prompt.category) {
+                    classes += " bg-blue-200 text-blue-800 dark:bg-blue-900 dark:text-blue-100";
+                  } else {
+                    classes += " bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200";
+                  }
+                  return (
+                    <span key={i} className={classes}>
+                      {tag}
+                    </span>
+                  );
+                })}
               <span className="px-2 py-0.5 rounded text-xs font-medium bg-green-200 text-green-800 dark:bg-green-900 dark:text-green-100">
-                {prompt.usageCount !== undefined ? prompt.usageCount : 0} { (prompt.usageCount === 0) ? <span role="img" aria-label="no usage">😴</span> : <span role="img" aria-label="usage count">🔥</span> }
+                {prompt.usageCount !== undefined ? prompt.usageCount : 0}{" "}
+                {prompt.usageCount === 0 ? (
+                  <span role="img" aria-label="no usage">
+                    😴
+                  </span>
+                ) : (
+                  <span role="img" aria-label="usage count">
+                    🔥
+                  </span>
+                )}
               </span>
               {onRemoveFavorite && (
                 <button

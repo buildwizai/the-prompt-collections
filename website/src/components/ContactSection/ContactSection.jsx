@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { FaEnvelope } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaEnvelope } from "react-icons/fa";
 
 const initialForm = {
-  message: ''
+  message: "",
 };
 
 const ContactSection = () => {
@@ -12,13 +12,13 @@ const ContactSection = () => {
     const { name, value } = event.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const subject = encodeURIComponent('Feedback for The Prompt Collection');
+    const subject = encodeURIComponent("Feedback for The Prompt Collection");
     const body = encodeURIComponent(formData.message.trim());
     window.location.href = `mailto:buildwizai@gmail.com?subject=${subject}&body=${body}`;
     setFormData(initialForm);
@@ -36,7 +36,10 @@ const ContactSection = () => {
         </p>
         <form className="grid gap-4" onSubmit={handleSubmit}>
           <div className="flex flex-col">
-            <label htmlFor="message" className="text-sm font-medium text-gray-900 dark:text-white mb-1">
+            <label
+              htmlFor="message"
+              className="text-sm font-medium text-gray-900 dark:text-white mb-1"
+            >
               Message
             </label>
             <textarea

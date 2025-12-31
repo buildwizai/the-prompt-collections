@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
   {
     quote:
-      'The Prompt Collection has become my go-to library. Our support team ships responses twice as fast thanks to the curated starters.',
-    name: 'Sasha Nguyen',
-    role: 'Lead CX Strategist'
+      "The Prompt Collection has become my go-to library. Our support team ships responses twice as fast thanks to the curated starters.",
+    name: "Sasha Nguyen",
+    role: "Lead CX Strategist",
   },
   {
     quote:
-      'I never realized how much better my AI outputs could be. The best practices and tailored prompts helped us win two new clients.',
-    name: 'Jordan Patel',
-    role: 'Creative Founder'
+      "I never realized how much better my AI outputs could be. The best practices and tailored prompts helped us win two new clients.",
+    name: "Jordan Patel",
+    role: "Creative Founder",
   },
   {
     quote:
-      'The prompts are consistently high-quality and easy to adapt. It feels like having an on-demand prompt engineer on the team.',
-    name: 'Maya Herrera',
-    role: 'Product Manager'
-  }
+      "The prompts are consistently high-quality and easy to adapt. It feels like having an on-demand prompt engineer on the team.",
+    name: "Maya Herrera",
+    role: "Product Manager",
+  },
 ];
 
 const TestimonialsSection = () => {
@@ -38,8 +38,8 @@ const TestimonialsSection = () => {
     };
 
     updateItemsPerView();
-    window.addEventListener('resize', updateItemsPerView);
-    return () => window.removeEventListener('resize', updateItemsPerView);
+    window.addEventListener("resize", updateItemsPerView);
+    return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
 
   const maxIndex = Math.max(0, testimonials.length - itemsPerView);
@@ -76,9 +76,13 @@ const TestimonialsSection = () => {
                   style={{ flex: `0 0 ${100 / itemsPerView}%` }}
                 >
                   <div className="flex flex-col h-full p-6 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 shadow-sm">
-                    <p className="text-sm text-gray-700 dark:text-gray-300 flex-1">"{testimonial.quote}"</p>
+                    <p className="text-sm text-gray-700 dark:text-gray-300 flex-1">
+                      "{testimonial.quote}"
+                    </p>
                     <div className="mt-4">
-                      <p className="text-sm font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                        {testimonial.name}
+                      </p>
                       <p className="text-xs text-gray-600 dark:text-gray-400">{testimonial.role}</p>
                     </div>
                   </div>
@@ -100,7 +104,7 @@ const TestimonialsSection = () => {
                 {Array.from({ length: maxIndex + 1 }).map((_, index) => (
                   <span
                     key={index}
-                    className={`h-2 w-2 rounded-full ${index === currentIndex ? 'bg-blue-500' : 'bg-gray-300 dark:bg-gray-600'}`}
+                    className={`h-2 w-2 rounded-full ${index === currentIndex ? "bg-blue-500" : "bg-gray-300 dark:bg-gray-600"}`}
                   />
                 ))}
               </div>

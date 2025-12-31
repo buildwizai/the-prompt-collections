@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import logoUrl from '../../assets/logo-mark.svg';
-import { FaGithub, FaTwitter, FaStar, FaCodeBranch, FaRocket } from 'react-icons/fa';
-import { fetchRepoData } from '../../utils/github';
+import React, { useEffect, useState } from "react";
+import logoUrl from "../../assets/logo-mark.svg";
+import { FaGithub, FaTwitter, FaStar, FaCodeBranch, FaRocket } from "react-icons/fa";
+import { fetchRepoData } from "../../utils/github";
 
 const Footer = () => {
   const [repoData, setRepoData] = useState(null);
@@ -12,7 +12,7 @@ const Footer = () => {
         const data = await fetchRepoData();
         setRepoData(data);
       } catch (error) {
-        console.error('Error fetching GitHub repository data:', error);
+        console.error("Error fetching GitHub repository data:", error);
       }
     };
 
@@ -28,7 +28,9 @@ const Footer = () => {
             <span className="inline-flex items-center justify-center rounded-md p-1 bg-cyan-500/10 ring-1 ring-cyan-300/40">
               <img src={logoUrl} alt="TPC logo" className="h-8 w-8 select-none" draggable="false" />
             </span>
-            <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">The Prompt Collection</span>
+            <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              The Prompt Collection
+            </span>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -99,7 +101,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">License</h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              This project is licensed under the{' '}
+              This project is licensed under the{" "}
               <a
                 href="https://opensource.org/licenses/MIT"
                 target="_blank"
