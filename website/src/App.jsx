@@ -127,28 +127,32 @@ const App = () => {
     setHasMore(startIndex + PAGE_SIZE < filtered.length);
   };
 
-  // Debounced search handler with recommendations
-  const handleSearch = debounce((query) => {
-    setSearchQuery(query);
-    setPage(1);
-    setVisiblePrompts([]);
-    setHasMore(true);
+  // Debounced search handler with recommendations (memoized to prevent unnecessary re-renders)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleSearch = useCallback(
+    debounce((query) => {
+      setSearchQuery(query);
+      setPage(1);
+      setVisiblePrompts([]);
+      setHasMore(true);
 
-    // Generate recommendations if query looks like a recommendation request
-    if (query && query.trim().length >= 3 && isRecommendationQuery(query)) {
-      setIsLoadingRecommendations(true);
-      setShowRecommendations(true);
-      // Use setTimeout to simulate async and avoid blocking UI
-      setTimeout(() => {
-        const results = getRecommendations(query, prompts, 3);
-        setRecommendations(results);
-        setIsLoadingRecommendations(false);
-      }, 100);
-    } else {
-      setShowRecommendations(false);
-      setRecommendations([]);
-    }
-  }, 300);
+      // Generate recommendations if query looks like a recommendation request
+      if (query && query.trim().length >= 3 && isRecommendationQuery(query)) {
+        setIsLoadingRecommendations(true);
+        setShowRecommendations(true);
+        // Use setTimeout to simulate async and avoid blocking UI
+        setTimeout(() => {
+          const results = getRecommendations(query, prompts, 3);
+          setRecommendations(results);
+          setIsLoadingRecommendations(false);
+        }, 100);
+      } else {
+        setShowRecommendations(false);
+        setRecommendations([]);
+      }
+    }, 300),
+    []
+  );
 
   // Reset visible prompts when search or tags change
   useEffect(() => {
