@@ -18,6 +18,7 @@ const PromptList = ({
   totalPrompts,
   totalFilteredPrompts,
   customTools,
+  hidePromptsCount,
 }) => {
   if (showCategoryList) {
     return (
@@ -77,10 +78,12 @@ const PromptList = ({
             Back to Categories
           </button>
         )}
-        <div className="text-sm text-cyber-gray-400 font-semibold">
-          <span className="text-cyber-green">{totalFilteredPrompts}</span> prompts found
-          {prompts.length < totalFilteredPrompts && ` (showing ${prompts.length})`}
-        </div>
+        {!hidePromptsCount && (
+          <div className="text-sm text-cyber-gray-400 font-semibold">
+            <span className="text-cyber-green">{totalFilteredPrompts}</span> prompts found
+            {prompts.length < totalFilteredPrompts && ` (showing ${prompts.length})`}
+          </div>
+        )}
       </div>
 
       {/* Prompts Grid with Infinite Scroll */}
@@ -130,6 +133,7 @@ PromptList.propTypes = {
       url: PropTypes.string.isRequired,
     })
   ),
+  hidePromptsCount: PropTypes.bool,
 };
 
 export default PromptList;

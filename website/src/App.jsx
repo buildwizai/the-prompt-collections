@@ -555,6 +555,7 @@ const App = () => {
               totalPrompts={totalPrompts}
               totalFilteredPrompts={getTotalFilteredPrompts()}
               customTools={customTools}
+              hidePromptsCount={showRecommendations}
             />
           </section>
         </div>
