@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "../../utils/cn";
 
-const CyberHero = ({ onSearchChange, searchQuery }) => {
+const CyberHero = ({ onSearchChange }) => {
+  const [inputValue, setInputValue] = useState("");
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -22,6 +25,12 @@ const CyberHero = ({ onSearchChange, searchQuery }) => {
       y: 0,
       transition: { duration: 0.8, ease: "easeOut" },
     },
+  };
+
+  const handleSearchInput = (e) => {
+    const value = e.target.value;
+    setInputValue(value);
+    onSearchChange(value);
   };
 
   return (
@@ -77,8 +86,8 @@ const CyberHero = ({ onSearchChange, searchQuery }) => {
                 <input
                   type="text"
                   placeholder="Search prompts, tags, or categories..."
-                  value={searchQuery}
-                  onChange={(e) => onSearchChange(e.target.value)}
+                  value={inputValue}
+                  onChange={handleSearchInput}
                   className={cn(
                     "w-full px-6 py-4 md:py-5 rounded-glass",
                     "bg-cyber-black/80 backdrop-blur-xl border-2 border-cyber-green/50",
@@ -154,7 +163,6 @@ const CyberHero = ({ onSearchChange, searchQuery }) => {
 
 CyberHero.propTypes = {
   onSearchChange: PropTypes.func.isRequired,
-  searchQuery: PropTypes.string.isRequired,
 };
 
 export default CyberHero;

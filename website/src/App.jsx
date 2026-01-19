@@ -480,7 +480,7 @@ const App = () => {
       <CyberNavbar activeSection="home" onNavigate={handleNavigation} />
 
       {/* Hero Section */}
-      {showHero && <CyberHero onSearchChange={handleSearch} searchQuery={searchQuery} />}
+      {showHero && <CyberHero onSearchChange={handleSearch} />}
 
       {/* Main Content Container */}
       <main className={`relative z-10 ${!showHero ? "pt-32" : ""}`}>
