@@ -6,6 +6,7 @@ import { X, Copy, Check, Edit, Trash2, Plus, Save, Zap, Heart, ChevronDown } fro
 import ShareButton from "../ShareButton/ShareButton";
 import "../../styles/animations.css";
 import aiTools from "../../data/ai-tools.json";
+import { cn } from "../../utils/cn";
 import {
   getMostFrequentTool,
   getModalUsageCount,
@@ -99,30 +100,36 @@ const SelectedPromptModal = ({
 
   return (
     <div className="fixed inset-0 z-50" aria-modal="true">
-      {/* Backdrop */}
+      {/* Cyberpunk Backdrop */}
       <div
-        className="fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-cyber-black/60 backdrop-blur-xl transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Container */}
       <div className="flex min-h-screen items-center justify-center p-4">
         <div
-          className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl border border-[var(--modal-border)] bg-[var(--modal-surface)] shadow-xl shadow-black/5 dark:shadow-black/20 animate-modal-entry"
+          className={cn(
+            "relative w-full max-w-4xl max-h-[90vh] overflow-y-auto",
+            "glass-card rounded-glass border-2 border-cyber-green/50",
+            "shadow-glow-green animate-modal-entry"
+          )}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Top Action Buttons */}
-          <div className="absolute right-4 top-4 flex items-center gap-1 z-10">
+          <div className="absolute right-4 top-4 flex items-center gap-2 z-10">
             <button
               onClick={onToggleFavorite}
-              className={`p-2 rounded-full transition-all duration-200 hover:scale-105 ${
+              className={cn(
+                "p-2.5 rounded-full transition-all duration-300 hover:scale-110",
                 isFavorite
-                  ? "text-red-500 bg-red-50 dark:bg-red-500/10"
-                  : "text-[var(--text-muted)] hover:bg-gray-100 dark:hover:bg-gray-800"
-              }`}
+                  ? "bg-cyber-green/20 text-cyber-green shadow-glow-green"
+                  : "text-cyber-gray-400 hover:text-cyber-green hover:bg-cyber-green/10"
+              )}
               title={isFavorite ? "Remove from favorites" : "Add to favorites"}
+              aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
             >
-              <Heart className={`w-4 h-4 ${isFavorite ? "fill-current" : ""}`} />
+              <Heart className={cn("w-5 h-5", isFavorite && "fill-current")} />
             </button>
             <ShareButton
               url={getShareUrl()}
@@ -131,32 +138,45 @@ const SelectedPromptModal = ({
               title={displayName}
             />
             <button
-              className="p-2 rounded-full text-[var(--text-muted)] hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 hover:scale-105"
+              className={cn(
+                "p-2.5 rounded-full text-cyber-gray-400",
+                "transition-all duration-300 hover:scale-110",
+                "hover:text-cyber-green hover:bg-cyber-green/10"
+              )}
               onClick={onClose}
+              aria-label="Close modal"
             >
-              <X className="w-4 h-4" />
+              <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* Content */}
           <div className="p-6 sm:p-8">
             {/* Header Section */}
-            <div className="pr-24 sm:pr-28 animate-fade-slide-up">
-              <h2 className="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
+            <div className="pr-24 sm:pr-28 animate-fade-slide-up space-y-2">
+              <h2
+                className={cn(
+                  "font-display text-2xl sm:text-3xl font-bold",
+                  "text-cyber-white tracking-tight",
+                  "break-words"
+                )}
+              >
                 {displayName}
               </h2>
+              <div className="h-0.5 w-24 bg-cyber-green drop-shadow-lg" />
             </div>
-
-            {/* Divider */}
-            <div className="my-4 h-px bg-gradient-to-r from-gray-200 via-gray-200 to-transparent dark:from-gray-700 dark:via-gray-700 animate-fade-slide-up animate-delay-50" />
 
             {/* Tags */}
             {selectedPrompt.tags && selectedPrompt.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-6 animate-fade-slide-up animate-delay-100">
+              <div className="flex flex-wrap gap-2 mt-6 mb-6 animate-fade-slide-up animate-delay-50">
                 {selectedPrompt.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2.5 py-1 text-xs font-medium rounded-full bg-[var(--tag-bg)] text-[var(--tag-text)] transition-colors"
+                    className={cn(
+                      "px-3 py-1.5 text-xs font-semibold rounded-full",
+                      "bg-cyber-green/10 border border-cyber-green/50 text-cyber-green",
+                      "transition-all duration-300 hover:border-cyber-green hover:shadow-glow-green"
+                    )}
                   >
                     {tag}
                   </span>
@@ -166,53 +186,85 @@ const SelectedPromptModal = ({
 
             {/* Usage Hint */}
             {selectedPrompt.usage && (
-              <div className="mb-6 rounded-lg border-l-2 border-[var(--accent)] bg-[var(--accent-soft)] p-4 animate-fade-slide-up animate-delay-150">
-                <span className="block text-[10px] font-semibold uppercase tracking-wider text-[var(--accent)] mb-1">
-                  Suggested usage
+              <div
+                className={cn(
+                  "mb-6 rounded-glass border-l-2 border-cyber-green",
+                  "bg-cyber-green/5 p-4 animate-fade-slide-up animate-delay-100"
+                )}
+              >
+                <span className="block text-xs font-bold uppercase tracking-wider text-cyber-green mb-2">
+                  💡 Suggested Usage
                 </span>
-                <p className="font-body text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="font-body text-sm text-cyber-gray-300 leading-relaxed">
                   {selectedPrompt.usage}
                 </p>
               </div>
             )}
 
             {/* Prompt Content */}
-            <div className="animate-fade-slide-up animate-delay-200">
-              <div className="rounded-xl border border-[var(--modal-border)] bg-[var(--modal-bg)] overflow-hidden">
-                <div className="px-4 py-2.5 border-b border-[var(--modal-border)]">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-muted)]">
-                    Prompt Content
+            <div className="animate-fade-slide-up animate-delay-150">
+              <div
+                className={cn(
+                  "rounded-glass border border-cyber-green/30 overflow-hidden",
+                  "bg-cyber-black/60 backdrop-blur-sm"
+                )}
+              >
+                <div className="px-4 py-3 border-b border-cyber-green/20 bg-cyber-green/5">
+                  <span className="text-xs font-bold uppercase tracking-wider text-cyber-green">
+                    📝 Prompt Content
                   </span>
                 </div>
                 <textarea
-                  className="w-full bg-transparent p-4 font-body text-sm leading-relaxed text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-0 resize-none"
+                  className={cn(
+                    "w-full bg-transparent p-4 font-mono text-sm leading-relaxed",
+                    "text-cyber-white placeholder-cyber-gray-600",
+                    "focus:outline-none focus:ring-2 focus:ring-cyber-green/50",
+                    "resize-none"
+                  )}
                   defaultValue={selectedPrompt.content}
                   rows={12}
                   placeholder="Prompt content..."
                 />
               </div>
               {shouldShowGuide && (
-                <p className="mt-2 text-xs text-[var(--text-muted)]">
-                  You can edit this prompt before using it
+                <p className="mt-2 text-xs text-cyber-gray-500">
+                  ✏️ You can edit this prompt before using it
                 </p>
               )}
             </div>
 
             {/* Actions Section */}
-            <div className="mt-6 pt-6 border-t border-[var(--modal-border)] animate-fade-slide-up animate-delay-250">
+            <div
+              className={cn(
+                "mt-8 pt-8 border-t border-cyber-green/20",
+                "animate-fade-slide-up animate-delay-200"
+              )}
+            >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <h3 className="font-display text-sm font-semibold text-[var(--text-primary)]">
-                  Use This Prompt
+                <h3
+                  className={cn(
+                    "font-display text-sm font-bold uppercase tracking-wider",
+                    "text-cyber-green"
+                  )}
+                >
+                  🚀 Use This Prompt
                 </h3>
 
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   {/* AI Selector */}
                   <select
-                    className="px-3 py-2.5 text-sm rounded-lg border border-[var(--modal-border)] bg-[var(--modal-surface)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)] transition-all cursor-pointer"
+                    className={cn(
+                      "px-4 py-2.5 text-sm rounded-glass",
+                      "border border-cyber-green/30",
+                      "bg-cyber-black/60 text-cyber-white",
+                      "focus:outline-none focus:ring-2 focus:ring-cyber-green/50 focus:border-cyber-green",
+                      "transition-all cursor-pointer",
+                      "font-semibold"
+                    )}
                     onChange={handleSelectChange}
                     value={selectedAITool?.name || ""}
                   >
-                    <option value="">Select an AI</option>
+                    <option value="">Select an AI...</option>
                     {aiTools.tools.map((tool) => (
                       <option key={tool.name} value={tool.name}>
                         {tool.name}
@@ -220,33 +272,52 @@ const SelectedPromptModal = ({
                     ))}
                     {customTools.map((tool) => (
                       <option key={tool.name} value={tool.name}>
-                        {tool.name}
+                        {tool.name} (Custom)
                       </option>
                     ))}
-                    <option value="add-custom-tool">+ Add New AI</option>
+                    <option value="add-custom-tool">➕ Add New AI</option>
                   </select>
 
                   {/* Button Group */}
                   <div className="flex gap-2">
                     {/* Copy Button */}
                     <button
-                      className={`flex-1 sm:flex-none px-4 py-2.5 text-sm font-medium rounded-lg flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.02] ${
+                      className={cn(
+                        "flex-1 sm:flex-none px-4 py-2.5 text-sm font-semibold rounded-glass",
+                        "flex items-center justify-center gap-2",
+                        "transition-all duration-300 hover:scale-105",
                         isCopied
-                          ? "bg-[var(--success)] text-white"
-                          : "bg-[var(--accent)] text-white hover:opacity-90"
-                      }`}
+                          ? "bg-cyber-green/20 text-cyber-green border border-cyber-green shadow-glow-green"
+                          : "bg-cyber-green text-cyber-black border border-cyber-green hover:shadow-glow-green-lg"
+                      )}
                       onClick={onCopy}
+                      aria-label="Copy prompt to clipboard"
                     >
-                      {isCopied ? <Check size={16} /> : <Copy size={16} />}
-                      <span>{isCopied ? "Copied!" : "Copy"}</span>
+                      {isCopied ? (
+                        <>
+                          <Check size={16} />
+                          <span>Copied!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy size={16} />
+                          <span>Copy</span>
+                        </>
+                      )}
                     </button>
 
                     {/* Quick Action Button */}
                     {frequentTool && (
                       <button
-                        className="flex-1 sm:flex-none px-4 py-2.5 text-sm font-medium rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 text-white flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/25"
+                        className={cn(
+                          "flex-1 sm:flex-none px-4 py-2.5 text-sm font-semibold rounded-glass",
+                          "bg-cyber-green/20 text-cyber-green border border-cyber-green",
+                          "flex items-center justify-center gap-2",
+                          "transition-all duration-300 hover:scale-105 hover:shadow-glow-green"
+                        )}
                         onClick={handleFrequentTool}
                         title={`Quick start with ${frequentTool.name}`}
+                        aria-label={`Quick start with ${frequentTool.name}`}
                       >
                         <Zap size={16} />
                         <span className="hidden sm:inline">{frequentTool.name}</span>
@@ -257,8 +328,8 @@ const SelectedPromptModal = ({
               </div>
 
               {shouldShowGuide && (
-                <p className="mt-3 text-xs text-[var(--text-muted)]">
-                  Select an AI to copy the prompt and open a new chat window automatically
+                <p className="mt-4 text-xs text-cyber-gray-500">
+                  💡 Select an AI to copy the prompt and open a new chat window automatically
                 </p>
               )}
             </div>

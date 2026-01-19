@@ -1,130 +1,238 @@
+/* Cyberpunk Animations */
+
+/* Floating animations */
 @keyframes float-slow {
   0%,
   100% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(5px, -5px);
+    transform: translateY(0px);
   }
   50% {
-    transform: translate(-5px, 5px);
-  }
-  75% {
-    transform: translate(-5px, -5px);
-  }
-}
-
-@keyframes modalEntry {
-  from {
-    opacity: 0;
-    transform: scale(0.95) translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: translateY(-8px);
   }
 }
 
 @keyframes float-medium {
   0%,
   100% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(8px, -8px);
+    transform: translateY(0px);
   }
   50% {
-    transform: translate(-8px, 8px);
-  }
-  75% {
-    transform: translate(-8px, -8px);
+    transform: translateY(-12px);
   }
 }
 
 @keyframes float-fast {
   0%,
   100% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(12px, -12px);
+    transform: translateY(0px);
   }
   50% {
-    transform: translate(-12px, 12px);
-  }
-  75% {
-    transform: translate(-12px, -12px);
+    transform: translateY(-16px);
   }
 }
 
 .animate-float-slow {
-  animation: float-slow 8s ease-in-out infinite;
+  animation: float-slow 6s ease-in-out infinite;
 }
 
 .animate-float-medium {
-  animation: float-medium 6s ease-in-out infinite;
+  animation: float-medium 4s ease-in-out infinite;
 }
 
 .animate-float-fast {
-  animation: float-fast 4s ease-in-out infinite;
+  animation: float-fast 3s ease-in-out infinite;
+}
+
+/* Glow pulse animations */
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 255, 65, 0.8);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Glowing border animation */
+@keyframes glowingBorder {
+  0% {
+    box-shadow:
+      inset 0 0 10px rgba(0, 255, 65, 0.3),
+      0 0 20px rgba(0, 255, 65, 0.2);
+  }
+  50% {
+    box-shadow:
+      inset 0 0 20px rgba(0, 255, 65, 0.5),
+      0 0 40px rgba(0, 255, 65, 0.4);
+  }
+  100% {
+    box-shadow:
+      inset 0 0 10px rgba(0, 255, 65, 0.3),
+      0 0 20px rgba(0, 255, 65, 0.2);
+  }
+}
+
+.animate-glowing-border {
+  animation: glowingBorder 3s ease-in-out infinite;
+}
+
+/* Modal entry with cyberpunk flair */
+@keyframes modalEntry {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .animate-modal-entry {
-  animation: modalEntry 0.3s ease-out;
+  animation: modalEntry 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Staggered fade-slide animations for modern minimal design */
+/* Fade slide up animation */
 @keyframes fadeSlideUp {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(16px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
 .animate-fade-slide-up {
-  animation: fadeSlideUp 0.4s ease-out forwards;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Staggered animation delays */
 .animate-delay-50 {
   animation-delay: 0.05s;
   opacity: 0;
 }
+
 .animate-delay-100 {
   animation-delay: 0.1s;
   opacity: 0;
 }
+
 .animate-delay-150 {
   animation-delay: 0.15s;
   opacity: 0;
 }
+
 .animate-delay-200 {
   animation-delay: 0.2s;
   opacity: 0;
 }
+
 .animate-delay-250 {
   animation-delay: 0.25s;
   opacity: 0;
 }
+
 .animate-delay-300 {
   animation-delay: 0.3s;
   opacity: 0;
 }
 
-/* Subtle button hover effect */
-@keyframes buttonPulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+/* Smooth hover lift effect */
+@keyframes liftHover {
+  0% {
+    transform: translateY(0) translateZ(0);
   }
-  50% {
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  100% {
+    transform: translateY(-4px) translateZ(0);
   }
 }
 
-.animate-button-pulse:hover {
-  animation: buttonPulse 1s ease-in-out infinite;
+.hover-lift:hover {
+  animation: liftHover 0.3s ease-out forwards;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+/* Rotating gradient border animation */
+@keyframes rotateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-border-gradient {
+  background-size: 200% 200%;
+  animation: rotateBorder 3s ease infinite;
+}
+
+/* Subtle text glow */
+@keyframes textGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+  }
+}
+
+.animate-text-glow {
+  animation: textGlow 2s ease-in-out infinite;
+}
+
+/* Conic gradient spinner */
+@keyframes conicSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-conic-spin {
+  animation: conicSpin 3s linear infinite;
+}
+
+/* Scroll reveal animations */
+@keyframes scrollReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-reveal {
+  animation: scrollReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Green highlight animation */
+@keyframes greenHighlight {
+  0%,
+  100% {
+    color: #f0f2f5;
+  }
+  50% {
+    color: #00ff41;
+  }
+}
+
+.animate-green-highlight {
+  animation: greenHighlight 2s ease-in-out infinite;
 }

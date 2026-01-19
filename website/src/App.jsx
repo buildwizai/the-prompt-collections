@@ -1,14 +1,12 @@
-// src/App.jsx
 import { useState, useEffect, useCallback, useRef } from "react";
-import Header from "./components/Header/Header";
+import { AnimatePresence } from "framer-motion";
+import CyberNavbar from "./components/Navigation/CyberNavbar";
+import CyberHero from "./components/Hero/CyberHero";
 import SearchBar from "./components/SearchBar/SearchBar";
 import TagFilter from "./components/TagFilter/TagFilter";
 import PromptList from "./components/PromptList/PromptList";
 import SelectedPromptModal from "./components/SelectedPromptModal/SelectedPromptModal";
 import Footer from "./components/Footer/Footer";
-import BestPracticesSection from "./components/BestPracticesSection/BestPracticesSection";
-import TestimonialsSection from "./components/TestimonialsSection/TestimonialsSection";
-import ContactSection from "./components/ContactSection/ContactSection";
 import prompts from "./data/prompts.json";
 import debounce from "lodash.debounce";
 import aiTools from "./data/ai-tools.json";
@@ -60,12 +58,6 @@ const App = () => {
   useEffect(() => {
     saveCustomTools(customTools);
   }, [customTools]);
-
-  const toggleDarkMode = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-    saveDarkMode(newMode);
-  };
 
   // Extract all unique tags from prompts
   const allTags = [...new Set(prompts.flatMap((prompt) => prompt.tags || []))];
@@ -460,94 +452,109 @@ const App = () => {
     .sort((a, b) => (b.usageCount || 0) - (a.usageCount || 0)) // Sort by usage count
     .slice(0, 5); // Take only top 5
 
+  const handleNavigation = (section) => {
+    switch (section) {
+      case "home":
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        setSelectedCategory(null);
+        setSelectedTags([]);
+        break;
+      case "browse": {
+        const browseElement = document.getElementById("browse-section");
+        if (browseElement) {
+          browseElement.scrollIntoView({ behavior: "smooth" });
+        } else {
+          window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+        }
+        break;
+      }
+      case "features":
+        window.scrollTo({ top: window.innerHeight * 2, behavior: "smooth" });
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto p-4">
-        <Header isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
+    <div className="min-h-screen bg-cyber-black text-cyber-white">
+      {/* Navigation */}
+      <CyberNavbar activeSection="home" onNavigate={handleNavigation} />
 
-        {showHero && (
-          <div className="flex flex-col items-center justify-center py-16 space-y-8">
-            <div className="text-center space-y-6 max-w-3xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
-                Your Gateway to AI Conversations
-              </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400">
-                Discover and use curated prompts to enhance your AI interactions
-              </p>
-            </div>
-          </div>
-        )}
+      {/* Hero Section */}
+      {showHero && <CyberHero onSearchChange={handleSearch} searchQuery={searchQuery} />}
 
-        {/* Search and Filters Section - Show search only when no filters are active */}
-        <div
-          className={`flex flex-col items-center justify-center ${showHero ? "" : "py-2"} ${selectedTags.length > 0 ? "space-y-2" : "space-y-4"}`}
-        >
-          {!selectedCategory && selectedTags.length === 0 && (
-            <div className="w-full max-w-2xl mx-auto">
-              <SearchBar onSearch={handleSearch} />
-            </div>
-          )}
+      {/* Main Content Container */}
+      <main className={`relative z-10 ${!showHero ? "pt-32" : ""}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+          {/* Search and Filters Section */}
+          <div className="flex flex-col items-center justify-center space-y-6 md:space-y-8">
+            {/* Search Bar - visible only when not in category view */}
+            {!selectedCategory && selectedTags.length === 0 && !showHero && (
+              <div className="w-full max-w-2xl">
+                <SearchBar onSearch={handleSearch} />
+              </div>
+            )}
 
-          {/* Smart Recommendations Section */}
-          {showRecommendations && !selectedCategory && selectedTags.length === 0 && (
-            <PromptRecommendation
-              recommendations={recommendations}
-              onSelectPrompt={handleSelectPrompt}
-              isLoading={isLoadingRecommendations}
-            />
-          )}
-
-          <div className="w-full mx-auto space-y-0">
-            {" "}
-            {/* reduced spacing from space-y-1 to space-y-0 */}
-            <TagFilter
-              tags={visibleTags}
-              selectedTags={selectedTags}
-              onTagToggle={handleTagToggle}
-              showAllTags={showAllTags}
-              onToggleShowAllTags={() => setShowAllTags(!showAllTags)}
-              tagCounts={tagCounts}
-              showShareButton={!showHero}
-              shareContent={getFilterShareContent()}
-              shareTitle="Filtered Prompts - The Prompt Collection"
-              favoritePrompts={favoritePrompts}
-            />
-            {/* Extracted Top Prompts Section remains unchanged */}
-            {showHero && (
-              <TopPrompts
-                topPrompts={topPrompts}
-                favoritePrompts={favoritesData}
-                handleSelectPrompt={handleSelectPrompt}
-                onRemoveFavorite={(prompt) => handleToggleFavorite(prompt)}
+            {/* Smart Recommendations */}
+            {showRecommendations && !selectedCategory && selectedTags.length === 0 && (
+              <PromptRecommendation
+                recommendations={recommendations}
+                onSelectPrompt={handleSelectPrompt}
+                isLoading={isLoadingRecommendations}
               />
             )}
+
+            {/* Tag Filter and Top Prompts */}
+            <div className="w-full space-y-6 md:space-y-8">
+              <TagFilter
+                tags={visibleTags}
+                selectedTags={selectedTags}
+                onTagToggle={handleTagToggle}
+                showAllTags={showAllTags}
+                onToggleShowAllTags={() => setShowAllTags(!showAllTags)}
+                tagCounts={tagCounts}
+                showShareButton={!showHero}
+                shareContent={getFilterShareContent()}
+                shareTitle="Filtered Prompts - The Prompt Collection"
+                favoritePrompts={favoritePrompts}
+              />
+
+              {/* Top Prompts - only show on hero */}
+              {showHero && (
+                <TopPrompts
+                  topPrompts={topPrompts}
+                  favoritePrompts={favoritesData}
+                  handleSelectPrompt={handleSelectPrompt}
+                  onRemoveFavorite={(prompt) => handleToggleFavorite(prompt)}
+                />
+              )}
+            </div>
           </div>
-        </div>
 
-        {/* Prompts List with full width */}
-        <div
-          className={`w-full ${!showHero && (selectedCategory || selectedTags.length > 0) ? "mt-1" : "mt-4"}`}
-        >
-          <PromptList
-            prompts={visiblePrompts}
-            loadMorePrompts={loadMorePrompts}
-            hasMore={hasMore}
-            onSelectPrompt={handleSelectPrompt}
-            onQuickAction={handleQuickAction} // pass quick action handler
-            selectedCategory={selectedCategory}
-            onCategoryClick={handleCategoryClick}
-            onBackToCategories={handleBackToCategories}
-            groupedPrompts={groupedPrompts}
-            showCategoryList={showCategoryList}
-            totalPrompts={totalPrompts}
-            totalFilteredPrompts={getTotalFilteredPrompts()}
-            customTools={customTools} // Add this prop
-          />
+          {/* Prompts List */}
+          <section id="browse-section" className="mt-12 md:mt-16">
+            <PromptList
+              prompts={visiblePrompts}
+              loadMorePrompts={loadMorePrompts}
+              hasMore={hasMore}
+              onSelectPrompt={handleSelectPrompt}
+              onQuickAction={handleQuickAction}
+              selectedCategory={selectedCategory}
+              onCategoryClick={handleCategoryClick}
+              onBackToCategories={handleBackToCategories}
+              groupedPrompts={groupedPrompts}
+              showCategoryList={showCategoryList}
+              totalPrompts={totalPrompts}
+              totalFilteredPrompts={getTotalFilteredPrompts()}
+              customTools={customTools}
+            />
+          </section>
         </div>
+      </main>
 
-        <BestPracticesSection />
-        <TestimonialsSection />
-        <ContactSection />
+      {/* Modal with AnimatePresence */}
+      <AnimatePresence>
         {selectedPrompt && (
           <SelectedPromptModal
             selectedPrompt={selectedPrompt}
@@ -563,8 +570,10 @@ const App = () => {
             onToggleFavorite={() => handleToggleFavorite(selectedPrompt)}
           />
         )}
-        <Footer />
-      </div>
+      </AnimatePresence>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

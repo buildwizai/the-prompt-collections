@@ -1,51 +1,43 @@
 import PropTypes from "prop-types";
 import { Trash2, Zap, Heart } from "lucide-react";
+import { cn } from "../utils/cn";
 
 const PromptList = ({ prompts, handleSelectPrompt, title, onRemoveFavorite, icon: Icon }) => {
   if (!prompts || prompts.length === 0) return null;
   return (
-    <div className="w-full p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-        {Icon && <Icon className="w-6 h-6" />}
+    <div className="glass-card p-6 space-y-4">
+      <h2
+        className={cn("text-xl font-display font-bold flex items-center gap-2", "text-cyber-white")}
+      >
+        {Icon && <Icon className="w-6 h-6 text-cyber-green drop-shadow-lg" />}
         {title}
       </h2>
-      <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+      <ul className="divide-y divide-cyber-green/20 space-y-2">
         {prompts.map((prompt) => (
           <li
             key={prompt.id || prompt.filename}
-            className="py-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100"
+            className={cn(
+              "py-3 px-2 rounded-glass cursor-pointer",
+              "transition-all duration-300",
+              "hover:bg-cyber-green/10 hover:border-cyber-green",
+              "border border-transparent"
+            )}
           >
-            <div className="flex items-center gap-2">
-              <span className="flex-1" onClick={() => handleSelectPrompt(prompt)}>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span
+                className="flex-1 text-cyber-white hover:text-cyber-green transition-colors font-semibold"
+                onClick={() => handleSelectPrompt(prompt)}
+              >
                 {prompt.summary || prompt.title || prompt.filename || "Untitled Prompt"}
               </span>
-              {prompt.tags &&
-                prompt.tags.map((tag, i) => {
-                  let classes = "px-1 py-0.5 rounded text-xs font-medium";
-                  if (tag === "system") {
-                    classes += " bg-red-200 text-red-800 dark:bg-red-900 dark:text-red-100";
-                  } else if (tag === prompt.category) {
-                    classes += " bg-blue-200 text-blue-800 dark:bg-blue-900 dark:text-blue-100";
-                  } else {
-                    classes += " bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200";
-                  }
-                  return (
-                    <span key={i} className={classes}>
-                      {tag}
-                    </span>
-                  );
-                })}
-              <span className="px-2 py-0.5 rounded text-xs font-medium bg-green-200 text-green-800 dark:bg-green-900 dark:text-green-100">
-                {prompt.usageCount !== undefined ? prompt.usageCount : 0}{" "}
-                {prompt.usageCount === 0 ? (
-                  <span role="img" aria-label="no usage">
-                    😴
-                  </span>
-                ) : (
-                  <span role="img" aria-label="usage count">
-                    🔥
-                  </span>
+              <span
+                className={cn(
+                  "px-2 py-1 rounded-full text-xs font-bold",
+                  "bg-cyber-green/20 text-cyber-green border border-cyber-green/50"
                 )}
+              >
+                {prompt.usageCount !== undefined ? prompt.usageCount : 0}{" "}
+                {prompt.usageCount === 0 ? "📦" : "🔥"}
               </span>
               {onRemoveFavorite && (
                 <button
@@ -53,8 +45,13 @@ const PromptList = ({ prompts, handleSelectPrompt, title, onRemoveFavorite, icon
                     e.stopPropagation();
                     onRemoveFavorite(prompt);
                   }}
-                  className="p-1 text-gray-400 hover:text-red-500 dark:text-gray-500 dark:hover:text-red-400 rounded"
+                  className={cn(
+                    "p-1.5 text-cyber-gray-400 rounded-full",
+                    "transition-all duration-300",
+                    "hover:text-cyber-green hover:bg-cyber-green/10"
+                  )}
                   title="Remove from favorites"
+                  aria-label="Remove from favorites"
                 >
                   <Trash2 size={16} />
                 </button>

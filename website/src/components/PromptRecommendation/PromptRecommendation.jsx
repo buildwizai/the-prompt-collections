@@ -1,26 +1,24 @@
 import PropTypes from "prop-types";
 import { Sparkles, Target, ChevronRight } from "lucide-react";
+import { cn } from "../../utils/cn";
 
-/**
- * Component to display the top 3 recommended prompts with match scores
- */
 const PromptRecommendation = ({ recommendations, onSelectPrompt, isLoading }) => {
   if (isLoading) {
     return (
       <div className="w-full max-w-4xl mx-auto mb-6">
-        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-xl p-4 border border-purple-100 dark:border-purple-800">
-          <div className="flex items-center gap-2 mb-3">
-            <Sparkles className="w-5 h-5 text-purple-500 animate-pulse" />
-            <span className="font-semibold text-purple-700 dark:text-purple-300">
-              Finding best matches...
-            </span>
+        <div
+          className={cn(
+            "glass-card rounded-glass p-4 border border-cyber-green/30",
+            "bg-gradient-to-r from-cyber-green/5 to-cyber-green/0"
+          )}
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <Sparkles className="w-5 h-5 text-cyber-green animate-pulse drop-shadow-lg" />
+            <span className="font-semibold text-cyber-green">Finding best matches...</span>
           </div>
           <div className="space-y-3">
             {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="h-20 bg-white/50 dark:bg-gray-800/50 rounded-lg animate-pulse"
-              />
+              <div key={i} className="h-20 bg-cyber-green/10 rounded-glass animate-pulse" />
             ))}
           </div>
         </div>
@@ -33,27 +31,30 @@ const PromptRecommendation = ({ recommendations, onSelectPrompt, isLoading }) =>
   }
 
   const getScoreColor = (score) => {
-    if (score >= 80) return "text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30";
-    if (score >= 60) return "text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30";
-    return "text-purple-600 dark:text-purple-400 bg-purple-100 dark:bg-purple-900/30";
+    if (score >= 80) return "bg-cyber-green/20 text-cyber-green border border-cyber-green";
+    if (score >= 60) return "bg-cyber-green/10 text-cyber-green border border-cyber-green/50";
+    return "bg-cyber-green/5 text-cyber-green border border-cyber-green/30";
   };
 
   const getScoreLabel = (score) => {
-    if (score >= 80) return "Excellent Match";
-    if (score >= 60) return "Good Match";
-    return "Relevant";
+    if (score >= 80) return "🎯 Perfect Match";
+    if (score >= 60) return "✓ Good Match";
+    return "~ Relevant";
   };
 
   return (
     <div className="w-full max-w-4xl mx-auto mb-6">
-      <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-xl p-4 border border-purple-100 dark:border-purple-800">
+      <div
+        className={cn(
+          "glass-card rounded-glass p-4 border border-cyber-green/30",
+          "bg-gradient-to-r from-cyber-green/5 to-cyber-green/0"
+        )}
+      >
         <div className="flex items-center gap-2 mb-4">
-          <Sparkles className="w-5 h-5 text-purple-500" />
-          <span className="font-semibold text-purple-700 dark:text-purple-300">
-            Top Recommendations for You
-          </span>
-          <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">
-            ({recommendations.length} matches found)
+          <Sparkles className="w-5 h-5 text-cyber-green drop-shadow-lg" />
+          <span className="font-display font-bold text-cyber-white">✨ Top Recommendations</span>
+          <span className="text-xs text-cyber-gray-400 ml-2">
+            ({recommendations.length} matches)
           </span>
         </div>
 

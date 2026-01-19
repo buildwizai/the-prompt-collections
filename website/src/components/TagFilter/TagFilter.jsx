@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import "../../styles/animations.css";
 import ShareButton from "../ShareButton/ShareButton";
 import { Heart } from "lucide-react";
+import { cn } from "../../utils/cn";
 
 const TagFilter = ({
   tags,
@@ -13,50 +14,80 @@ const TagFilter = ({
   showShareButton,
   favoritePrompts,
 }) => {
-  const baseClass = "text-sm px-3 py-1 rounded-full cursor-pointer";
+  const baseTagClass = cn(
+    "text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-full cursor-pointer",
+    "transition-all duration-300 font-semibold",
+    "border-2 border-cyber-gray-700"
+  );
+
+  const getTagClasses = (isSelected) => {
+    return isSelected
+      ? cn(baseTagClass, "bg-cyber-green/10 border-cyber-green text-cyber-green shadow-glow-green")
+      : cn(
+          baseTagClass,
+          "bg-glass hover:border-cyber-green text-cyber-gray-300 hover:text-cyber-green"
+        );
+  };
 
   return (
-    <div className={`space-y-${selectedTags.length > 0 ? "2" : "6"}`}>
+    <div className={cn("space-y-4", selectedTags.length > 0 && "space-y-2")}>
       <div className="flex justify-end items-center">
         {showShareButton && <ShareButton url={window.location.href} text="Share Page" />}
       </div>
 
       <div
-        className={`relative ${selectedTags.length > 0 ? "min-h-[50px]" : "min-h-[100px]"} overflow-hidden`}
+        className={cn(
+          "relative overflow-hidden",
+          selectedTags.length > 0 ? "min-h-[60px]" : "min-h-[120px]"
+        )}
       >
-        <div className="flex flex-wrap gap-2 justify-center items-center p-2">
+        <div className="flex flex-wrap gap-2 sm:gap-3 justify-center items-center p-2">
           {/* Favorites tag */}
-          <span
+          <button
             onClick={() => onTagToggle("favorites")}
-            className={`${baseClass} ${
-              selectedTags.includes("favorites")
-                ? "bg-red-500 text-white font-bold"
-                : "bg-gray-200 text-gray-800"
-            } flex items-center gap-1`}
+            className={cn(
+              getTagClasses(selectedTags.includes("favorites")),
+              "flex items-center gap-2 hover:scale-105 active:scale-95"
+            )}
+            aria-pressed={selectedTags.includes("favorites")}
+            aria-label={`Toggle favorites filter. ${favoritePrompts.length} favorites`}
           >
-            <Heart size={14} className={selectedTags.includes("favorites") ? "fill-current" : ""} />
-            Favorites ({favoritePrompts.length})
-          </span>
+            <Heart size={16} className={selectedTags.includes("favorites") ? "fill-current" : ""} />
+            <span>
+              Favorites
+              <span className="text-xs ml-1">({favoritePrompts.length})</span>
+            </span>
+          </button>
+
           {/* Regular tags */}
-          {tags.map((tag) => {
-            const extraClasses = selectedTags.includes(tag)
-              ? "bg-blue-500 text-white font-bold"
-              : "bg-gray-200 text-gray-800";
-            return (
-              <span
-                key={tag}
-                onClick={() => onTagToggle(tag)}
-                className={`${baseClass} ${extraClasses}`}
-              >
-                {tag} ({tagCounts[tag] || 0})
-              </span>
-            );
-          })}
+          {tags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => onTagToggle(tag)}
+              className={cn(
+                getTagClasses(selectedTags.includes(tag)),
+                "hover:scale-105 active:scale-95"
+              )}
+              aria-pressed={selectedTags.includes(tag)}
+              aria-label={`Toggle ${tag} filter. ${tagCounts[tag] || 0} prompts`}
+            >
+              {tag}
+              <span className="text-xs ml-1">({tagCounts[tag] || 0})</span>
+            </button>
+          ))}
+
+          {/* Show more/less button */}
           <button
             onClick={onToggleShowAllTags}
-            className="text-sm px-3 py-1 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+            className={cn(
+              "text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-full",
+              "text-cyber-green hover:text-cyber-green-light",
+              "transition-all duration-300 font-semibold",
+              "hover:shadow-glow-green"
+            )}
+            aria-label={showAllTags ? "Show fewer tags" : "Show all tags"}
           >
-            {showAllTags ? "Show Less" : "Show All Tags"}
+            {showAllTags ? "Show Less" : "Show All"}
           </button>
         </div>
       </div>
