@@ -1,42 +1,90 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-  <title id="title">TPC Mark – Neon Hex with P</title>
-  <desc id="desc">Transparent background. Neon blue hexagon outline with a single P letter inside.</desc>
+  <title id="title">The Prompt Collection Logo – Neural Prompt Mark</title>
+  <desc id="desc">Modern cyberpunk logo combining a prompt message with neural network elements, representing AI prompts and knowledge collection.</desc>
+
   <defs>
-    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8CF9FF"/>
-      <stop offset="50%" stop-color="#5EE7FF"/>
-      <stop offset="100%" stop-color="#2BD4FF"/>
+    <!-- Main neon green gradient -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff41"/>
+      <stop offset="100%" stop-color="#00cc33"/>
     </linearGradient>
-    <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="b"/>
+
+    <!-- Accent cyan gradient for depth -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ff41"/>
+      <stop offset="50%" stop-color="#00dd38"/>
+      <stop offset="100%" stop-color="#00aa28"/>
+    </linearGradient>
+
+    <!-- Strong glow filter for main elements -->
+    <filter id="glow-strong" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
       <feMerge>
-        <feMergeNode in="b"/>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
+
+    <!-- Soft glow for inner details -->
+    <filter id="glow-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge>
-        <feMergeNode in="b"/>
+        <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <style>
-      .font { font-family: 'Poppins', 'Avenir Next', Avenir, 'Nunito Sans', 'Segoe UI', system-ui, -apple-system, sans-serif; }
-    </style>
   </defs>
 
-  <!-- Hexagon border with glow -->
-  <g>
-    <polygon points="128,24 205.5,68 205.5,188 128,232 50.5,188 50.5,68"
-             fill="none" stroke="url(#neon)" stroke-width="12" opacity="0.6" filter="url(#glow-strong)"/>
-    <polygon points="128,24 205.5,68 205.5,188 128,232 50.5,188 50.5,68"
-             fill="none" stroke="url(#neon)" stroke-width="5"/>
+  <!-- Outer geometric frame - Angular prompt shape -->
+  <g filter="url(#glow-strong)">
+    <!-- Main angular prompt bubble outline -->
+    <path d="M 60 40 L 180 40 Q 200 40 200 60 L 200 140 Q 200 160 180 160 L 95 160 L 75 185 L 85 160 L 60 160 Q 40 160 40 140 L 40 60 Q 40 40 60 40 Z"
+          fill="none" stroke="url(#greenGradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
   </g>
 
-  <!-- P letter -->
-  <g class="font" text-anchor="middle" fill="url(#neon)" stroke="#CFFFFF" stroke-opacity="0.25" paint-order="stroke" filter="url(#glow-soft)">
-    <text x="128" y="140" font-size="120" font-weight="700" letter-spacing="0.5" dominant-baseline="middle">P</text>
+  <!-- Inner neural network pattern -->
+  <g filter="url(#glow-soft)">
+    <!-- Neural nodes - distributed network points -->
+    <circle cx="80" cy="70" r="5" fill="url(#greenGradient)" opacity="0.8"/>
+    <circle cx="140" cy="60" r="5" fill="url(#greenGradient)" opacity="0.8"/>
+    <circle cx="170" cy="85" r="5" fill="url(#greenGradient)" opacity="0.8"/>
+    <circle cx="160" cy="130" r="5" fill="url(#greenGradient)" opacity="0.8"/>
+    <circle cx="100" cy="140" r="5" fill="url(#greenGradient)" opacity="0.8"/>
+    <circle cx="70" cy="115" r="5" fill="url(#greenGradient)" opacity="0.8"/>
+
+    <!-- Central node - larger for emphasis -->
+    <circle cx="120" cy="100" r="7" fill="url(#greenGradient)" opacity="0.9"/>
+
+    <!-- Neural connections - thin lines connecting nodes -->
+    <line x1="80" y1="70" x2="120" y2="100" stroke="url(#greenGradient)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="140" y1="60" x2="120" y2="100" stroke="url(#greenGradient)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="170" y1="85" x2="120" y2="100" stroke="url(#greenGradient)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="160" y1="130" x2="120" y2="100" stroke="url(#greenGradient)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="100" y1="140" x2="120" y2="100" stroke="url(#greenGradient)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="70" y1="115" x2="120" y2="100" stroke="url(#greenGradient)" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Secondary connections between outer nodes -->
+    <line x1="80" y1="70" x2="140" y2="60" stroke="url(#greenGradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="140" y1="60" x2="170" y2="85" stroke="url(#greenGradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="170" y1="85" x2="160" y2="130" stroke="url(#greenGradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="160" y1="130" x2="100" y2="140" stroke="url(#greenGradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="100" y1="140" x2="70" y2="115" stroke="url(#greenGradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="70" y1="115" x2="80" y2="70" stroke="url(#greenGradient)" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Accent details - thin geometric lines for tech feel -->
+  <g filter="url(#glow-soft)">
+    <!-- Corner accents -->
+    <line x1="65" y1="50" x2="75" y2="50" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="65" y1="50" x2="65" y2="60" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+
+    <line x1="190" y1="50" x2="180" y2="50" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="190" y1="50" x2="190" y2="60" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+
+    <line x1="65" y1="155" x2="75" y2="155" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="65" y1="155" x2="65" y2="145" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+
+    <line x1="190" y1="155" x2="180" y2="155" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="190" y1="155" x2="190" y2="145" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
   </g>
 </svg>
-
