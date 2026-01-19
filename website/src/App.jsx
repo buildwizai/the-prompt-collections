@@ -13,6 +13,8 @@ import prompts from "./data/prompts.json";
 import debounce from "lodash.debounce";
 import aiTools from "./data/ai-tools.json";
 import TopPrompts from "./components/TopPrompts";
+import PromptRecommendation from "./components/PromptRecommendation";
+import { getRecommendations, isRecommendationQuery } from "./utils/recommendationEngine";
 import {
   loadStoredState,
   saveDarkMode,
@@ -44,6 +46,9 @@ const App = () => {
   const [showAllTags, setShowAllTags] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [showHero, setShowHero] = useState(true);
+  const [recommendations, setRecommendations] = useState([]);
+  const [showRecommendations, setShowRecommendations] = useState(false);
+  const [isLoadingRecommendations, setIsLoadingRecommendations] = useState(false);
 
   // Load custom tools from localStorage on initial render
   useEffect(() => {
@@ -132,12 +137,27 @@ const App = () => {
     setHasMore(startIndex + PAGE_SIZE < filtered.length);
   };
 
-  // Debounced search handler
+  // Debounced search handler with recommendations
   const handleSearch = debounce((query) => {
     setSearchQuery(query);
     setPage(1);
     setVisiblePrompts([]);
     setHasMore(true);
+
+    // Generate recommendations if query looks like a recommendation request
+    if (query && query.trim().length >= 3 && isRecommendationQuery(query)) {
+      setIsLoadingRecommendations(true);
+      setShowRecommendations(true);
+      // Use setTimeout to simulate async and avoid blocking UI
+      setTimeout(() => {
+        const results = getRecommendations(query, prompts, 3);
+        setRecommendations(results);
+        setIsLoadingRecommendations(false);
+      }, 100);
+    } else {
+      setShowRecommendations(false);
+      setRecommendations([]);
+    }
   }, 300);
 
   // Reset visible prompts when search or tags change
@@ -466,6 +486,15 @@ const App = () => {
             <div className="w-full max-w-2xl mx-auto">
               <SearchBar onSearch={handleSearch} />
             </div>
+          )}
+
+          {/* Smart Recommendations Section */}
+          {showRecommendations && !selectedCategory && selectedTags.length === 0 && (
+            <PromptRecommendation
+              recommendations={recommendations}
+              onSelectPrompt={handleSelectPrompt}
+              isLoading={isLoadingRecommendations}
+            />
           )}
 
           <div className="w-full mx-auto space-y-0">
