@@ -1,1 +1,1 @@
-export { default } from './PromptRecommendation';
+export { default } from "./PromptRecommendation";

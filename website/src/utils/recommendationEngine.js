@@ -9,27 +9,143 @@
  * @returns {string[]} Array of tokens
  */
 const stopWords = new Set([
-  'a', 'an', 'the', 'and', 'or', 'but', 'is', 'are', 'was', 'were', 'be', 'been',
-  'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-  'should', 'may', 'might', 'must', 'shall', 'can', 'need', 'dare', 'ought', 'used',
-  'to', 'of', 'in', 'for', 'on', 'with', 'at', 'by', 'from', 'as', 'into', 'through',
-  'during', 'before', 'after', 'above', 'below', 'between', 'under', 'again', 'further',
-  'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'each',
-  'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own',
-  'same', 'so', 'than', 'too', 'very', 'just', 'also', 'now', 'it', 'its', 'this',
-  'that', 'these', 'those', 'i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'you',
-  'your', 'yours', 'he', 'him', 'his', 'she', 'her', 'hers', 'they', 'them', 'their',
-  'what', 'which', 'who', 'whom', 'if', 'because', 'until', 'while', 'about', 'against',
-  'any', 'both', 'down', 'up', 'out', 'off', 'over', 'am', 'get', 'got', 'make'
+  "a",
+  "an",
+  "the",
+  "and",
+  "or",
+  "but",
+  "is",
+  "are",
+  "was",
+  "were",
+  "be",
+  "been",
+  "being",
+  "have",
+  "has",
+  "had",
+  "do",
+  "does",
+  "did",
+  "will",
+  "would",
+  "could",
+  "should",
+  "may",
+  "might",
+  "must",
+  "shall",
+  "can",
+  "need",
+  "dare",
+  "ought",
+  "used",
+  "to",
+  "of",
+  "in",
+  "for",
+  "on",
+  "with",
+  "at",
+  "by",
+  "from",
+  "as",
+  "into",
+  "through",
+  "during",
+  "before",
+  "after",
+  "above",
+  "below",
+  "between",
+  "under",
+  "again",
+  "further",
+  "then",
+  "once",
+  "here",
+  "there",
+  "when",
+  "where",
+  "why",
+  "how",
+  "all",
+  "each",
+  "few",
+  "more",
+  "most",
+  "other",
+  "some",
+  "such",
+  "no",
+  "nor",
+  "not",
+  "only",
+  "own",
+  "same",
+  "so",
+  "than",
+  "too",
+  "very",
+  "just",
+  "also",
+  "now",
+  "it",
+  "its",
+  "this",
+  "that",
+  "these",
+  "those",
+  "i",
+  "me",
+  "my",
+  "myself",
+  "we",
+  "our",
+  "ours",
+  "you",
+  "your",
+  "yours",
+  "he",
+  "him",
+  "his",
+  "she",
+  "her",
+  "hers",
+  "they",
+  "them",
+  "their",
+  "what",
+  "which",
+  "who",
+  "whom",
+  "if",
+  "because",
+  "until",
+  "while",
+  "about",
+  "against",
+  "any",
+  "both",
+  "down",
+  "up",
+  "out",
+  "off",
+  "over",
+  "am",
+  "get",
+  "got",
+  "make",
 ]);
 
 function tokenize(text) {
   if (!text) return [];
   return text
     .toLowerCase()
-    .replace(/[^\w\s-]/g, ' ') // Keep hyphens for compound words
+    .replace(/[^\w\s-]/g, " ") // Keep hyphens for compound words
     .split(/\s+/)
-    .filter(word => word.length > 2 && !stopWords.has(word));
+    .filter((word) => word.length > 2 && !stopWords.has(word));
 }
 
 /**
@@ -42,7 +158,7 @@ function calculateTF(tokens) {
   const totalTerms = tokens.length;
   if (totalTerms === 0) return tf;
 
-  tokens.forEach(token => {
+  tokens.forEach((token) => {
     tf.set(token, (tf.get(token) || 0) + 1);
   });
 
@@ -65,9 +181,9 @@ function calculateIDF(allTokens) {
   const docFrequency = new Map();
 
   // Count document frequency for each term
-  allTokens.forEach(tokens => {
+  allTokens.forEach((tokens) => {
     const uniqueTokens = new Set(tokens);
-    uniqueTokens.forEach(token => {
+    uniqueTokens.forEach((token) => {
       docFrequency.set(token, (docFrequency.get(token) || 0) + 1);
     });
   });
@@ -137,12 +253,12 @@ function calculatePhraseMatchBonus(query, text) {
   if (lowerText.includes(lowerQuery)) return 0.3;
 
   // Check for word sequence matches (partial phrase)
-  const queryWords = lowerQuery.split(/\s+/).filter(w => w.length > 2);
+  const queryWords = lowerQuery.split(/\s+/).filter((w) => w.length > 2);
   if (queryWords.length < 2) return 0;
 
   let sequenceBonus = 0;
   for (let i = 0; i < queryWords.length - 1; i++) {
-    const bigram = queryWords[i] + ' ' + queryWords[i + 1];
+    const bigram = queryWords[i] + " " + queryWords[i + 1];
     if (lowerText.includes(bigram)) {
       sequenceBonus += 0.05;
     }
@@ -160,15 +276,15 @@ function calculatePhraseMatchBonus(query, text) {
 function calculateTagMatchBonus(queryTokens, tags) {
   if (!queryTokens.length || !tags || !tags.length) return 0;
 
-  const tagSet = new Set(tags.map(t => t.toLowerCase()));
+  const tagSet = new Set(tags.map((t) => t.toLowerCase()));
   let matchCount = 0;
 
-  queryTokens.forEach(token => {
+  queryTokens.forEach((token) => {
     if (tagSet.has(token)) {
       matchCount++;
     }
     // Also check for partial tag matches
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       if (tag.toLowerCase().includes(token) || token.includes(tag.toLowerCase())) {
         matchCount += 0.5;
       }
@@ -190,7 +306,7 @@ function calculateCategoryMatchBonus(queryTokens, category) {
   const categoryLower = category.toLowerCase();
   let bonus = 0;
 
-  queryTokens.forEach(token => {
+  queryTokens.forEach((token) => {
     if (categoryLower === token) {
       bonus += 0.2;
     } else if (categoryLower.includes(token) || token.includes(categoryLower)) {
@@ -219,20 +335,20 @@ export function getRecommendations(query, prompts, topN = 3) {
   }
 
   // Create searchable text for each prompt
-  const promptTexts = prompts.map(prompt => {
+  const promptTexts = prompts.map((prompt) => {
     const parts = [
-      prompt.category || '',
-      prompt.summary || '',
-      prompt.usage || '',
-      prompt.content || '',
-      (prompt.tags || []).join(' '),
-      (prompt.subcategories || []).join(' ')
+      prompt.category || "",
+      prompt.summary || "",
+      prompt.usage || "",
+      prompt.content || "",
+      (prompt.tags || []).join(" "),
+      (prompt.subcategories || []).join(" "),
     ];
-    return parts.join(' ');
+    return parts.join(" ");
   });
 
   // Tokenize all prompts
-  const allPromptTokens = promptTexts.map(text => tokenize(text));
+  const allPromptTokens = promptTexts.map((text) => tokenize(text));
 
   // Calculate IDF across all prompts
   const idf = calculateIDF([queryTokens, ...allPromptTokens]);
@@ -251,47 +367,49 @@ export function getRecommendations(query, prompts, topN = 3) {
     const categoryBonus = calculateCategoryMatchBonus(queryTokens, prompt.category);
 
     // Weight summary and usage matches higher
-    const summaryTokens = tokenize(prompt.summary || '');
-    const usageTokens = tokenize(prompt.usage || '');
+    const summaryTokens = tokenize(prompt.summary || "");
+    const usageTokens = tokenize(prompt.usage || "");
     const summaryBonus = calculateSimilarity(queryTokens, summaryTokens, idf) * 0.15;
     const usageBonus = calculateSimilarity(queryTokens, usageTokens, idf) * 0.1;
 
-    const totalScore = similarity + phraseBonus + tagBonus + categoryBonus + summaryBonus + usageBonus;
+    const totalScore =
+      similarity + phraseBonus + tagBonus + categoryBonus + summaryBonus + usageBonus;
 
     // Generate match reasons
     const matchReasons = [];
     if (categoryBonus > 0.1) matchReasons.push(`Category: ${prompt.category}`);
     if (tagBonus > 0.05) {
-      const matchedTags = prompt.tags?.filter(tag =>
-        queryTokens.some(qt => tag.toLowerCase().includes(qt) || qt.includes(tag.toLowerCase()))
-      ) || [];
-      if (matchedTags.length > 0) matchReasons.push(`Tags: ${matchedTags.slice(0, 3).join(', ')}`);
+      const matchedTags =
+        prompt.tags?.filter((tag) =>
+          queryTokens.some((qt) => tag.toLowerCase().includes(qt) || qt.includes(tag.toLowerCase()))
+        ) || [];
+      if (matchedTags.length > 0) matchReasons.push(`Tags: ${matchedTags.slice(0, 3).join(", ")}`);
     }
-    if (phraseBonus > 0.1) matchReasons.push('Phrase match');
-    if (summaryBonus > 0.02) matchReasons.push('Summary match');
-    if (similarity > 0.1) matchReasons.push('Content relevance');
+    if (phraseBonus > 0.1) matchReasons.push("Phrase match");
+    if (summaryBonus > 0.02) matchReasons.push("Summary match");
+    if (similarity > 0.1) matchReasons.push("Content relevance");
 
     return {
       prompt,
       score: totalScore,
-      matchReasons
+      matchReasons,
     };
   });
 
   // Sort by score and return top N
   const topResults = scoredPrompts
-    .filter(item => item.score > 0.05) // Filter out very low scores
+    .filter((item) => item.score > 0.05) // Filter out very low scores
     .sort((a, b) => b.score - a.score)
     .slice(0, topN);
 
   // Normalize scores to 0-100 range for display
   if (topResults.length > 0) {
     const maxScore = topResults[0].score;
-    topResults.forEach(item => {
+    topResults.forEach((item) => {
       item.displayScore = Math.min(Math.round((item.score / maxScore) * 100), 99);
       // Ensure minimum score of 50 for top results to look reasonable
       if (item.displayScore < 50 && item === topResults[0]) {
-        item.displayScore = Math.round(50 + (item.score * 100));
+        item.displayScore = Math.round(50 + item.score * 100);
       }
     });
   }
@@ -310,12 +428,30 @@ export function isRecommendationQuery(query) {
   // If the query is descriptive (contains action words or has multiple words), it's likely a recommendation request
   const queryLower = query.toLowerCase();
   const recommendationIndicators = [
-    'help', 'want', 'need', 'looking', 'find', 'search', 'create', 'write',
-    'generate', 'make', 'build', 'improve', 'assistant', 'prompt', 'for',
-    'about', 'with', 'can', 'how', 'best', 'good'
+    "help",
+    "want",
+    "need",
+    "looking",
+    "find",
+    "search",
+    "create",
+    "write",
+    "generate",
+    "make",
+    "build",
+    "improve",
+    "assistant",
+    "prompt",
+    "for",
+    "about",
+    "with",
+    "can",
+    "how",
+    "best",
+    "good",
   ];
 
-  const hasIndicator = recommendationIndicators.some(word => queryLower.includes(word));
+  const hasIndicator = recommendationIndicators.some((word) => queryLower.includes(word));
   const hasMultipleWords = query.trim().split(/\s+/).length >= 2;
 
   return hasIndicator || hasMultipleWords;
