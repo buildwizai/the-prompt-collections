@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
 import { cn } from "../../utils/cn";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, searchQuery = "" }) => {
+  const [inputValue, setInputValue] = useState(searchQuery);
+
+  // Sync with external searchQuery changes
+  useEffect(() => {
+    setInputValue(searchQuery);
+  }, [searchQuery]);
   return (
     <div className="w-full px-2 sm:px-0">
       <div className="relative group">
@@ -13,7 +20,12 @@ const SearchBar = ({ onSearch }) => {
           <input
             type="text"
             placeholder="Search prompts, tags, or categories..."
-            onChange={(e) => onSearch(e.target.value)}
+            value={inputValue}
+            onChange={(e) => {
+              const value = e.target.value;
+              setInputValue(value);
+              onSearch(value);
+            }}
             className={cn(
               "w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg",
               "rounded-glass border-2",
@@ -48,6 +60,7 @@ const SearchBar = ({ onSearch }) => {
 
 SearchBar.propTypes = {
   onSearch: PropTypes.func.isRequired,
+  searchQuery: PropTypes.string,
 };
 
 export default SearchBar;

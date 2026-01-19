@@ -46,6 +46,9 @@ const App = () => {
   const [showRecommendations, setShowRecommendations] = useState(false);
   const [isLoadingRecommendations, setIsLoadingRecommendations] = useState(false);
 
+  // Derived variable to detect search mode
+  const isSearchMode = searchQuery.trim().length > 0;
+
   // Load custom tools from localStorage on initial render
   useEffect(() => {
     const storedTools = loadCustomTools();
@@ -373,8 +376,8 @@ const App = () => {
 
   // Separate effect for hero visibility
   useEffect(() => {
-    setShowHero(!selectedCategory && selectedTags.length === 0);
-  }, [selectedCategory, selectedTags]);
+    setShowHero(!selectedCategory && selectedTags.length === 0 && !isSearchMode);
+  }, [selectedCategory, selectedTags, isSearchMode]);
 
   // Handle initial URL params - only run once on mount
   useEffect(() => {
@@ -491,10 +494,10 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
           {/* Search and Filters Section */}
           <div className="flex flex-col items-center justify-center space-y-6 md:space-y-8">
-            {/* Search Bar - visible only when not in category view */}
-            {!selectedCategory && selectedTags.length === 0 && !showHero && (
+            {/* Search Bar - visible during search mode */}
+            {isSearchMode && (
               <div className="w-full max-w-2xl">
-                <SearchBar onSearch={handleSearch} />
+                <SearchBar onSearch={handleSearch} searchQuery={searchQuery} />
               </div>
             )}
 
@@ -507,31 +510,33 @@ const App = () => {
               />
             )}
 
-            {/* Tag Filter and Top Prompts */}
-            <div className="w-full space-y-6 md:space-y-8">
-              <TagFilter
-                tags={visibleTags}
-                selectedTags={selectedTags}
-                onTagToggle={handleTagToggle}
-                showAllTags={showAllTags}
-                onToggleShowAllTags={() => setShowAllTags(!showAllTags)}
-                tagCounts={tagCounts}
-                showShareButton={!showHero}
-                shareContent={getFilterShareContent()}
-                shareTitle="Filtered Prompts - The Prompt Collection"
-                favoritePrompts={favoritePrompts}
-              />
-
-              {/* Top Prompts - only show on hero */}
-              {showHero && (
-                <TopPrompts
-                  topPrompts={topPrompts}
-                  favoritePrompts={favoritesData}
-                  handleSelectPrompt={handleSelectPrompt}
-                  onRemoveFavorite={(prompt) => handleToggleFavorite(prompt)}
+            {/* Tag Filter and Top Prompts - hidden during search mode */}
+            {!isSearchMode && (
+              <div className="w-full space-y-6 md:space-y-8">
+                <TagFilter
+                  tags={visibleTags}
+                  selectedTags={selectedTags}
+                  onTagToggle={handleTagToggle}
+                  showAllTags={showAllTags}
+                  onToggleShowAllTags={() => setShowAllTags(!showAllTags)}
+                  tagCounts={tagCounts}
+                  showShareButton={!showHero}
+                  shareContent={getFilterShareContent()}
+                  shareTitle="Filtered Prompts - The Prompt Collection"
+                  favoritePrompts={favoritePrompts}
                 />
-              )}
-            </div>
+
+                {/* Top Prompts - only show on hero */}
+                {showHero && (
+                  <TopPrompts
+                    topPrompts={topPrompts}
+                    favoritePrompts={favoritesData}
+                    handleSelectPrompt={handleSelectPrompt}
+                    onRemoveFavorite={(prompt) => handleToggleFavorite(prompt)}
+                  />
+                )}
+              </div>
+            )}
           </div>
 
           {/* Prompts List */}
@@ -574,8 +579,8 @@ const App = () => {
         )}
       </AnimatePresence>
 
-      {/* Footer */}
-      <Footer />
+      {/* Footer - hidden during search mode */}
+      {!isSearchMode && <Footer />}
     </div>
   );
 };
