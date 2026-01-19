@@ -15,7 +15,6 @@ import PromptRecommendation from "./components/PromptRecommendation";
 import { getRecommendations, isRecommendationQuery } from "./utils/recommendationEngine";
 import {
   loadStoredState,
-  saveDarkMode,
   saveCustomTools,
   savePromptUsageStats,
   saveToolUsageStats,
@@ -27,7 +26,6 @@ const PAGE_SIZE = 20; // Number of prompts to load at a time
 
 const App = () => {
   const storedState = loadStoredState();
-  const [isDarkMode, setIsDarkMode] = useState(storedState.darkMode);
   const [customTools, setCustomTools] = useState(storedState.customTools);
   const [usageStats, setUsageStats] = useState(storedState.promptUsageStats);
   const [, setToolUsageStats] = useState(storedState.toolUsageStats);
