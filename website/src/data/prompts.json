@@ -1003,7 +1003,7 @@
     "id": "notebooklm-styling-for-generated-slide",
     "category": "notebooklm",
     "subcategories": [],
-    "content": "Generate the document based on the following styling guideline:\n\n1. **Color Palette (Strictly Limited):** Use only four core colors: Black, White, Gray, and Bright Green.\n2. **Aesthetic:** Maintain an elegant, clear, clean, and professional design language.\n3. **Visual Depth:** Incorporate visual depth using elements like blocks, lines, borders, and subtle shadows to achieve a 3D effect.\n4. **Bright Green Usage Constraint:** The Bright Green color is strictly reserved for highlights (text, borders, or lines); it must *never* be used as a background color.\n5. **System Status Colors:** Standardized colors for danger, informational, and warning states may only be applied to text elements, not backgrounds or primary UI components.",
+    "content": "Generate the document based on the following styling guideline:\n\n1. **Color Palette (Strictly Limited):** Use only four core colors: Black, White, Gray, and Bright Green.\n2. **Aesthetic:** Maintain an elegant, clear, clean, and professional design language.\n3. **Visual Depth:** Incorporate visual depth using elements like card, lines, borders, and subtle shadows.\n4. **Bright Green Usage Constraint:** The Bright Green color is strictly reserved for highlights (text, borders, or lines); it must *never* be used as a background color.\n5. **System Status Colors:** Standardized colors for danger, informational, and warning states may only be applied to text elements, not backgrounds or primary UI components.",
     "filename": "styling-for-generated-slide.md",
     "tags": [
       "notebooklm",
