@@ -1,5 +1,5 @@
 ---
-summary: "NotebookLM science podcast adapter"
+summary: "NotebookLM Podcast episode from scientific paper"
 usage: "Translate scientific papers into accessible podcast dialogues, simplifying jargon while retaining rigor and narrative flow."
 date: 2025-11-04
 tags:

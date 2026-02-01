@@ -1,5 +1,5 @@
 ---
-summary: "NotebookLM social post generator"
+summary: "NotebookLM Podcast episode tweet"
 usage: "Convert NotebookLM material into punchy social posts highlighting central insights, hashtags, and audience calls-to-action effectively."
 date: 2025-11-04
 tags:
@@ -9,4 +9,7 @@ tags:
 - twitter
 - post
 ---
-Imagine a podcast episode discussing the topic from the provided source. Craft a Twitter post (200 characters max) to introduce that episode. Add relevant hash tags, and always add the special hash tag: #BuildWizAIShow
+From the provided source, write a 250‑character Twitter post that promotes the podcast episode. Include the mandatory hashtag #BuildWizAIShow, add any relevant hashtags, and always insert both links:
+
+Spotify: https://open.spotify.com/show/5CVKgOaJSWfKlwe6KaqO7v?si=411798db18e34d0b
+Apple Podcast: https://podcasts.apple.com/fr/podcast/build-wiz-ai-show/id1799918505

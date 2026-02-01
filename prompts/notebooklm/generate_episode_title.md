@@ -1,5 +1,5 @@
 ---
-summary: "NotebookLM episode title generator"
+summary: "NotebookLM Podcast episode title"
 usage: "Generate catchy podcast episode titles from NotebookLM sources"
 date: 2025-02-01
 tags:

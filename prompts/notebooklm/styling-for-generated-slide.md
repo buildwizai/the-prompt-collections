@@ -1,5 +1,5 @@
 ---
-summary: "NotebookLM styling guide"
+summary: "NotebookLM generate graphic with style"
 usage: "Apply professional styling guidelines to NotebookLM-generated document with strict color palette and modern design principles."
 date: 2025-01-04
 tags:

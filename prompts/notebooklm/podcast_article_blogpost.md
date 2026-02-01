@@ -1,5 +1,5 @@
 ---
-summary: "NotebookLM article podcast adapter"
+summary: "NotebookLM Podcast episode from article or blogpost"
 usage: "Adapt articles or blog posts into conversational podcast scripts with pacing notes and engaging transitions."
 date: 2025-11-04
 tags:
