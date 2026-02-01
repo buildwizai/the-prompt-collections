@@ -919,7 +919,7 @@
     "id": "notebooklm-generate_episode_description",
     "category": "notebooklm",
     "subcategories": [],
-    "content": "Imagine a podcast episode discussing the topic from the provided source. Generate a short (max 3 sentences), concise description to introduce that episode.",
+    "content": "Generate a compelling 2-3 sentence podcast episode description based on the provided source. Open with a hook that captures attention, highlight the core topic or insight, and hint at what listeners will discover. Keep it conversational and engaging.",
     "filename": "generate_episode_description.md",
     "tags": [
       "notebooklm",
@@ -931,6 +931,23 @@
     "summary": "NotebookLM episode summary writer",
     "usage": "Turn NotebookLM sources into engaging podcast episode summaries with hooks, key points, and listener takeaways.",
     "date": "2025-11-04"
+  },
+  {
+    "id": "notebooklm-generate_episode_title",
+    "category": "notebooklm",
+    "subcategories": [],
+    "content": "Generate a catchy, concise podcast episode title (6-10 words) based on the provided source. The title should encapsulate the main topic and intrigue potential listeners.",
+    "filename": "generate_episode_title.md",
+    "tags": [
+      "notebooklm",
+      "system-prompt",
+      "generate",
+      "episode",
+      "title"
+    ],
+    "summary": "NotebookLM episode title generator",
+    "usage": "Generate catchy podcast episode titles from NotebookLM sources",
+    "date": "2025-02-01"
   },
   {
     "id": "notebooklm-generate_twitter_post",
@@ -953,7 +970,7 @@
     "id": "notebooklm-podcast_article_blogpost",
     "category": "notebooklm",
     "subcategories": [],
-    "content": "- Start by introduce the podcast show name: Build Wiz AI\n- Introduce Hosts: B (male voice) and A (female voice)\n- Key focus areas:\n  - Present main points clearly, avoid jargon\n  - Add personal stories and opinions to engage listeners\n  - Provide deep analysis and explore multiple perspectives\n  - Share practical applications and real-world solutions\n- Do not mention/reveal personal information\n- Conclude by acknowledging and crediting all sources used",
+    "content": "- Start by introducing the podcast show name: Build Wiz AI\n- Introduce hosts: B (male voice) and A (female voice)\n- Key focus areas:\n  - Present main points clearly with conversational language, avoiding technical jargon unless explained\n  - Weave in personal anecdotes, reactions, and candid opinions to create authentic connection with listeners\n  - Provide deep analysis by unpacking complex ideas into digestible segments and exploring multiple viewpoints\n  - Share practical applications with actionable takeaways and real‑world examples that listeners can implement\n  - Use natural dialogue transitions and questions between hosts to maintain engaging pacing\n  - Include moments of curiosity, surprise, or discovery to mirror genuine conversation flow\n  - Balance information density with breathing room—pause for emphasis, ask clarifying questions, or recap key insights\n  - End segments with clear synthesis that ties insights back to listener value\n- Do not mention or reveal personal information\n- Conclude by acknowledging and crediting all sources used",
     "filename": "podcast_article_blogpost.md",
     "tags": [
       "notebooklm",
@@ -970,7 +987,7 @@
     "id": "notebooklm-podcast_scientific_paper",
     "category": "notebooklm",
     "subcategories": [],
-    "content": "- Start by introduce the podcast show name: Build Wiz AI\n- Introduce Hosts: B (male voice) and A (female voice)\n- Key focus areas:\n  - Present main points clearly, avoid jargon\n  - Focus on the main results and their significance.\n  - Explain why the study matters and its real-world implications.\n  - Discuss strengths, limitations, and unanswered questions.\n  - Relate the topic to everyday life or current events to maintain interest\n- Conclude by acknowledging and crediting all sources used",
+    "content": "- Start by introduce the podcast show name: Build Wiz AI\n- Introduce Hosts: B (male voice) and A (female voice)\n- Key focus areas:\n  - Break down complex concepts into digestible analogies and examples that non-experts can understand\n  - Present main findings clearly while translating technical jargon into accessible language without oversimplifying\n  - Highlight the key results, methodology innovations, and their statistical or practical significance\n  - Explain the broader impact: why this research matters to science, society, and potential future applications\n  - Contextualize the study within existing research: what gaps does it fill, what controversies does it address\n  - Discuss methodological strengths, acknowledged limitations, and questions that remain open for future investigation\n  - Connect abstract findings to concrete real-world scenarios, current events, or relatable everyday experiences\n  - Maintain scientific accuracy while creating an engaging narrative arc with moments of curiosity and discovery\n  - Use conversational dialogue between hosts to explore different perspectives and ask clarifying questions\n  - Balance enthusiasm for breakthroughs with critical thinking about reproducibility, sample sizes, and alternative interpretations\n- Conclude by acknowledging and crediting all sources used",
     "filename": "podcast_scientific_paper.md",
     "tags": [
       "notebooklm",
