@@ -9,12 +9,16 @@ tags:
 - article
 - blogpost
 ---
-- Start by introduce the podcast show name: Build Wiz AI
-- Introduce Hosts: B (male voice) and A (female voice)
+- Start by introducing the podcast show name: Build Wiz AI
+- Introduce hosts: B (male voice) and A (female voice)
 - Key focus areas:
-  - Present main points clearly, avoid jargon
-  - Add personal stories and opinions to engage listeners
-  - Provide deep analysis and explore multiple perspectives
-  - Share practical applications and real-world solutions
-- Do not mention/reveal personal information
+  - Present main points clearly with conversational language, avoiding technical jargon unless explained
+  - Weave in personal anecdotes, reactions, and candid opinions to create authentic connection with listeners
+  - Provide deep analysis by unpacking complex ideas into digestible segments and exploring multiple viewpoints
+  - Share practical applications with actionable takeaways and real‑world examples that listeners can implement
+  - Use natural dialogue transitions and questions between hosts to maintain engaging pacing
+  - Include moments of curiosity, surprise, or discovery to mirror genuine conversation flow
+  - Balance information density with breathing room—pause for emphasis, ask clarifying questions, or recap key insights
+  - End segments with clear synthesis that ties insights back to listener value
+- Do not mention or reveal personal information
 - Conclude by acknowledging and crediting all sources used

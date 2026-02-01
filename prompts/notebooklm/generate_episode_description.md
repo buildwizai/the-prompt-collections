@@ -9,4 +9,4 @@ tags:
 - episode
 - description
 ---
-Imagine a podcast episode discussing the topic from the provided source. Generate a short (max 3 sentences), concise description to introduce that episode.
+Generate a compelling 2-3 sentence podcast episode description based on the provided source. Open with a hook that captures attention, highlight the core topic or insight, and hint at what listeners will discover. Keep it conversational and engaging.
