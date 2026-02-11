@@ -9,7 +9,7 @@ tags:
 - twitter
 - post
 ---
-From the provided source, write a 250‑character Twitter post that promotes the podcast episode. Include the mandatory hashtag #BuildWizAIShow, add any relevant hashtags, and always insert both links:
+From the provided source, write a X post (as long as possible - max 250‑characters) that promotes the podcast episode. Include the mandatory hashtag #BuildWizAIShow, add 3 relevant hashtags, and always insert both links:
 
 Spotify: https://open.spotify.com/show/5CVKgOaJSWfKlwe6KaqO7v?si=411798db18e34d0b
 Apple Podcast: https://podcasts.apple.com/fr/podcast/build-wiz-ai-show/id1799918505

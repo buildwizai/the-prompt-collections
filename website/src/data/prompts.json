@@ -928,7 +928,7 @@
       "episode",
       "description"
     ],
-    "summary": "NotebookLM episode summary writer",
+    "summary": "NotebookLM Podcast episode description",
     "usage": "Turn NotebookLM sources into engaging podcast episode summaries with hooks, key points, and listener takeaways.",
     "date": "2025-11-04"
   },
@@ -945,7 +945,7 @@
       "episode",
       "title"
     ],
-    "summary": "NotebookLM episode title generator",
+    "summary": "NotebookLM Podcast episode title",
     "usage": "Generate catchy podcast episode titles from NotebookLM sources",
     "date": "2025-02-01"
   },
@@ -953,7 +953,7 @@
     "id": "notebooklm-generate_twitter_post",
     "category": "notebooklm",
     "subcategories": [],
-    "content": "Imagine a podcast episode discussing the topic from the provided source. Craft a Twitter post (200 characters max) to introduce that episode. Add relevant hash tags, and always add the special hash tag: #BuildWizAIShow",
+    "content": "From the provided source, write a 250‑character Twitter post that promotes the podcast episode. Include the mandatory hashtag #BuildWizAIShow, add any relevant hashtags, and always insert both links:\n\nSpotify: https://open.spotify.com/show/5CVKgOaJSWfKlwe6KaqO7v?si=411798db18e34d0b\nApple Podcast: https://podcasts.apple.com/fr/podcast/build-wiz-ai-show/id1799918505",
     "filename": "generate_twitter_post.md",
     "tags": [
       "notebooklm",
@@ -962,7 +962,7 @@
       "twitter",
       "post"
     ],
-    "summary": "NotebookLM social post generator",
+    "summary": "NotebookLM Podcast episode tweet",
     "usage": "Convert NotebookLM material into punchy social posts highlighting central insights, hashtags, and audience calls-to-action effectively.",
     "date": "2025-11-04"
   },
@@ -979,7 +979,7 @@
       "article",
       "blogpost"
     ],
-    "summary": "NotebookLM article podcast adapter",
+    "summary": "NotebookLM Podcast episode from article or blogpost",
     "usage": "Adapt articles or blog posts into conversational podcast scripts with pacing notes and engaging transitions.",
     "date": "2025-11-04"
   },
@@ -996,7 +996,7 @@
       "scientific",
       "paper"
     ],
-    "summary": "NotebookLM science podcast adapter",
+    "summary": "NotebookLM Podcast episode from scientific paper",
     "usage": "Translate scientific papers into accessible podcast dialogues, simplifying jargon while retaining rigor and narrative flow.",
     "date": "2025-11-04"
   },
@@ -1028,7 +1028,7 @@
       "styling",
       "design"
     ],
-    "summary": "NotebookLM styling guide",
+    "summary": "NotebookLM generate graphic with style",
     "usage": "Apply professional styling guidelines to NotebookLM-generated document with strict color palette and modern design principles.",
     "date": "2025-01-04"
   },
