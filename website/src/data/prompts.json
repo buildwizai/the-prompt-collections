@@ -953,7 +953,7 @@
     "id": "notebooklm-generate_twitter_post",
     "category": "notebooklm",
     "subcategories": [],
-    "content": "From the provided source, write a 250‑character Twitter post that promotes the podcast episode. Include the mandatory hashtag #BuildWizAIShow, add any relevant hashtags, and always insert both links:\n\nSpotify: https://open.spotify.com/show/5CVKgOaJSWfKlwe6KaqO7v?si=411798db18e34d0b\nApple Podcast: https://podcasts.apple.com/fr/podcast/build-wiz-ai-show/id1799918505",
+    "content": "From the provided source, write a X post (as long as possible - max 250‑characters) that promotes the podcast episode. Include the mandatory hashtag #BuildWizAIShow, add 3 relevant hashtags, and always insert both links:\n\nSpotify: https://open.spotify.com/show/5CVKgOaJSWfKlwe6KaqO7v?si=411798db18e34d0b\nApple Podcast: https://podcasts.apple.com/fr/podcast/build-wiz-ai-show/id1799918505",
     "filename": "generate_twitter_post.md",
     "tags": [
       "notebooklm",
