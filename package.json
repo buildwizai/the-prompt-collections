@@ -2,6 +2,19 @@
   "name": "the-prompt-collection",
   "private": true,
   "version": "1.0.0",
+  "description": "A curated repository of AI prompts for various purposes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildwizai/the-prompt-collection.git"
+  },
+  "keywords": [
+    "prompts",
+    "ai",
+    "llm",
+    "prompt-engineering",
+    "gpt"
+  ],
   "type": "module",
   "scripts": {
     "dev": "npm run dev --prefix website",
